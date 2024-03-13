@@ -1,0 +1,579 @@
+<script setup lang="ts">
+
+import {useActorsStore} from "~/store/actors";
+
+const actorsStore = useActorsStore();
+
+const actorsList = actorsStore.actorsList;
+
+
+definePageMeta({
+  layout: "default-landing"
+})
+</script>
+
+<template>
+  <main class="main">
+    <section class="hero section">
+      <div class="hero-content container">
+        <div class="hero-content__left">
+          <a class="anchor-tool" href="#">
+            37+ кейсов в портфолио
+            <span class="anchor-tool__dot">
+            <svg width="5" height="6" viewBox="0 0 5 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="2.5" cy="3" r="2.5" fill="#F58AB2"/>
+            </svg>
+          </span>
+            Посмотреть их
+            <span class="anchor-tool__arrow">
+            <svg width="7" height="10" viewBox="0 0 7 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M1 1L5 5L1 9" stroke="#F58AB2" stroke-width="2"/>
+            </svg>
+          </span>
+          </a>
+          <div class="hero-content__description">
+            <h1 class="title-h1">
+              <span>POSH.AGENCY</span> - Создайте незабываемые образы с профессиональным продюсером актёров
+            </h1>
+            <p>
+              <span>Lorem ipsum dolor sit amet</span>, consectetur adipiscing elit. Nam semper odio nisi, et eleifend
+              leo pulvinar
+              ut. Praesent orci nibh, blandit sit amet blandit vitae, venenatis et ante. Nullam mi tellus, lacinia
+              eget
+              vestibulum eget, rutrum a tellus. Phasellus pharetra felis ante, a fermentum elit pharetra eu. Sed
+              tincidunt eleifend ullamcorper. Nullam at commodo ipsum.
+            </p>
+          </div>
+          <button class="button button--gradient hero-content__button">Связаться сейчас</button>
+        </div>
+        <div class="hero-content__right">
+          <a href="#" class="link-default link-default--bordered">telegram</a>
+          <a href="#" class="link-default link-default--bordered">instagram</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="company section container">
+      <div class="company-banner">
+        <div class="company-banner__logo">
+          <img src="/static-images/posh-agency-logotype.svg" alt="POSH.AGENCY LOGO">
+        </div>
+
+        <div class="company-banner__content">
+          <h2 class="company-banner__title title-h2">Реализовали рекламные проекты для крупных компаний и брендов:
+            Эффективные стратегии и креативные
+            решения,
+            которые привели к заметному успеху!</h2>
+
+          <div class="company-list">
+            <NuxtLink class="company-list__link">
+              <img class="company-list__image" src="/static-images/mts-logo.svg"
+                   alt="Смотреть бэкстейдж для компании МТС">
+            </NuxtLink>
+            <NuxtLink class="company-list__link">
+              <img class="company-list__image" src="/static-images/mts-logo.svg"
+                   alt="Смотреть бэкстейдж для компании МТС">
+            </NuxtLink>
+            <NuxtLink class="company-list__link">
+              <img class="company-list__image" src="/static-images/mts-logo.svg"
+                   alt="Смотреть бэкстейдж для компании МТС">
+            </NuxtLink>
+            <NuxtLink class="company-list__link">
+              <img class="company-list__image" src="/static-images/mts-logo.svg"
+                   alt="Смотреть бэкстейдж для компании МТС">
+            </NuxtLink>
+            <NuxtLink class="company-list__link">
+              <img class="company-list__image" src="/static-images/mts-logo.svg"
+                   alt="Смотреть бэкстейдж для компании МТС">
+            </NuxtLink>
+            <NuxtLink class="company-list__link">
+              <img class="company-list__image" src="/static-images/mts-logo.svg"
+                   alt="Смотреть бэкстейдж для компании МТС">
+            </NuxtLink>
+            <NuxtLink class="company-list__link">
+              <img class="company-list__image" src="/static-images/mts-logo.svg"
+                   alt="Смотреть бэкстейдж для компании МТС">
+            </NuxtLink>
+            <div class="company-list__nda">
+              <p>+13 NDA</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="company-backstage">
+        <h2 class="title-h2 company-backstage__title">
+          Посмотри наши <span class="title-dash title-dash--pink"></span> <span>бэкстейджи</span>
+        </h2>
+        <div class="company-backstage__content">
+          <div class="company-backstage__col company-backstage__col--left">
+            <NuxtLink class="backstage-card backstage-card--vertical">
+              <img class="backstage-card__preview" src="/static-images/backstage/backstage-card-preview-test.png"
+                   alt="">
+              <div class="backstage-card__content">
+                <h3 class="title-h3 backstage-card__title">
+                  Название
+                </h3>
+                <p class="backstage-card__description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem
+                  ipsum
+                  dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing
+                  elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                </p>
+                <span class="backstage-card__date">27.02.2023</span>
+              </div>
+            </NuxtLink>
+            <NuxtLink class="backstage-card backstage-card--vertical">
+              <div class="backstage-card__content">
+                <h3 class="title-h3 backstage-card__title">
+                  Название
+                </h3>
+                <p class="backstage-card__description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem
+                  ipsum
+                  dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing
+                  elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                </p>
+                <span class="backstage-card__date">27.02.2023</span>
+              </div>
+              <img class="backstage-card__preview" src="/static-images/backstage/backstage-card-preview-test.png"
+                   alt="">
+            </NuxtLink>
+          </div>
+          <div class="company-backstage__col company-backstage__col--right">
+            <NuxtLink class="backstage-card backstage-card--horizontal">
+              <img class="backstage-card__preview" src="/static-images/backstage/backstage-card-preview-test.png"
+                   alt="">
+              <div class="backstage-card__content">
+                <h3 class="title-h3 backstage-card__title">
+                  Название
+                </h3>
+                <p class="backstage-card__description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem
+                  ipsum
+                  dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing
+                  elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                </p>
+                <span class="backstage-card__date">27.02.2023</span>
+              </div>
+            </NuxtLink>
+            <NuxtLink class="backstage-card backstage-card--horizontal">
+              <div class="backstage-card__content">
+                <h3 class="title-h3 backstage-card__title">
+                  Название
+                </h3>
+                <p class="backstage-card__description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem
+                  ipsum
+                  dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing
+                  elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                </p>
+                <span class="backstage-card__date">27.02.2023</span>
+              </div>
+              <img class="backstage-card__preview" src="/static-images/backstage/backstage-card-preview-test.png"
+                   alt="">
+            </NuxtLink>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="actor section container">
+      <div class="section__heading">
+        <h2 class="title-h2 actor__title"><span>работа</span> с актёрами</h2>
+        <p class="actor__description">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam semper odio nisi, et eleifend leo pulvinar ut.
+          Praesent orci nibh, blandit sit amet blandit vitae, venenatis et ante. Nullam mi tellus, lacinia eget
+          vestibulum eget, rutrum a tellus. Phasellus pharetra felis ante, a fermentum elit pharetra eu. Sed tincidunt
+          eleifend ullamcorper. Nullam at commodo ipsum.
+        </p>
+      </div>
+      <div class="actor__list">
+        <ActorCard
+            v-for="(actor, index) in actorsList"
+            :key="index"
+            :actorData="actor"
+        />
+      </div>
+    </section>
+  </main>
+
+
+</template>
+
+<style scoped lang="scss">
+// HERO
+.hero {
+  color: $bright;
+  background: center / cover no-repeat url("/static-images/hero-bg.png");
+}
+
+.hero-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  padding: 17.5rem .5rem;
+
+  @include tablet {
+    flex-direction: column;
+    align-items: center;
+    padding: 13rem 10px;
+  }
+
+  &__left {
+    max-width: 34.6rem;
+    width: 100%;
+
+    @include tablet {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      margin-bottom: 4rem;
+    }
+
+    @include mobile-big {
+      margin-bottom: 2rem;
+    }
+  }
+
+  &__right {
+    display: flex;
+    gap: 1rem;
+  }
+
+  &__description {
+
+    h1 {
+      margin-bottom: 2.5rem;
+
+      span {
+        font-weight: 800;
+      }
+
+      @include tablet {
+        margin-bottom: 1.6rem;
+      }
+
+      @include mobile-big {
+        font-size: 1.4rem;
+      }
+    }
+
+    p {
+      font-size: .8rem;
+
+      span {
+        font-weight: 600;
+      }
+
+      @include mobile-big {
+        font-size: .7rem;
+      }
+    }
+  }
+
+  &__button {
+    margin-top: 2.5rem;
+
+    @include tablet {
+      margin-top: 2rem;
+    }
+
+    @include mobile-big {
+      margin-top: 1rem;
+    }
+  }
+}
+
+.anchor-tool {
+  display: inline-flex;
+  gap: .5rem;
+  align-items: center;
+
+  border-radius: 1.25rem;
+  padding: .5rem;
+  background-color: $peach;
+
+  color: $dark;
+  font-weight: 400;
+  font-size: .7rem;
+  margin-bottom: 2.5rem;
+
+  transition: background-color .2s ease-in-out;
+
+  &:hover {
+    background-color: #fa9962;
+  }
+
+  @include tablet {
+    margin-bottom: 2rem;
+  }
+
+  @include mobile-small {
+    margin-bottom: 1rem;
+    font-size: .6rem;
+  }
+}
+
+// COMPANY
+
+.company-banner {
+  border-radius: 1.6rem;
+  padding: 1.25rem;
+  background: center / cover no-repeat url("/static-images/companies-banner-bg.png");
+  margin-bottom: 3rem;
+
+  @include tablet {
+    margin-bottom: 2rem;
+  }
+
+  @include mobile-big {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  &__logo {
+    max-width: 12.5rem;
+    width: 100%;
+    margin-bottom: 1rem;
+  }
+
+  &__content {
+    display: flex;
+    justify-content: space-between;
+
+    @include tablet {
+      flex-direction: column;
+      gap: 2rem;
+    }
+  }
+
+  &__title {
+    font-weight: 600;
+    font-size: 1.35rem;
+    letter-spacing: -0.01em;
+    max-width: 31.25rem;
+    width: 100%;
+    margin-bottom: 0;
+    display: inline-block;
+
+    @include mobile-big {
+      font-size: .9rem;
+      text-align: center;
+    }
+  }
+}
+
+.company-list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+
+  @include tablet {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  @include mobile-big {
+    justify-content: center;
+  }
+
+  &__image {
+    max-width: 8rem;
+    width: 100%;
+
+    @include tablet {
+      max-width: 6rem;
+    }
+
+    @include mobile-big {
+      max-width: 5rem;
+    }
+
+  }
+
+  &__link {
+    transition: transform .2s ease-in-out;
+
+    &:hover {
+      transform: scale(1.2);
+    }
+  }
+
+  &__nda {
+    background-color: $pink;
+    border-radius: 1.25rem;
+    padding: .5rem 1.25rem;
+    color: $bright;
+    text-align: center;
+    font-weight: 600;
+    font-size: 1.1rem;
+    grid-column: span 2;
+
+    @include mobile-big {
+      font-size: .8rem;
+    }
+  }
+}
+
+.company-backstage {
+
+  &__content {
+    display: flex;
+    gap: 1.5rem;
+
+    @include tablet {
+      flex-direction: column;
+      gap: 1.2rem;
+    }
+  }
+
+  &__col {
+    display: flex;
+    gap: .95rem;
+
+    &--left {
+      flex-basis: 50%;
+
+      @include tablet {
+        flex-basis: unset;
+        flex-direction: column;
+      }
+    }
+
+    &--right {
+      flex-direction: column;
+      flex-basis: 50%;
+
+      @include mobile-big {
+        flex-basis: unset;
+      }
+    }
+  }
+}
+
+.backstage-card {
+  padding: .8rem;
+  border-radius: 1.6rem;
+  font-size: .7rem;
+  color: #5b5b5b;
+
+  display: flex;
+  gap: .8rem;
+
+  transition: all .2s ease-in-out;
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+  }
+
+
+  &__preview {
+    max-width: 251px;
+    aspect-ratio: 1 / 1;
+
+    @include mobile-big {
+      max-width: unset;
+    }
+  }
+
+  &:hover {
+    box-shadow: 0 .2rem .2rem 0 $dark;
+  }
+
+  &__title {
+    font-style: italic;
+    font-weight: 600;
+    font-size: 1rem;
+    text-transform: uppercase;
+    margin-bottom: 1.2rem;
+  }
+
+  &__description {
+    margin-bottom: auto;
+
+    @include mobile-big {
+      margin-bottom: 3.5rem;
+    }
+  }
+
+  &--vertical {
+    flex-direction: column;
+    background: linear-gradient(141deg, rgba(245, 138, 178, .3) 0%, rgba(242, 223, 118, .3) 100%);
+    max-height: 30.85rem;
+    height: 100%;
+
+    @include tablet {
+      flex-direction: row;
+    }
+
+    @include mobile-big {
+      flex-direction: column;
+    }
+
+    &:last-child {
+      @include mobile-big {
+        flex-direction: column-reverse;
+      }
+    }
+  }
+
+  &--horizontal {
+    background: linear-gradient(141deg, rgb(255, 190, 152, .5) 0%, rgba(242, 223, 118, .3) 100%);
+    max-height: 14.7rem;
+    height: 100%;
+
+    @include mobile-big {
+      flex-direction: column;
+      max-height: unset;
+    }
+
+    &:last-child {
+      @include mobile-big {
+        flex-direction: column-reverse;
+      }
+    }
+  }
+}
+
+// ACTORS
+
+.actor {
+  &__title {
+    display: inline-block;
+    text-transform: uppercase;
+    position: relative;
+    z-index: 5;
+
+    &::before {
+      content: "";
+
+      border-radius: 0.75rem;
+      max-width: 10.4rem;
+      width: 100%;
+      height: 2.5rem;
+
+      background-color: $yellow;
+      position: absolute;
+      top: -15%;
+      left: -2.5%;
+      z-index: -5;
+    }
+  }
+
+  &__description {
+    max-width: 46.5rem;
+    width: 100%;
+
+    font-size: .8rem;
+  }
+
+  &__list {
+    display: flex;
+    gap: 1.5rem;
+    flex-direction: column;
+  }
+}
+</style>
