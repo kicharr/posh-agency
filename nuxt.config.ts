@@ -1,5 +1,34 @@
 export default defineNuxtConfig({
-    ssr: true,
+    ssr: false,
+    app: {
+        head: {
+            title: 'POSH.AGENCY - Агентство Анастасии Миллер',
+            htmlAttrs: {
+                lang: 'ru',
+            },
+            meta: [
+                {charset: 'utf-8'},
+                {
+                    name: 'description',
+                    content: 'POSH.AGENCY - Агентство Анастасии Миллер. Профессиональный менеджмент актёров в Москве.'
+                },
+                {
+                    name: 'viewport',
+                    content: 'width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no'
+                },
+            ],
+            link: [
+                {rel: 'icon', type: 'image/x-icon', href: '/favicon.ico'}
+            ],
+        },
+        pageTransition: {
+            name: 'page',
+            mode: 'out-in',
+        }
+    },
+    devServer: {
+        port: 8080
+    },
     alias: {
         "assets": "../assets",
     },

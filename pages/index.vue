@@ -1,14 +1,17 @@
-<script setup lang="ts">
-
+<script setup>
 import {useActorsStore} from "~/store/actors";
+import {useProjectsStore} from "~/store/projects";
+import ProjectCard from "~/components/Projects/ProjectCard.vue";
 
 const actorsStore = useActorsStore();
+const projectsStore = useProjectsStore();
 
 const actorsList = actorsStore.actorsList;
+const projectList = projectsStore.projectsList;
 
 
 definePageMeta({
-  layout: "default-landing"
+  layout: "landing-layout"
 })
 </script>
 
@@ -53,6 +56,59 @@ definePageMeta({
       </div>
     </section>
 
+    <section class="projects section container">
+      <div class="section__heading">
+        <h2 class="title-h2 projects__title">
+          <span>
+            Проекты
+          </span>
+          <span>
+            КИНОПРОЕКТЫ
+          </span>
+        </h2>
+        <div class="projects__info">
+          <p class="projects__description">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam semper odio nisi, et eleifend leo pulvinar ut.
+            Praesent orci nibh, blandit sit amet blandit vitae, venenatis et ante. Nullam mi tellus, lacinia eget
+            vestibulum eget, rutrum a tellus. Phasellus pharetra felis ante, a fermentum elit pharetra eu. Sed tincidunt
+            eleifend ullamcorper. Nullam at commodo ipsum.
+          </p>
+          <p class="projects__description">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam semper odio nisi, et eleifend leo pulvinar ut.
+            Praesent orci nibh, blandit sit amet blandit vitae, venenatis et ante.
+          </p>
+        </div>
+
+      </div>
+
+      <div class="projects__list">
+        <ProjectCard
+            v-for="(project, index) in projectList"
+            :key="index"
+            :projectData="project"
+        />
+      </div>
+    </section>
+
+    <section class="actor section container">
+      <div class="section__heading">
+        <h2 class="title-h2 actor__title"><span>работа</span> с актёрами</h2>
+        <p class="actor__description">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam semper odio nisi, et eleifend leo pulvinar ut.
+          Praesent orci nibh, blandit sit amet blandit vitae, venenatis et ante. Nullam mi tellus, lacinia eget
+          vestibulum eget, rutrum a tellus. Phasellus pharetra felis ante, a fermentum elit pharetra eu. Sed tincidunt
+          eleifend ullamcorper. Nullam at commodo ipsum.
+        </p>
+      </div>
+      <div class="actor__list">
+        <ActorCard
+            v-for="(actor, index) in actorsList"
+            :key="index"
+            :actorData="actor"
+        />
+      </div>
+    </section>
+
     <section class="company section container">
       <div class="company-banner">
         <div class="company-banner__logo">
@@ -67,43 +123,52 @@ definePageMeta({
 
           <div class="company-list">
             <NuxtLink class="company-list__link">
-              <img class="company-list__image" src="/static-images/mts-logo.svg"
+              <img class="company-list__image" src="/static-images/backstage/sberbank-logo.svg"
+                   alt="СБЕРБАНК">
+            </NuxtLink>
+            <NuxtLink class="company-list__link">
+              <img class="company-list__image" src="/static-images/backstage/mts-logo.svg"
                    alt="Смотреть бэкстейдж для компании МТС">
             </NuxtLink>
             <NuxtLink class="company-list__link">
-              <img class="company-list__image" src="/static-images/mts-logo.svg"
+              <img class="company-list__image" src="/static-images/backstage/yasno-logo.svg"
+                   alt="Сервис ЯСНО">
+            </NuxtLink>
+            <NuxtLink class="company-list__link">
+              <img class="company-list__image" src="/static-images/backstage/sportmaster.svg"
                    alt="Смотреть бэкстейдж для компании МТС">
             </NuxtLink>
             <NuxtLink class="company-list__link">
-              <img class="company-list__image" src="/static-images/mts-logo.svg"
-                   alt="Смотреть бэкстейдж для компании МТС">
+              <img class="company-list__image" src="/static-images/backstage/monochrome.svg"
+                   alt="monochrome">
             </NuxtLink>
             <NuxtLink class="company-list__link">
-              <img class="company-list__image" src="/static-images/mts-logo.svg"
-                   alt="Смотреть бэкстейдж для компании МТС">
+              <img class="company-list__image" src="/static-images/backstage/nextup.svg"
+                   alt="nextup">
             </NuxtLink>
             <NuxtLink class="company-list__link">
-              <img class="company-list__image" src="/static-images/mts-logo.svg"
-                   alt="Смотреть бэкстейдж для компании МТС">
+              <img class="company-list__image" src="/static-images/backstage/yandex.svg"
+                   alt="yandex">
             </NuxtLink>
             <NuxtLink class="company-list__link">
-              <img class="company-list__image" src="/static-images/mts-logo.svg"
-                   alt="Смотреть бэкстейдж для компании МТС">
+              <img class="company-list__image" style="width: 82px" src="/static-images/backstage/nuum.svg"
+                   alt="nuum">
             </NuxtLink>
-            <NuxtLink class="company-list__link">
-              <img class="company-list__image" src="/static-images/mts-logo.svg"
-                   alt="Смотреть бэкстейдж для компании МТС">
-            </NuxtLink>
-            <div class="company-list__nda">
-              <p>+13 NDA</p>
-            </div>
+            <!--            <div class="company-list__nda">-->
+            <!--              <p>+13 NDA</p>-->
+            <!--            </div>-->
           </div>
         </div>
       </div>
 
       <div class="company-backstage">
         <h2 class="title-h2 company-backstage__title">
-          Посмотри наши <span class="title-dash title-dash--pink"></span> <span>бэкстейджи</span>
+          <span>
+            Посмотри наши
+          </span>
+          <span>
+            бэкстейджи
+          </span>
         </h2>
         <div class="company-backstage__content">
           <div class="company-backstage__col company-backstage__col--left">
@@ -173,31 +238,16 @@ definePageMeta({
         </div>
       </div>
     </section>
-
-    <section class="actor section container">
-      <div class="section__heading">
-        <h2 class="title-h2 actor__title"><span>работа</span> с актёрами</h2>
-        <p class="actor__description">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam semper odio nisi, et eleifend leo pulvinar ut.
-          Praesent orci nibh, blandit sit amet blandit vitae, venenatis et ante. Nullam mi tellus, lacinia eget
-          vestibulum eget, rutrum a tellus. Phasellus pharetra felis ante, a fermentum elit pharetra eu. Sed tincidunt
-          eleifend ullamcorper. Nullam at commodo ipsum.
-        </p>
-      </div>
-      <div class="actor__list">
-        <ActorCard
-            v-for="(actor, index) in actorsList"
-            :key="index"
-            :actorData="actor"
-        />
-      </div>
-    </section>
   </main>
 
 
 </template>
 
 <style scoped lang="scss">
+.main {
+  overflow-x: hidden;
+}
+
 // HERO
 .hero {
   color: $bright;
@@ -313,11 +363,10 @@ definePageMeta({
 }
 
 // COMPANY
-
 .company-banner {
   border-radius: 1.6rem;
   padding: 1.25rem;
-  background: center / cover no-repeat url("/static-images/companies-banner-bg.png");
+  background: center / cover no-repeat url("/static-images/backstage/companies-banner-bg.png");
   margin-bottom: 3rem;
 
   @include tablet {
@@ -381,6 +430,10 @@ definePageMeta({
     max-width: 8rem;
     width: 100%;
 
+    &--big {
+      max-width: 14.15rem;
+    }
+
     @include tablet {
       max-width: 6rem;
     }
@@ -417,11 +470,46 @@ definePageMeta({
 
 .company-backstage {
 
+  &__title {
+    display: inline-flex;
+    gap: 3.5rem;
+    position: relative;
+    text-transform: uppercase;
+
+    @include mobile-big {
+      display: flex;
+      gap: .75rem;
+    }
+
+    span:first-child {
+      font-style: normal;
+      font-weight: 400;
+
+      @include mobile-big {
+        &::before {
+          left: 13.5rem;
+          right: 0;
+        }
+      }
+
+      @include mobile-small {
+        &::before {
+          left: 11.5rem;
+          right: 0;
+        }
+      }
+    }
+
+    span:last-child {
+      text-align: right;
+    }
+  }
+
   &__content {
     display: flex;
     gap: 1.5rem;
 
-    @include tablet {
+    @media (max-width: 1200px) {
       flex-direction: column;
       gap: 1.2rem;
     }
@@ -539,27 +627,41 @@ definePageMeta({
 }
 
 // ACTORS
-
 .actor {
   &__title {
     display: inline-block;
     text-transform: uppercase;
     position: relative;
     z-index: 5;
+  }
 
+  span {
     &::before {
-      content: "";
+      @include title-bg-yellow;
+      left: -2.5rem;
 
-      border-radius: 0.75rem;
-      max-width: 10.4rem;
-      width: 100%;
-      height: 2.5rem;
+      @include laptop {
+        left: -1.8rem;
+        width: 7.4rem;
+      }
 
-      background-color: $yellow;
-      position: absolute;
-      top: -15%;
-      left: -2.5%;
-      z-index: -5;
+      @include tablet {
+        width: 7.5rem;
+        height: 2rem;
+        left: -1.8rem;
+      }
+
+      @include mobile-big {
+        width: 7rem;
+        height: 2rem;
+        left: -1.5rem;
+      }
+
+      @include mobile-small {
+        width: 5.5rem;
+        height: 2rem;
+        left: -0.8rem;
+      }
     }
   }
 
@@ -574,6 +676,123 @@ definePageMeta({
     display: flex;
     gap: 1.5rem;
     flex-direction: column;
+  }
+}
+
+// PROJECTS
+.projects {
+
+  &__title {
+    text-transform: uppercase;
+    position: relative;
+    z-index: 5;
+
+    display: inline-flex;
+    gap: 3.5rem;
+
+    @include mobile-big {
+      display: flex;
+      gap: .75rem;
+    }
+
+    span {
+      &:last-child {
+        font-weight: 400;
+        font-style: normal;
+
+        @include mobile-big {
+          text-align: right;
+        }
+      }
+    }
+
+    &::before {
+      @include title-bg-yellow;
+      top: -0.2rem;
+      right: -2.5rem;
+
+      @include laptop {
+        top: -0.4rem;
+        right: -3.7rem;
+      }
+
+      @include tablet {
+        width: 7.4rem;
+        right: -0.7rem;
+      }
+
+      @include mobile-big {
+        width: 6.4rem;
+        height: 2rem;
+        left: unset;
+        right: -0.6rem;
+        top: 2rem;
+      }
+    }
+
+    span:first-child {
+      &::before {
+        @include mobile-big {
+          left: 7.5rem;
+        }
+
+        @include mobile-small {
+          left: 6rem;
+        }
+      }
+
+    }
+
+  }
+
+  &__info {
+    display: flex;
+    justify-content: space-between;
+
+    @include tablet {
+      flex-direction: column-reverse;
+      gap: 1rem;
+    }
+  }
+
+  &__description {
+    font-size: .8rem;
+    flex-basis: 60%;
+
+    &:last-child {
+      font-size: 0.7rem;
+      color: $pink;
+      flex-basis: 30%;
+
+      @include tablet {
+        max-width: 18rem;
+        margin-left: auto;
+      }
+
+      @include mobile-big {
+        max-width: unset;
+        flex-basis: unset;
+        margin-left: auto;
+      }
+    }
+
+    @include mobile-big {
+      flex-basis: unset;
+    }
+  }
+
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem .47rem;
+
+    @include tablet {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @include mobile-big {
+      grid-template-columns: repeat(1, 1fr);
+    }
   }
 }
 </style>

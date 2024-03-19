@@ -13,6 +13,14 @@ const changeMobileNavVissible = () => {
   }
 }
 
+watch(isMobileNavVissible, (val) => {
+  if (val) {
+    document.addEventListener('scroll', (e) => {
+      if (e) changeMobileNavVissible();
+    }, {once: true})
+  }
+})
+
 </script>
 
 <template>
@@ -43,16 +51,16 @@ const changeMobileNavVissible = () => {
       <div class="header-nav">
         <ul class="header-nav__list">
           <li>
-            <NuxtLink class="link-default">Работа с актёрами</NuxtLink>
+            <NuxtLink class="link-default header-nav__link">Работа с актёрами</NuxtLink>
           </li>
           <li>
-            <NuxtLink class="link-default">Кейсы</NuxtLink>
+            <NuxtLink class="link-default header-nav__link">Кейсы</NuxtLink>
           </li>
           <li>
-            <NuxtLink class="link-default">Кинопроекты</NuxtLink>
+            <NuxtLink class="link-default header-nav__link">Кинопроекты</NuxtLink>
           </li>
           <li>
-            <NuxtLink class="link-default">Контакты</NuxtLink>
+            <NuxtLink class="link-default header-nav__link">Контакты</NuxtLink>
           </li>
         </ul>
       </div>
@@ -80,16 +88,18 @@ const changeMobileNavVissible = () => {
         </button>
         <ul v-if="isMobileNavVissible" class="header-nav-burger__list">
           <li>
-            <NuxtLink class="link-default header-nav-burger__link" rel="nofollow">Работа с актёрами</NuxtLink>
+            <NuxtLink class="link-default  header-nav__link" rel="nofollow">Работа с актёрами
+            </NuxtLink>
           </li>
           <li>
-            <NuxtLink class="link-default header-nav-burger__link" rel="nofollow">Кейсы</NuxtLink>
+            <NuxtLink class="link-default  header-nav__link" rel="nofollow">Кейсы</NuxtLink>
           </li>
           <li>
-            <NuxtLink class="link-default header-nav-burger__link" rel="nofollow">Кинопроекты</NuxtLink>
+            <NuxtLink class="link-default header-nav__link " rel="nofollow">Кинопроекты
+            </NuxtLink>
           </li>
           <li>
-            <NuxtLink class="link-default header-nav-burger__link" rel="nofollow">Контакты</NuxtLink>
+            <NuxtLink class="link-default header-nav__link " rel="nofollow">Контакты</NuxtLink>
           </li>
         </ul>
       </div>
@@ -139,7 +149,7 @@ const changeMobileNavVissible = () => {
     display: flex;
     gap: 2.25rem;
 
-    @include tablet {
+    @media (max-width: 978px) {
       display: none;
     }
   }
@@ -148,63 +158,90 @@ const changeMobileNavVissible = () => {
 .header-nav-burger {
   display: none;
 
-  @include tablet {
+  @media (max-width: 978px) {
     display: block;
   }
 
   &__list {
     position: absolute;
-    top: 0;
-    right: 0;
-    background-color: $peach;
-    width: 100%;
+    top: 3.3rem;
+    right: 0.5rem;
+    background: $dark;
+    border-radius: 0.4rem 0 0.4rem 0.4rem;
+    padding: 2.5rem;
     z-index: 3;
-    padding: 5.5rem 1rem 1rem 1rem;
 
-    -webkit-animation: showElement alternate .5s;
-    -o-animation: showElement alternate .5s;
-    animation: showElement alternate .5s;
+    @include defaultShowAnimation;
+
+    li {
+      margin-bottom: 1.75rem;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+
+    @include mobile-big {
+      top: 4.5rem;
+    }
   }
 
   &__button {
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
     gap: .15rem;
+
+    max-width: 2.5rem;
+    width: 100%;
+    height: 2.5rem;
+    border-radius: 1.3rem;
+    padding: 0.7rem;
+    background: $dark;
 
     position: relative;
     z-index: 4;
 
+    transition: all .5s ease-in-out;
+
     span {
       display: inline-block;
       border-radius: 1.6rem;
-      width: 2rem;
+      width: 1.5rem;
       height: .15rem;
       background: $burger-gradient;
       transition: all .5s ease-in-out;
     }
-  }
 
-  &__button.mobile-nav-show {
-    span {
-      display: none;
-    }
+    &.mobile-nav-show {
+      span {
+        display: none;
 
-    span:first-child {
-      display: block;
-      position: absolute;
-      top: 0;
-      left: -30px;
-      transform: rotate(45deg);
-    }
+        &:first-child {
+          display: block;
+          transform: rotate(45deg);
+          position: relative;
+        }
 
-    span:last-child {
-      display: block;
-      position: absolute;
-      top: 0;
-      left: -30px;
-      transform: rotate(-45deg);
+        &:last-child {
+          position: absolute;
+          display: block;
+          transform: rotate(-45deg);
+        }
+      }
     }
   }
+}
+
+.mobile-nav-show {
+  border-radius: 1.3rem 1.3rem 0 0;
+  padding: 0.7rem;
+  background: $dark;
+
+  -webkit-animation: showElement alternate .5s;
+  -o-animation: showElement alternate .5s;
+  animation: showElement alternate .5s;
 }
 
 .header-action {

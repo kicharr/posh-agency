@@ -27,6 +27,11 @@ p {
     padding: 0;
 }
 
+pre {
+    margin: 0;
+    font-family: inherit;
+}
+
 a {
     background-color: transparent;
     color: inherit;
