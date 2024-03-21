@@ -13,9 +13,7 @@ const props = defineProps(['projectData']);
       </div>
       <div class="project-card__name">
         <p>{{ projectData?.name }}</p>
-
       </div>
-
     </div>
   </NuxtLink>
 </template>
@@ -25,7 +23,6 @@ const props = defineProps(['projectData']);
   max-width: 19.6rem;
   width: 100%;
   overflow: hidden;
-
   border-radius: 1.6rem;
   padding: .8rem .8rem 1.2rem .8rem;
 
@@ -37,6 +34,10 @@ const props = defineProps(['projectData']);
 
   @include mobile-big {
     max-width: unset;
+  }
+
+  &__content {
+    overflow: hidden;
   }
 
   &::before {
@@ -67,18 +68,19 @@ const props = defineProps(['projectData']);
         rgb(255, 255, 255) 100%);
   }
 
-  &:hover {
-    box-shadow: 0 .2rem .2rem 0 $dark;
-  }
-
   &__preview {
-    max-width: 18rem;
-    width: 100%;
     border-radius: 1.25rem;
     margin-bottom: .4rem;
+    max-width: 18rem;
+    width: 100%;
+    overflow: hidden;
 
-    @include mobile-big {
-      max-width: unset;
+    img {
+      transition: $transitionTransform;
+
+      @include mobile-big {
+        max-width: unset;
+      }
     }
   }
 
@@ -87,6 +89,14 @@ const props = defineProps(['projectData']);
     font-weight: 600;
     font-size: 0.9rem;
     text-transform: uppercase;
+  }
+
+  &:hover {
+    box-shadow: 0 .2rem .2rem 0 $dark;
+
+    img {
+      transform: scale(1.1);
+    }
   }
 }
 </style>

@@ -1,12 +1,12 @@
 <script setup>
-import {useActorsStore} from "~/store/actors";
+import {useArtistsStore} from "~/store/artists.js";
 import {useProjectsStore} from "~/store/projects";
 import ProjectCard from "~/components/Projects/ProjectCard.vue";
 
-const actorsStore = useActorsStore();
+const artistsStore = useArtistsStore();
 const projectsStore = useProjectsStore();
 
-const actorsList = actorsStore.actorsList;
+const artistsList = artistsStore.artistsList;
 const projectList = projectsStore.projectsList;
 
 
@@ -56,6 +56,26 @@ definePageMeta({
       </div>
     </section>
 
+    <section id="artists" class="artists section container">
+      <div class="section__heading">
+        <h2 class="title-h2 artists__title"><span>работа</span> с актёрами</h2>
+        <p class="artists__description">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam semper odio nisi, et eleifend leo pulvinar ut.
+          Praesent orci nibh, blandit sit amet blandit vitae, venenatis et ante. Nullam mi tellus, lacinia eget
+          vestibulum eget, rutrum a tellus. Phasellus pharetra felis ante, a fermentum elit pharetra eu. Sed tincidunt
+          eleifend ullamcorper. Nullam at commodo ipsum.
+        </p>
+      </div>
+      <div class="artists__list">
+        <ArtistCard
+            v-for="(artist, index) in artistsList.slice(0, 4)"
+            :key="index"
+            :artistData="artist"
+        />
+      </div>
+      <NuxtLink to="/artists/" class="button artists__button">Смотерть всех</NuxtLink>
+    </section>
+
     <section class="projects section container">
       <div class="section__heading">
         <h2 class="title-h2 projects__title">
@@ -90,25 +110,6 @@ definePageMeta({
       </div>
     </section>
 
-    <section class="actor section container">
-      <div class="section__heading">
-        <h2 class="title-h2 actor__title"><span>работа</span> с актёрами</h2>
-        <p class="actor__description">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam semper odio nisi, et eleifend leo pulvinar ut.
-          Praesent orci nibh, blandit sit amet blandit vitae, venenatis et ante. Nullam mi tellus, lacinia eget
-          vestibulum eget, rutrum a tellus. Phasellus pharetra felis ante, a fermentum elit pharetra eu. Sed tincidunt
-          eleifend ullamcorper. Nullam at commodo ipsum.
-        </p>
-      </div>
-      <div class="actor__list">
-        <ActorCard
-            v-for="(actor, index) in actorsList"
-            :key="index"
-            :actorData="actor"
-        />
-      </div>
-    </section>
-
     <section class="company section container">
       <div class="company-banner">
         <div class="company-banner__logo">
@@ -136,7 +137,7 @@ definePageMeta({
             </NuxtLink>
             <NuxtLink class="company-list__link">
               <img class="company-list__image" src="/static-images/backstage/sportmaster.svg"
-                   alt="Смотреть бэкстейдж для компании МТС">
+                   alt="Спортмастер">
             </NuxtLink>
             <NuxtLink class="company-list__link">
               <img class="company-list__image" src="/static-images/backstage/monochrome.svg"
@@ -151,12 +152,9 @@ definePageMeta({
                    alt="yandex">
             </NuxtLink>
             <NuxtLink class="company-list__link">
-              <img class="company-list__image" style="width: 82px" src="/static-images/backstage/nuum.svg"
+              <img class="company-list__image" src="/static-images/backstage/nuum.svg"
                    alt="nuum">
             </NuxtLink>
-            <!--            <div class="company-list__nda">-->
-            <!--              <p>+13 NDA</p>-->
-            <!--            </div>-->
           </div>
         </div>
       </div>
@@ -251,6 +249,7 @@ definePageMeta({
 // HERO
 .hero {
   color: $bright;
+  background: rgba(0, 0, 0, .5);
   background: center / cover no-repeat url("/static-images/hero-bg.png");
 }
 
@@ -258,7 +257,7 @@ definePageMeta({
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
-  padding: 17.5rem .5rem;
+  padding: 17.5rem .5rem 10rem;
 
   @include tablet {
     flex-direction: column;
@@ -420,6 +419,7 @@ definePageMeta({
   @include tablet {
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
   }
 
   @include mobile-big {
@@ -445,7 +445,7 @@ definePageMeta({
   }
 
   &__link {
-    transition: transform .2s ease-in-out;
+    transition: $transitionTransform;
 
     &:hover {
       transform: scale(1.2);
@@ -626,8 +626,11 @@ definePageMeta({
   }
 }
 
-// ACTORS
-.actor {
+// artists
+.artists {
+  display: flex;
+  flex-direction: column;
+
   &__title {
     display: inline-block;
     text-transform: uppercase;
@@ -676,6 +679,11 @@ definePageMeta({
     display: flex;
     gap: 1.5rem;
     flex-direction: column;
+  }
+
+  &__button {
+    color: $dark;
+    margin: 3rem auto 2rem;
   }
 }
 

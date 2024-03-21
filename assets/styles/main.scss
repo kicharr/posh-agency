@@ -197,6 +197,8 @@ body {
 
 .button {
   border-radius: 1.6rem;
+  display: inline-block;
+  text-align: center;
   border: 0.05rem solid $dark;
   background-color: transparent;
   padding: .8rem 1.6rem;
@@ -228,6 +230,8 @@ body {
 .list-default {
 
   li {
+    display: flex;
+    align-items: center;
     padding-left: .75rem;
     position: relative;
 

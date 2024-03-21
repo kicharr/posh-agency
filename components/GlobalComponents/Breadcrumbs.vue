@@ -13,8 +13,8 @@ const props = defineProps({
       </li>
       <img class="breadcrumbs__image" src="/static-images/icons/breadcrumbs-arrow.svg" alt="-">
       <li class="breadcrumbs__item">
-        <NuxtLink :to="neededLink?.link" class="link-default breadcrumbs__link">
-          {{ neededLink?.title }}
+        <NuxtLink to="/artists" class="link-default breadcrumbs__link">
+          Актёры
         </NuxtLink>
       </li>
       <img class="breadcrumbs__image" src="/static-images/icons/breadcrumbs-arrow.svg" alt="-">

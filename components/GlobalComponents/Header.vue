@@ -20,22 +20,21 @@ watch(isMobileNavVissible, (val) => {
     }, {once: true})
   }
 })
-
 </script>
 
 <template>
-  <header :class="`header header-${theme ? theme : 'light'}`">
+  <header :class="`header header-${theme ? theme : 'dark'}`">
     <div class="header-action header-action--mobile">
       <ul class="header-action__list container">
         <li>
-          <NuxtLink class="link-default link-default--big">
-            + 7 (322) 874-12-12
-          </NuxtLink>
+          <a href="tel:+79175452084" class="link-default link-default--big">
+            + 7 (917) 545-20-84
+          </a>
         </li>
         <li>
-          <NuxtLink class="link-default link-default--big">
-            anastasiya@yandex.ru
-          </NuxtLink>
+          <a href="mailto:me@orlshrl.ru" class="link-default link-default--big">
+            me@orlshrl.ru
+          </a>
         </li>
       </ul>
     </div>
@@ -68,14 +67,14 @@ watch(isMobileNavVissible, (val) => {
       <div class="header-action header-action--desktop">
         <ul class="header-action__list">
           <li>
-            <NuxtLink class="link-default link-default--big">
-              + 7 (322) 874-12-12
-            </NuxtLink>
+            <a href="tel:+79175452084" class="link-default link-default--big">
+              + 7 (917) 545-20-84
+            </a>
           </li>
           <li>
-            <NuxtLink class="link-default link-default--big">
-              anastasiya@yandex.ru
-            </NuxtLink>
+            <a href="mailto:me@orlshrl.ru" class="link-default link-default--big">
+              me@orlshrl.ru
+            </a>
           </li>
         </ul>
       </div>
@@ -108,8 +107,6 @@ watch(isMobileNavVissible, (val) => {
 </template>
 
 <style scoped lang="scss">
-
-
 .header {
   padding: .8rem 0;
   color: $dark;
@@ -118,6 +115,7 @@ watch(isMobileNavVissible, (val) => {
   top: 0;
   left: 0;
   width: 100%;
+  z-index: 10;
 
   @include mobile-big {
     padding: .4rem 0;
@@ -126,6 +124,10 @@ watch(isMobileNavVissible, (val) => {
 
 .header-light {
   color: $bright;
+}
+
+.header-dark {
+  position: relative;
 }
 
 .header-content {
@@ -174,6 +176,7 @@ watch(isMobileNavVissible, (val) => {
     @include defaultShowAnimation;
 
     li {
+      color: $bright;
       margin-bottom: 1.75rem;
 
       &:last-child {
