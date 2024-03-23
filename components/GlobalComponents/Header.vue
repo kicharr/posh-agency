@@ -50,7 +50,7 @@ watch(isMobileNavVissible, (val) => {
       <div class="header-nav">
         <ul class="header-nav__list">
           <li>
-            <NuxtLink class="link-default header-nav__link">Работа с актёрами</NuxtLink>
+            <NuxtLink to="/artists" class="link-default header-nav__link">Работа с актёрами</NuxtLink>
           </li>
           <li>
             <NuxtLink class="link-default header-nav__link">Кейсы</NuxtLink>
@@ -87,7 +87,7 @@ watch(isMobileNavVissible, (val) => {
         </button>
         <ul v-if="isMobileNavVissible" class="header-nav-burger__list">
           <li>
-            <NuxtLink class="link-default  header-nav__link" rel="nofollow">Работа с актёрами
+            <NuxtLink to="/artists" class="link-default  header-nav__link" rel="nofollow">Работа с актёрами
             </NuxtLink>
           </li>
           <li>
@@ -110,7 +110,7 @@ watch(isMobileNavVissible, (val) => {
 .header {
   padding: .8rem 0;
   color: $dark;
-  border-bottom: .05rem solid $bright;
+  border-bottom: .05rem solid #cbcbca;
   position: absolute;
   top: 0;
   left: 0;

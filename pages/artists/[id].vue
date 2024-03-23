@@ -67,10 +67,10 @@ definePageMeta({
         </div>
 
         <div class="actor-hero__links">
-          <a :href="artistData?.additionalInformation?.kinoteatrLink" target="_blank">
+          <a v-if="artistData?.additionalInformation?.kinoteatrLink" :href="artistData?.additionalInformation?.kinoteatrLink" target="_blank">
             <img class="actor-link" src="/static-images/artists/kino-teatr.svg" alt="Ссылка на страницу кинотеатра">
           </a>
-          <a :href="artistData?.additionalInformation?.kinopoiskLink" target="_blank">
+          <a v-if="artistData?.additionalInformation?.kinopoiskLink" :href="artistData?.additionalInformation?.kinopoiskLink" target="_blank">
             <img class="actor-link" src="/static-images/artists/kinopoisk.svg" alt="Ссылка на страницу кинопоиска">
           </a>
         </div>
@@ -107,7 +107,7 @@ definePageMeta({
               {{ artistData?.commonFeatures?.weight }}
             </p>
           </div>
-          <div class="info-content__item">
+          <div v-if="artistData?.commonFeatures?.clothingSize" class="info-content__item">
             <span class="info-content__title">
               Размер одежды
             </span>
@@ -115,7 +115,7 @@ definePageMeta({
               {{ artistData?.commonFeatures?.clothingSize }}
             </p>
           </div>
-          <div class="info-content__item">
+          <div v-if="artistData?.commonFeatures?.shoeSize" class="info-content__item">
             <span class="info-content__title">
               Размер обуви
             </span>

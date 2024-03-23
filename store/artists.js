@@ -4,9 +4,10 @@ export const useArtistsStore = defineStore('artists', () => {
     const artistsList = ref([
         {
             id: 'slava-kopeykin',
-            preview: "/slava-kopeykin/slava-kopeykin-preview.png",
+            category: 'actor',
+            preview: "/slava-kopeykin/slava-kopeykin-preview.webp",
             commonFeatures: {
-                photo: "/artists/slava-kopeykin/slava-kopeykin.png",
+                photo: "/artists/slava-kopeykin/slava-kopeykin.webp",
                 name: "Слава Копейкин",
                 dateBirth: '24.03.1983',
                 growth: 185,
@@ -18,9 +19,9 @@ export const useArtistsStore = defineStore('artists', () => {
                 voice: "сопрано",
                 type: "общий европейский",
                 photos: [
-                    'artists/slava-kopeykin/slava-kopeykin-1.png',
-                    'artists/slava-kopeykin/slava-kopeykin-2.png',
-                    'artists/slava-kopeykin/slava-kopeykin-3.png'
+                    'artists/slava-kopeykin/slava-kopeykin-1.webp',
+                    'artists/slava-kopeykin/slava-kopeykin-2.webp',
+                    'artists/slava-kopeykin/slava-kopeykin-3.webp'
                 ],
                 vizitingCard: 'https://www.youtube.com/embed/CxhIyXpG9xk'
             },
@@ -64,10 +65,209 @@ export const useArtistsStore = defineStore('artists', () => {
             ]
         },
         {
-            id: 'philip-ershov',
-            preview: "philip-ershov/philip-ershov-preview.png",
+            id: 'gleb-shevnin',
+            preview: "gleb-shevnin/gleb-shevnin-preview.webp",
+            category: 'actor',
             commonFeatures: {
-                photo: "artists/philip-ershov/philip-ershov.png",
+                photo: "artists/gleb-shevnin/gleb-shevnin.webp",
+                name: "Глеб Шевнин",
+                dateBirth: '07.08.1999',
+                growth: 190,
+                weight: 60,
+                clothingSize: 'XL',
+                shoeSize: 45,
+                eyes: 'зеленый',
+                foreignLanguages: ['английский (свободный-разговорный)'],
+                voice: 'баритон',
+                hairColor: 'брюнет',
+                dance: ['общетеатральный (любительский)'],
+                vocal: ['драматический (любительский)'],
+                type: "общий",
+                photos: [
+                    '/artists/gleb-shevnin/gleb-shevnin-1.webp',
+                    '/artists/gleb-shevnin/gleb-shevnin-2.webp',
+                    '/artists/gleb-shevnin/gleb-shevnin-3.webp'
+                ],
+                vizitingCard: 'https://www.youtube.com/embed/PQWHXo-a3uY'
+            },
+            additionalInformation: {
+                nationality: "Россия",
+                city:
+                    "Москва, Московская область, Россия",
+                driving:
+                    'Права категории В, A',
+                tvWork:
+                    null,
+                externalFeatures: 'пирсинг',
+                moreInfo: ['Британский акцент, обучение в гимназии Лондона', 'баскетбол (профессиональный)', 'футбол (любительский)', 'фехтование (любительский)'],
+                skills: ['жонглирование', 'клоунада', 'озвучивание'],
+                kinopoiskLink: 'https://www.kinopoisk.ru/name/6432509/',
+                kinoteatrLink: 'https://www.kino-teatr.ru/kino/acter/m/ros/574087/bio/'
+            },
+            filmography: [
+                {
+                    name: "Мама из прошлого (в производстве) -  Мерцалов",
+                    year: 2024,
+                    type: 'default'
+                },
+                {
+                    name: "Белая полоса (в производстве) -  Антон",
+                    year: 2024,
+                    type: 'default'
+                },
+                {
+                    name: "Френдзона-2",
+                    year: 2024,
+                    type: 'best'
+                },
+                {
+                    name: "Теория больших денег - Илья (главная роль)",
+                    year: 2023,
+                    type: 'best'
+                },
+                {
+                    name: "Наводнение - Спиридонов",
+                    year: 2023,
+                    type: 'default'
+                },
+                {
+                    name: "Контейнер-2 - Макс",
+                    year: 2022,
+                    type: 'default'
+                },
+                {
+                    name: "Психология преступления. Дуэль - Артём",
+                    year: 2021,
+                    type: 'default'
+                },
+                {
+                    name: "Динозавр-3 - Ганс",
+                    year: 2021,
+                    type: 'default'
+                },
+            ]
+        },
+        {
+            id: 'danya-kiselyov',
+            preview: "danya-kiselyov/danya-kiselyov-preview.webp",
+            category: 'actor',
+            commonFeatures: {
+                photo: "artists/danya-kiselyov/danya-kiselyov.webp",
+                name: "Даня Киселёв",
+                dateBirth: '18.02.2000',
+                growth: 180,
+                weight: 70,
+                clothingSize: 'M',
+                shoeSize: '44-45',
+                eyes: 'карий',
+                foreignLanguages: ['украинский (разговорный)', 'английский (базовый)'],
+                voice: 'баритон',
+                hairColor: 'шатен',
+                dance: ['общетеатральный (любительский)',],
+                vocal: ['академический (любительский)'],
+                type: "европейский",
+                photos: [
+                    '/artists/danya-kiselyov/danya-kiselyov-1.webp',
+                    '/artists/danya-kiselyov/danya-kiselyov-2.webp',
+                    '/artists/danya-kiselyov/danya-kiselyov-3.webp'
+                ],
+                vizitingCard: null
+            },
+            additionalInformation: {
+                nationality: "Россия",
+                city: "Москва, Московская область, Россия",
+                driving: 'Права категории В, А',
+                tvWork: null,
+                externalFeatures: null,
+                moreInfo: ['плавание (полупрофессиональный)', 'горные лыжи (любительский)', 'акробатика (любительский)', 'фехтование (любительский)'],
+                skills: null,
+                kinopoiskLink: 'https://www.kinopoisk.ru/name/2454700/',
+                kinoteatrLink: 'https://www.kino-teatr.ru/kino/acter/m/ros/338299/bio/'
+            },
+            filmography: [
+                {
+                    name: "Лихие (в производстве) - Витя Шпак",
+                    year: 2025,
+                    type: 'default'
+                },
+                {
+                    name: "Тайны Карениной - Левин",
+                    year: 2024,
+                    type: 'default'
+                },
+                {
+                    name: "Сумма квадратов катетов - Марк (главная роль)",
+                    year: 2024,
+                    type: 'best'
+                },
+                {
+                    name: "Слово пацана. Кровь на асфальте - Цыган",
+                    year: 2023,
+                    type: 'best'
+                },
+                {
+                    name: "Закрытый уровень - Хрыч (главная роль)",
+                    year: 2023,
+                    type: 'default'
+                },
+                {
+                    name: "Разрешите обратиться - Дэн (главная роль)",
+                    year: 2023,
+                    type: 'best'
+                },
+                {
+                    name: "Ангел мести (в производстве) - Андрей Корсаков",
+                    year: 2024,
+                    type: 'default'
+                },
+                {
+                    name: "Жена Олигарха - Никита Гуров",
+                    year: 2022,
+                    type: 'best'
+                },
+                {
+                    name: "Молодёжка. Студенты (в производстве) - Олег Валенцов",
+                    year: 2024,
+                    type: 'best'
+                },
+                {
+                    name: "Трудные подростки-5 - Тима",
+                    year: 2024,
+                    type: 'best'
+                },
+                {
+                    name: "Елки 10 - Кирилл",
+                    year: 2023,
+                    type: 'default'
+                },
+                {
+                    name: "Переговорщик -  Слава/Слоу",
+                    year: 2022,
+                    type: 'default'
+                },
+                {
+                    name: "Смешная история - Даниель",
+                    year: 2023,
+                    type: 'default'
+                },
+                {
+                    name: "Райцентр - Антон в молодости",
+                    year: 2023,
+                    type: 'default'
+                },
+                {
+                    name: "Здоровый человек - Рожа",
+                    year: 2022,
+                    type: 'default'
+                },
+            ]
+        },
+        {
+            id: 'philip-ershov',
+            preview: "philip-ershov/philip-ershov-preview.webp",
+            category: 'actor',
+            commonFeatures: {
+                photo: "artists/philip-ershov/philip-ershov.webp",
                 name: "Филипп Ершов",
                 dateBirth: '04.09.1993',
                 growth: 180,
@@ -83,9 +283,9 @@ export const useArtistsStore = defineStore('artists', () => {
                 hairColor: 'каштановый',
                 type: "европейский",
                 photos: [
-                    '/artists/philip-ershov/philip-ershov-1.png',
-                    '/artists/philip-ershov/philip-ershov-2.png',
-                    '/artists/philip-ershov/philip-ershov-3.png'
+                    '/artists/philip-ershov/philip-ershov-1.webp',
+                    '/artists/philip-ershov/philip-ershov-2.webp',
+                    '/artists/philip-ershov/philip-ershov-3.webp'
                 ],
                 vizitingCard: null
             },
@@ -206,10 +406,265 @@ export const useArtistsStore = defineStore('artists', () => {
             ]
         },
         {
-            id: 'arseny-weiss',
-            preview: "arseny-weiss/arseny-weiss-preview.png",
+            id: 'sasha-yugov',
+            preview: "sasha-yugov/sasha-yugov-preview.webp",
+            category: 'actor',
             commonFeatures: {
-                photo: "artists/arseny-weiss/arseny-weiss.png",
+                photo: "artists/sasha-yugov/sasha-yugov.webp",
+                name: "Саша Югов",
+                dateBirth: '14.08.1997',
+                growth: 178,
+                weight: 60,
+                clothingSize: '44-46',
+                shoeSize: 41,
+                eyes: 'серо-зеленый',
+                foreignLanguages: null,
+                voice: 'баритон',
+                hairColor: 'брюнет',
+                dance: [
+                    'народные (полупрофессиональный)',
+                    'брейк (полупрофессиональный)',
+                    'хип-хоп (полупрофессиональный)',
+                    'хореография (полупрофессиональный)'
+                ],
+                vocal: ['драматический (любительский)'],
+                type: "европейский",
+                photos: [
+                    '/artists/sasha-yugov/sasha-yugov-1.webp',
+                    '/artists/sasha-yugov/sasha-yugov-2.webp',
+                    '/artists/sasha-yugov/sasha-yugov-3.webp'
+                ],
+                vizitingCard: 'https://www.youtube.com/embed/aCx0gQS7Qvc'
+            },
+            additionalInformation: {
+                nationality: "Россия",
+                city:
+                    "Москва, Московская область, Россия",
+                driving:
+                    'Права категории В, А',
+                tvWork:
+                    null,
+                externalFeatures:
+                    null,
+                moreInfo: ['Занимался в хореографическом коллективе (9 лет)'],
+                skills: ['жонглирование'],
+                kinopoiskLink: 'https://www.kinopoisk.ru/name/6370841/',
+                kinoteatrLink: 'https://www.kino-teatr.ru/kino/acter/m/ros/525117/bio/'
+            },
+            filmography: [
+                {
+                    name: "Тур с Иванушками",
+                    year: 2024,
+                    type: 'default'
+                },
+                {
+                    name: "Юг (в производстве) - полицейский",
+                    year: 2024,
+                    type: 'default'
+                },
+                {
+                    name: "Выжившие 2 - Петрусик",
+                    year: 2024,
+                    type: 'default'
+                },
+                {
+                    name: "В парке Чаир (в производстве) - Ося",
+                    year: 2024,
+                    type: 'default'
+                },
+                {
+                    name: "Мафия - дело семейное - лейтенант Кустицкий",
+                    year: 2024,
+                    type: 'best'
+                },
+                {
+                    name: "Я делаю шаг - Генка",
+                    year: 2023,
+                    type: 'default'
+                },
+                {
+                    name: "Немодельное агентство - Ваня, оператор",
+                    year: 2023,
+                    type: 'default'
+                },
+                {
+                    name: "Лада Голд - Кот",
+                    year: 2023,
+                    type: 'default'
+                },
+                {
+                    name: "Загадай любовь -  Коля",
+                    year: 2023,
+                    type: 'default'
+                },
+                {
+                    name: "Стая - Лерой",
+                    year: 2022,
+                    type: 'best'
+                },
+                {
+                    name: "Салют, Начальник - Витёк",
+                    year: 2022,
+                    type: 'default'
+                },
+                {
+                    name: "Предпоследняя инстанция-2 - Арсений Иванович",
+                    year: 2022,
+                    type: 'default'
+                },
+                {
+                    name: "Переговорщик -  Слава/Слоу",
+                    year: 2022,
+                    type: 'default'
+                },
+                {
+                    name: "Ловец снов - Саша, дежурный",
+                    year: 2022,
+                    type: 'best'
+                },
+                {
+                    name: "Эпидемия-2 - Шнур",
+                    year: 2022,
+                    type: 'default'
+                },
+                {
+                    name: "Светлячок - хулиган",
+                    year: 2021,
+                    type: 'default'
+                },
+            ]
+        },
+        {
+            id: 'yana-enzhaeva',
+            preview: "yana-enzhaeva/yana-enzhaeva-preview.webp",
+            category: 'actresses',
+            commonFeatures: {
+                photo: "artists/yana-enzhaeva/yana-enzhaeva.webp",
+                name: "Яна Енжаева",
+                dateBirth: '26.09.1994',
+                growth: 170,
+                weight: null,
+                clothingSize: null,
+                shoeSize: null,
+                eyes: 'Карие',
+                foreignLanguages: null,
+                voice: null,
+                hairColor: 'Каштановые',
+                dance: null,
+                vocal: null,
+                type: "Европейский",
+                photos: [
+                    '/artists/yana-enzhaeva/yana-enzhaeva-1.webp',
+                    '/artists/yana-enzhaeva/yana-enzhaeva-2.webp',
+                    '/artists/yana-enzhaeva/yana-enzhaeva-3.webp'
+                ],
+                vizitingCard: null
+            },
+            additionalInformation: {
+                nationality: "Россия",
+                city: "Москва, Московская область, Россия",
+                driving: null,
+                tvWork: null,
+                externalFeatures: null,
+                moreInfo: null,
+                skills: null,
+                kinopoiskLink: 'https://www.kinopoisk.ru/name/3672503/',
+                kinoteatrLink: 'https://www.kino-teatr.ru/kino/acter/w/ros/405422/foto/1456469/'
+            },
+            filmography: [
+                {
+                    name: "Праздники-2 (в производстве) Юля — главная роль",
+                    year: 2024,
+                    type: 'best'
+                },
+                {
+                    name: "Праздники Юля Пыжова — главная роль  дочь Натальи и Виктора",
+                    year: 2023,
+                    type: 'default'
+                },
+                {
+                    name: "Стражник - Юлия Борисоглебская — главная роль",
+                    year: 2022,
+                    type: 'best'
+                },
+                {
+                    name: "Приворот. Чёрное венчание - Женя — главная роль",
+                    year: 2021,
+                    type: 'best'
+                },
+                {
+                    name: "Дура - Катя - главная роль",
+                    year: 2021,
+                    type: 'best'
+                },
+                {
+                    name: "Ищейка-4 - Вера Василенко",
+                    year: 2020,
+                    type: 'default'
+                },
+                {
+                    name: "ИП Пирогова-2",
+                    year: 2019,
+                    type: 'default'
+                },
+                {
+                    name: "Молодёжка",
+                    year: 2018,
+                    type: 'best'
+                },
+                {
+                    name: "Бесстыдники - Юлия Сундукова",
+                    year: 2017,
+                    type: 'default'
+                },
+                {
+                    name: "Отель Элеон (все сезоны) - дочь Колесниченко",
+                    year: 2016,
+                    type: 'best'
+                },
+                {
+                    name: "Вы все меня бесите - Алиса",
+                    year: 2016,
+                    type: 'default'
+                },
+                {
+                    name: "Sпарта - Анна Мелкова",
+                    year: 2016,
+                    type: 'default'
+                },
+                {
+                    name: "Метод",
+                    year: 2015,
+                    type: 'best'
+                },
+                {
+                    name: "Легко ли быть молодым? - Света (Главная роль)",
+                    year: 2015,
+                    type: 'default'
+                },
+                {
+                    name: "Эти глаза напротив - Анжела",
+                    year: 2015,
+                    type: 'default'
+                },
+                {
+                    name: "Кухня в Париже - девушка",
+                    year: 2014,
+                    type: 'default'
+                },
+                {
+                    name: "Выпускной - Маша Шалаева",
+                    year: 2014,
+                    type: 'default'
+                },
+            ]
+        },
+        {
+            id: 'arseny-weiss',
+            preview: "arseny-weiss/arseny-weiss-preview.webp",
+            category: 'actor',
+            commonFeatures: {
+                photo: "artists/arseny-weiss/arseny-weiss.webp",
                 name: "Арсений Вейс",
                 dateBirth: '23.02.2005',
                 growth: 184,
@@ -232,9 +687,9 @@ export const useArtistsStore = defineStore('artists', () => {
                 hairColor: 'темно-русый',
                 type: "европейский",
                 photos: [
-                    '/artists/arseny-weiss/arseny-weiss-1.png',
-                    '/artists/arseny-weiss/arseny-weiss-2.png',
-                    '/artists/arseny-weiss/arseny-weiss-3.png'
+                    '/artists/arseny-weiss/arseny-weiss-1.webp',
+                    '/artists/arseny-weiss/arseny-weiss-2.webp',
+                    '/artists/arseny-weiss/arseny-weiss-3.webp'
                 ],
                 vizitingCard: 'https://www.youtube.com/embed/Nap4eXNM_hY'
             },
@@ -287,10 +742,107 @@ export const useArtistsStore = defineStore('artists', () => {
             ]
         },
         {
-            id: 'dmitry-zhuravlev',
-            preview: "dmitry-zhuravlev/dmitry-zhuravlev-preview.png",
+            id: 'tatiana-marakhonich',
+            preview: "tatiana-marakhonich/tatiana-marakhonich-preview.webp",
+            category: 'actresses',
             commonFeatures: {
-                photo: "artists/dmitry-zhuravlev/dmitry-zhuravlev.png",
+                photo: "artists/tatiana-marakhonich/tatiana-marakhonich.webp",
+                name: "Татьяна Марахонич",
+                dateBirth: '27.05.1998',
+                growth: 177,
+                weight: 53,
+                clothingSize: 42,
+                shoeSize: 38,
+                eyes: 'зеленый',
+                foreignLanguages: ["английский (свободный)"],
+                voice: 'сопрано',
+                hairColor: 'шатенка',
+                dance: [
+                    'бальные (любительский)',
+                    'джаз-модерн (любительский)',
+                    'народные (любительский)'
+                ],
+                vocal: ['академический (любительский)'],
+                type: "общий славянский европейский",
+                photos: [
+                    '/artists/tatiana-marakhonich/tatiana-marakhonich-1.webp',
+                    '/artists/tatiana-marakhonich/tatiana-marakhonich-2.webp',
+                    '/artists/tatiana-marakhonich/tatiana-marakhonich-3.webp'
+                ],
+                vizitingCard: 'https://www.youtube.com/embed/8mvIlmxXOTM'
+            },
+            additionalInformation: {
+                nationality: "Россия",
+                city: "Москва, Московская область, Россия",
+                driving: null,
+                tvWork: null,
+                externalFeatures: null,
+                moreInfo: [
+                    'волейбол (любительский)',
+                    'конный (любительский)',
+                    'страйкбол (любительский)',
+                    'плавание (любительский)',
+                    'прыжки в воду (любительский)',
+                    'акробатика (любительский)'
+                ],
+                skills: ['жонглирование'],
+                kinopoiskLink: 'https://www.kinopoisk.ru/name/6125190/',
+                kinoteatrLink: 'https://www.kino-teatr.ru/kino/acter/w/ros/587167/bio/'
+            },
+            filmography: [
+                {
+                    name: "Натали и Александр- Кэти",
+                    year: 2024,
+                    type: 'default'
+                },
+                {
+                    name: "Закрывай замок на два оборота (в производстве) - Есения (главная роль)",
+                    year: 2024,
+                    type: 'best'
+                },
+                {
+                    name: "Эта любовь - Даша",
+                    year: 2023,
+                    type: 'best'
+                },
+                {
+                    name: "Актрисы - Алла",
+                    year: 2023,
+                    type: 'default'
+                },
+                {
+                    name: "Ёлки-иголки - Арина",
+                    year: 2022,
+                    type: 'best'
+                },
+                {
+                    name: "Второе зрение-2 - Эля",
+                    year: 2022,
+                    type: 'default'
+                },
+                {
+                    name: "Аврора - Нифонтова",
+                    year: 2022,
+                    type: 'default'
+                },
+                {
+                    name: "Естественный отбор-2 - девушка в баре",
+                    year: 2021,
+                    type: 'default'
+                },
+                {
+                    name: "Закаты и рассветы - Ольга",
+                    year: 2020,
+                    type: 'default'
+                },
+            ]
+        },
+        {
+            id: 'dmitry-zhuravlev',
+            preview: "dmitry-zhuravlev/dmitry-zhuravlev-preview.webp",
+            category: 'actor',
+            commonFeatures: {
+                photo: "artists/dmitry-zhuravlev/dmitry-zhuravlev.webp",
                 name: "Дмитрий Журавлев",
                 dateBirth: '17.05.1992',
                 growth: 176,
@@ -304,9 +856,9 @@ export const useArtistsStore = defineStore('artists', () => {
                 hairColor: 'русый',
                 type: "европейский",
                 photos: [
-                    '/artists/dmitry-zhuravlev/dmitry-zhuravlev-1.png',
-                    '/artists/dmitry-zhuravlev/dmitry-zhuravlev-2.png',
-                    '/artists/dmitry-zhuravlev/dmitry-zhuravlev-3.png'
+                    '/artists/dmitry-zhuravlev/dmitry-zhuravlev-1.webp',
+                    '/artists/dmitry-zhuravlev/dmitry-zhuravlev-2.webp',
+                    '/artists/dmitry-zhuravlev/dmitry-zhuravlev-3.webp'
                 ],
                 vizitingCard: 'https://www.youtube.com/embed/O8cSptxArpk'
             },
@@ -382,10 +934,90 @@ export const useArtistsStore = defineStore('artists', () => {
             ]
         },
         {
-            id: 'andrey-galchenko',
-            preview: "andrey-galchenko/andrey-galchenko-preview.png",
+            id: 'polina-denisova',
+            preview: "polina-denisova/polina-denisova-preview.webp",
+            category: 'actresses',
             commonFeatures: {
-                photo: "artists/andrey-galchenko/andrey-galchenko.png",
+                photo: "artists/polina-denisova/polina-denisova.webp",
+                name: "Полина Денисова",
+                dateBirth: '24.02.2004',
+                growth: 167,
+                weight: 50,
+                clothingSize: 42,
+                shoeSize: 39,
+                eyes: 'карий-зеленый',
+                foreignLanguages: ["английский (разговорный)"],
+                voice: 'альт',
+                dance: [
+                    'балет (профессиональный)',
+                    'народные (профессиональный)',
+                    'контемпорари'
+                ],
+                hairColor: 'каштановый',
+                type: "общий европейский",
+                photos: [
+                    '/artists/polina-denisova/polina-denisova-1.webp',
+                    '/artists/polina-denisova/polina-denisova-2.webp',
+                    '/artists/polina-denisova/polina-denisova-3.webp'
+                ],
+                vizitingCard: 'https://www.youtube.com/embed/TQS60BvRX4s'
+            },
+            additionalInformation:
+                {
+                    nationality: "Россия",
+                    city: "Москва, Московская область, Россия",
+                    driving: null,
+                    tvWork: null,
+                    moreInfo: [
+                        'фортепиано (любительский), хореография (любительский), плавание (любительский), баскетбол (любительский)'
+                    ],
+                    kinopoiskLink: 'https://www.kinopoisk.ru/name/7093129/',
+                    kinoteatrLink: 'https://www.kino-teatr.ru/kino/acter/w/ros/795366/bio/'
+                },
+            filmography: [
+                {
+                    name: "Последний урок (в производстве) - Аня (главная роль)",
+                    year: 2024,
+                    type: 'default'
+                },
+                {
+                    name: "Папины дочки. Новые-2 (в производстве) - Соня (главная роль)",
+                    year: 2024,
+                    type: 'best'
+                },
+                {
+                    name: "Бедные смеются, богатые плачут - Катя (главная роль)",
+                    year: 2024,
+                    type: 'default'
+                },
+                {
+                    name: "Саша против! - Юля",
+                    year: 2023,
+                    type: 'default'
+                },
+                {
+                    name: "Папины дочки. Новые - Соня (главная роль)",
+                    year: 2023,
+                    type: 'default'
+                },
+                {
+                    name: "Все смотрят на тебя (короткометражный)",
+                    year: 2021,
+                    type: 'default'
+                },
+                {
+                    name: "Два отца и два сына",
+                    year: 2013,
+                    type: 'best'
+                },
+            ]
+        },
+        {
+            id: 'andrey-galchenko',
+            preview: "andrey-galchenko/andrey-galchenko-preview.webp",
+            category: 'actor',
+            commonFeatures: {
+                photo: "artists/andrey-galchenko/andrey-galchenko.webp",
                 name: "Андрей Гальченко",
                 dateBirth: '22.11.1997',
                 growth: 177,
@@ -403,9 +1035,9 @@ export const useArtistsStore = defineStore('artists', () => {
                 vocal: ['академический (любительский)'],
                 type: "европейский",
                 photos: [
-                    '/artists/andrey-galchenko/andrey-galchenko-1.png',
-                    '/artists/andrey-galchenko/andrey-galchenko-2.png',
-                    '/artists/andrey-galchenko/andrey-galchenko-3.png'
+                    '/artists/andrey-galchenko/andrey-galchenko-1.webp',
+                    '/artists/andrey-galchenko/andrey-galchenko-2.webp',
+                    '/artists/andrey-galchenko/andrey-galchenko-3.webp'
                 ],
                 vizitingCard: null
             },
@@ -452,10 +1084,95 @@ export const useArtistsStore = defineStore('artists', () => {
             ]
         },
         {
-            id: 'julia-sorokina',
-            preview: "julia-sorokina/julia-sorokina-preview.png",
+            id: 'alina-kolesnikova',
+            preview: "alina-kolesnikova/alina-kolesnikova-preview.webp",
+            category: 'actresses',
             commonFeatures: {
-                photo: "artists/julia-sorokina/julia-sorokina.png",
+                photo: "artists/alina-kolesnikova/alina-kolesnikova.webp",
+                name: "Алина Колесникова",
+                dateBirth: '12.01.2000',
+                growth: 175,
+                weight: 54,
+                clothingSize: 42,
+                shoeSize: 38,
+                eyes: 'зеленый',
+                foreignLanguages: ["английский (базовый)"],
+                voice: 'сопрано',
+                hairColor: 'шатенка',
+                dance: [
+                    'джаз-модерн (профессиональный)',
+                    'хип-хоп (профессиональный)',
+                    'балет (профессиональный)',
+                    'народные (профессиональный)'
+                ],
+                vocal: ['академический (любительский)'],
+                type: "европейский",
+                photos: [
+                    '/artists/alina-kolesnikova/alina-kolesnikova-1.webp',
+                    '/artists/alina-kolesnikova/alina-kolesnikova-2.webp',
+                    '/artists/alina-kolesnikova/alina-kolesnikova-3.webp'
+                ],
+                vizitingCard: 'https://www.youtube.com/embed/VNjMZSRzJKY'
+            },
+            additionalInformation: {
+                nationality: "Россия",
+                city: "Москва, Московская область, Россия",
+                driving: null,
+                tvWork: null,
+                externalFeatures: null,
+                skills: ['озвучивание', 'жонглирование', 'пантомима'],
+                kinopoiskLink: 'https://www.kinopoisk.ru/name/6125190/',
+                kinoteatrLink: 'https://www.kino-teatr.ru/kino/acter/w/ros/587167/bio/'
+            },
+            filmography: [
+                {
+                    name: "Мосгаз (в производстве) - Лидова",
+                    year: 2024,
+                    type: 'default'
+                },
+                {
+                    name: "Райский (в производстве) - главная роль",
+                    year: 2024,
+                    type: 'best'
+                },
+                {
+                    name: "Трудные подростки-4 - вебкамщица",
+                    year: 2022,
+                    type: 'default'
+                },
+                {
+                    name: "Второе зрение-2 - Щербатова",
+                    year: 2022,
+                    type: 'default'
+                },
+                {
+                    name: "Бедные смеются, богатые плачут",
+                    year: 2024,
+                    type: 'best'
+                },
+                {
+                    name: "Спасская-3 - Карина Павлова",
+                    year: 2023,
+                    type: 'default'
+                },
+                {
+                    name: "Женить нельзя рассорить - Юля",
+                    year: 2022,
+                    type: 'default'
+                },
+                {
+                    name: "Естественный отбор-2",
+                    year: 2021,
+                    type: 'default'
+                },
+            ]
+        },
+        {
+            id: 'julia-sorokina',
+            preview: "julia-sorokina/julia-sorokina-preview.webp",
+            category: 'actresses',
+            commonFeatures: {
+                photo: "artists/julia-sorokina/julia-sorokina.webp",
                 name: "Юлия Сорокина",
                 dateBirth: '18.06.2000',
                 growth: 170,
@@ -473,9 +1190,9 @@ export const useArtistsStore = defineStore('artists', () => {
                 hairColor: 'темно-русый',
                 type: "общий европейский",
                 photos: [
-                    'artists/julia-sorokina/julia-sorokina-1.png',
-                    'artists/julia-sorokina/julia-sorokina-2.png',
-                    'artists/julia-sorokina/julia-sorokina-3.png'
+                    'artists/julia-sorokina/julia-sorokina-1.webp',
+                    'artists/julia-sorokina/julia-sorokina-2.webp',
+                    'artists/julia-sorokina/julia-sorokina-3.webp'
                 ],
                 vizitingCard: 'https://www.youtube.com/embed/8VksL9PZ40A'
             },
@@ -667,88 +1384,105 @@ export const useArtistsStore = defineStore('artists', () => {
             ]
         },
         {
-            id: 'polina-denisova',
-            preview: "polina-denisova/polina-denisova-preview.png",
+            id: 'kirill-rusin',
+            preview: "kirill-rusin/kirill-rusin-preview.webp",
+            category: 'actor',
             commonFeatures: {
-                photo: "artists/polina-denisova/polina-denisova.png",
-                name: "Полина Денисова",
-                dateBirth: '24.02.2004',
-                growth: 167,
-                weight: 50,
-                clothingSize: 42,
-                shoeSize: 39,
-                eyes: 'карий-зеленый',
-                foreignLanguages: ["английский (разговорный)"],
-                voice: 'альт',
-                dance: [
-                    'балет (профессиональный)',
-                    'народные (профессиональный)',
-                    'контемпорари'
-                ],
-                hairColor: 'каштановый',
-                type: "общий европейский",
+                photo: "artists/kirill-rusin/kirill-rusin.webp",
+                name: "Кирилл Русин",
+                dateBirth: '20.09.1999',
+                growth: 181,
+                weight: 60,
+                clothingSize: 'L',
+                shoeSize: 43,
+                eyes: 'зеленый',
+                foreignLanguages: ['английский (разговорный)'],
+                voice: 'тенор',
+                hairColor: 'русый',
+                dance: ['хип-хоп (любительский)', 'народные (любительский)'],
+                vocal: ['драматический (любительский)'],
+                type: "европейский",
                 photos: [
-                    '/artists/polina-denisova/polina-denisova-1.png',
-                    '/artists/polina-denisova/polina-denisova-2.png',
-                    '/artists/polina-denisova/polina-denisova-3.png'
+                    '/artists/kirill-rusin/kirill-rusin-1.webp',
+                    '/artists/kirill-rusin/kirill-rusin-2.webp',
+                    '/artists/kirill-rusin/kirill-rusin-3.webp'
                 ],
-                vizitingCard: 'https://www.youtube.com/embed/TQS60BvRX4s'
+                vizitingCard: 'https://www.youtube.com/embed/WHK8aP8WT4E'
             },
-            additionalInformation:
-                {
-                    nationality: "Россия",
-                    city: "Москва, Московская область, Россия",
-                    driving: null,
-                    tvWork: null,
-                    moreInfo: [
-                        'фортепиано (любительский), хореография (любительский), плавание (любительский), баскетбол (любительский)'
-                    ],
-                    kinopoiskLink: 'https://www.kinopoisk.ru/name/7093129/',
-                    kinoteatrLink: 'https://www.kino-teatr.ru/kino/acter/w/ros/795366/bio/'
-                },
+            additionalInformation: {
+                nationality: "Россия",
+                city:
+                    "Москва, Московская область, Россия",
+                driving:
+                    'Права категории В',
+                tvWork:
+                    null,
+                externalFeatures:
+                    null,
+                moreInfo: ['баскетбол (любительский)', 'бег (любительский)', 'борьба (любительский)', 'волейбол (любительский)', 'плавание (любительский)', 'регби (любительский)', 'футбол (любительский)'],
+                skills: ['пантомима', 'озвучивание'],
+                kinopoiskLink: 'https://www.kinopoisk.ru/name/6413669/',
+                kinoteatrLink: 'https://www.kino-teatr.ru/kino/acter/m/ros/534014/bio/'
+            },
             filmography: [
                 {
-                    name: "Последний урок (в производстве) - Аня (главная роль)",
+                    name: "Наш папа — Дед Мороз! (в производстве) - главная роль",
                     year: 2024,
                     type: 'default'
                 },
                 {
-                    name: "Папины дочки. Новые-2 (в производстве) - Соня (главная роль)",
-                    year: 2024,
+                    name: "Шёпот - Кевин",
+                    year: 2023,
+                    type: 'default'
+                },
+                {
+                    name: "Саша против! - Кирилл",
+                    year: 2023,
+                    type: 'default'
+                },
+                {
+                    name: "Мёрзлая земля | Frozen Land",
+                    year: 2023,
                     type: 'best'
                 },
                 {
-                    name: "Бедные смеются, богатые плачут - Катя (главная роль)",
-                    year: 2024,
-                    type: 'default'
-                },
-                {
-                    name: "Саша против! - Юля",
+                    name: "Отчаянная невеста - зевака",
                     year: 2023,
                     type: 'default'
                 },
                 {
-                    name: "Папины дочки. Новые - Соня (главная роль)",
-                    year: 2023,
-                    type: 'default'
-                },
-                {
-                    name: "Все смотрят на тебя (короткометражный)",
+                    name: "Сказки Пушкина. Для взрослых",
                     year: 2021,
                     type: 'default'
                 },
                 {
-                    name: "Два отца и два сына",
-                    year: 2013,
+                    name: "Система - Иван (главная роль)",
+                    year: 2021,
                     type: 'best'
+                },
+                {
+                    name: "Рождение эволюционера (короткометражный)",
+                    year: 2021,
+                    type: 'default'
+                },
+                {
+                    name: "Вампиры средней полосы - Вова",
+                    year: 2021,
+                    type: 'default'
+                },
+                {
+                    name: "Авако (короткометражный) - Лев",
+                    year: 2021,
+                    type: 'default'
                 },
             ]
         },
         {
             id: 'galya-denisenko',
-            preview: "galya-denisenko/galya-denisenko-preview.png",
+            preview: "galya-denisenko/galya-denisenko-preview.webp",
+            category: 'actresses',
             commonFeatures: {
-                photo: "artists/galya-denisenko/galya-denisenko.png",
+                photo: "artists/galya-denisenko/galya-denisenko.webp",
                 name: "Галя Денисенко",
                 dateBirth: '17.05.2000',
                 growth: 166,
@@ -767,9 +1501,9 @@ export const useArtistsStore = defineStore('artists', () => {
                 hairColor: 'брюнетка',
                 type: "европейский",
                 photos: [
-                    '/artists/galya-denisenko/galya-denisenko-1.png',
-                    '/artists/galya-denisenko/galya-denisenko-2.png',
-                    '/artists/galya-denisenko/galya-denisenko-3.png'
+                    '/artists/galya-denisenko/galya-denisenko-1.webp',
+                    '/artists/galya-denisenko/galya-denisenko-2.webp',
+                    '/artists/galya-denisenko/galya-denisenko-3.webp'
                 ],
                 vizitingCard: 'https://www.youtube.com/embed/rMnDmeOMHTM'
             },
@@ -801,107 +1535,33 @@ export const useArtistsStore = defineStore('artists', () => {
             ]
         },
         {
-            id: 'rozovskaya-alexandra',
-            preview: "rozovskaya-alexandra/rozovskaya-alexandra-preview.png",
+            id: 'ekaterina-channova',
+            preview: "ekaterina-channova/ekaterina-channova-preview.webp",
+            category: 'actresses',
             commonFeatures: {
-                photo: "artists/rozovskaya-alexandra/rozovskaya-alexandra.png",
-                name: "Александра Розовская",
-                dateBirth: '27.01.1988',
-                growth: 165,
-                weight: 56,
-                clothingSize: '42-44',
-                shoeSize: 36,
-                eyes: 'серо-голубой',
-                foreignLanguages: ["английский (свободный)", "французский (базовый)"],
-                voice: 'сопрано',
-                hairColor: 'русый',
-                dance: ['джаз-модерн (любительский)',],
-                vocal: ['эстрадно-джазовый (профессиональный)'],
-                type: "общий европейский",
-                photos: [
-                    '/artists/rozovskaya-alexandra/rozovskaya-alexandra-1.png',
-                    '/artists/rozovskaya-alexandra/rozovskaya-alexandra-2.png',
-                    '/artists/rozovskaya-alexandra/rozovskaya-alexandra-3.png'
-                ],
-                vizitingCard: 'https://www.youtube.com/embed/gSQoC3wJ9ec'
-            },
-            additionalInformation: {
-                nationality: "Россия",
-                city: "Москва, Московская область, Россия",
-                driving: 'Права категории В',
-                tvWork: null,
-                externalFeatures: null,
-                moreInfo: [
-                    'Есть своя музыкальная группа “Meydeleh”',
-                    'Музыкальная школа им. Дунаевского - фортепиано',
-                    'большой теннис (любительский)',
-                    'волейбол (любительский)', 'фехтование (любительский)', 'акробатика (любительский)'
-                ],
-                skills: ['жонглирование', 'озвучивание'],
-                kinopoiskLink: 'https://www.kinopoisk.ru/name/6370840/',
-                kinoteatrLink: 'https://www.kino-teatr.ru/kino/acter/w/ros/240352/bio/'
-            },
-            filmography: [
-                {
-                    name: "Богатые плачут, бедные смеются",
-                    year: 2024,
-                    type: 'best'
-                },
-                {
-                    name: "Моя мама — шпион - Лариса Виноградова",
-                    year: 2023,
-                    type: 'default'
-                },
-                {
-                    name: "Свадьбы и разводы - Лиля, невеста Виктора",
-                    year: 2018,
-                    type: 'best'
-                },
-                {
-                    name: "Чехов-GALA (фильм-спектакль) барышня 'Свадьба'",
-                    year: 2012,
-                    type: 'default'
-                },
-                {
-                    name: "Записки экспедитора Тайной канцелярии-2 - царевна Елизавета",
-                    year: 2011,
-                    type: 'default'
-                },
-                {
-                    name: "Иван Грозный - Анна Колтовская",
-                    year: 2009,
-                    type: 'best'
-                },
-            ]
-        },
-        {
-            id: 'tatiana-marakhonich',
-            preview: "tatiana-marakhonich/tatiana-marakhonich-preview.png",
-            commonFeatures: {
-                photo: "artists/tatiana-marakhonich/tatiana-marakhonich.png",
-                name: "Татьяна Марахонич",
-                dateBirth: '27.05.1998',
-                growth: 177,
-                weight: 53,
+                photo: "artists/ekaterina-channova/ekaterina-channova.webp",
+                name: "Кристина Орлянская",
+                dateBirth: '15.03.2001',
+                growth: 170,
+                weight: 52,
                 clothingSize: 42,
                 shoeSize: 38,
                 eyes: 'зеленый',
-                foreignLanguages: ["английский (свободный)"],
-                voice: 'сопрано',
-                hairColor: 'шатенка',
+                foreignLanguages: ["английский (разговорный)"],
+                voice: 'меццо-сопрано',
+                hairColor: 'блондинка',
                 dance: [
-                    'бальные (любительский)',
-                    'джаз-модерн (любительский)',
-                    'народные (любительский)'
+                    'спортивные бальные (полупрофессиональный)',
+                    'общетеатральный (любительский высокий)',
                 ],
-                vocal: ['академический (любительский)'],
+                vocal: ['академический (любительский)', 'эстрада (любительский)'],
                 type: "общий славянский европейский",
                 photos: [
-                    '/artists/tatiana-marakhonich/tatiana-marakhonich-1.png',
-                    '/artists/tatiana-marakhonich/tatiana-marakhonich-2.png',
-                    '/artists/tatiana-marakhonich/tatiana-marakhonich-3.png'
+                    '/artists/ekaterina-channova/ekaterina-channova-1.webp',
+                    '/artists/ekaterina-channova/ekaterina-channova-2.webp',
+                    '/artists/ekaterina-channova/ekaterina-channova-3.webp'
                 ],
-                vizitingCard: 'https://www.youtube.com/embed/8mvIlmxXOTM'
+                vizitingCard: null
             },
             additionalInformation: {
                 nationality: "Россия",
@@ -909,154 +1569,141 @@ export const useArtistsStore = defineStore('artists', () => {
                 driving: null,
                 tvWork: null,
                 externalFeatures: null,
-                moreInfo: [
-                    'волейбол (любительский)',
-                    'конный (любительский)',
-                    'страйкбол (любительский)',
-                    'плавание (любительский)',
-                    'прыжки в воду (любительский)',
-                    'акробатика (любительский)'
-                ],
-                skills: ['жонглирование'],
-                kinopoiskLink: 'https://www.kinopoisk.ru/name/6125190/',
-                kinoteatrLink: 'https://www.kino-teatr.ru/kino/acter/w/ros/587167/bio/'
+                moreInfo: ['Музыкальная школа по классу фортепиано (7 лет)'],
+                skills: ['дубляж', 'пантомима'],
+                kinopoiskLink: 'https://www.kinopoisk.ru/name/4844224/',
+                kinoteatrLink: 'https://www.kino-teatr.ru/kino/acter/w/ros/452996/works/'
             },
             filmography: [
                 {
-                    name: "Натали и Александр- Кэти",
+                    name: "Уроки китайского (в производстве) - Яна",
                     year: 2024,
                     type: 'default'
                 },
                 {
-                    name: "Закрывай замок на два оборота (в производстве) - Есения (главная роль)",
+                    name: "Столыпин (в производстве) - Мария Столыпина",
                     year: 2024,
                     type: 'best'
                 },
                 {
-                    name: "Эта любовь - Даша",
+                    name: "Министерство Всего Хорошего (в производстве) -  распределительница",
+                    year: 2024,
+                    type: 'default'
+                },
+                {
+                    name: "Страсти по Матвею - студентка",
+                    year: 2023,
+                    type: 'default'
+                },
+                {
+                    name: "Медиатор-3 - Ксюша",
+                    year: 2023,
+                    type: 'default'
+                },
+                {
+                    name: "Голова-жестянка",
+                    year: 2023,
+                    type: 'default'
+                },
+                {
+                    name: "Старое пианино - Катя (главная роль)",
+                    year: 2022,
+                    type: 'best'
+                },
+                {
+                    name: "Подслушано в Рыбинске - Вика",
+                    year: 2024,
+                    type: 'best'
+                },
+                {
+                    name: "Старушки в бегах-3 (в производстве)",
+                    year: 2024,
+                    type: 'default'
+                },
+                {
+                    name: "Мама из прошлого (в производстве) - Ольга в детстве",
+                    year: 2024,
+                    type: 'default'
+                },
+                {
+                    name: "Планета Максимус (фильм-спектакль) -Катя (главная роль)",
                     year: 2023,
                     type: 'best'
                 },
                 {
-                    name: "Актрисы - Алла",
+                    name: "Эффект домино - Алина Терская",
                     year: 2023,
                     type: 'default'
                 },
                 {
-                    name: "Ёлки-иголки - Арина",
-                    year: 2022,
-                    type: 'best'
-                },
-                {
-                    name: "Второе зрение-2 - Эля",
+                    name: "Чикатило. Финальный сезон - Астафьева",
                     year: 2022,
                     type: 'default'
                 },
                 {
-                    name: "Аврора - Нифонтова",
+                    name: "Солнце, море и любовь - Полина",
                     year: 2022,
-                    type: 'default'
-                },
-                {
-                    name: "Естественный отбор-2 - девушка в баре",
-                    year: 2021,
-                    type: 'default'
-                },
-                {
-                    name: "Закаты и рассветы - Ольга",
-                    year: 2020,
                     type: 'default'
                 },
             ]
         },
         {
-            id: 'alina-kolesnikova',
-            preview: "alina-kolesnikova/alina-kolesnikova-preview.png",
+            id: 'ruslan-chagilov',
+            preview: "ruslan-chagilov/ruslan-chagilov-preview.webp",
+            category: 'actor',
             commonFeatures: {
-                photo: "artists/alina-kolesnikova/alina-kolesnikova.png",
-                name: "Алина Колесникова",
-                dateBirth: '12.01.2000',
-                growth: 175,
-                weight: 54,
-                clothingSize: 42,
-                shoeSize: 38,
-                eyes: 'зеленый',
-                foreignLanguages: ["английский (базовый)"],
-                voice: 'сопрано',
-                hairColor: 'шатенка',
-                dance: [
-                    'джаз-модерн (профессиональный)',
-                    'хип-хоп (профессиональный)',
-                    'балет (профессиональный)',
-                    'народные (профессиональный)'
-                ],
-                vocal: ['академический (любительский)'],
-                type: "европейский",
+                photo: "artists/ruslan-chagilov/ruslan-chagilov.webp",
+                name: "Руслан Чагилов",
+                dateBirth: '19.09.2003',
+                growth: 178,
+                weight: null,
+                clothingSize: 46,
+                shoeSize: 40,
+                eyes: 'голубой',
+                foreignLanguages: ['английский (свсвободный)'],
+                voice: 'баритон',
+                hairColor: 'русый',
+                dance: ['народный (любительский)', 'Чарльстон (любительский)', 'современный (любительский)', 'хип-хоп (любительский)'],
+                vocal: ['драматический (любительский)'],
+                type: "общий",
                 photos: [
-                    '/artists/alina-kolesnikova/alina-kolesnikova-1.png',
-                    '/artists/alina-kolesnikova/alina-kolesnikova-2.png',
-                    '/artists/alina-kolesnikova/alina-kolesnikova-3.png'
+                    '/artists/ruslan-chagilov/ruslan-chagilov-1.webp',
+                    '/artists/ruslan-chagilov/ruslan-chagilov-2.webp',
+                    '/artists/ruslan-chagilov/ruslan-chagilov-3.webp'
                 ],
-                vizitingCard: 'https://www.youtube.com/embed/VNjMZSRzJKY'
+                vizitingCard: 'https://www.youtube.com/embed/ov4cdoEbjwA'
             },
             additionalInformation: {
                 nationality: "Россия",
-                city: "Москва, Московская область, Россия",
-                driving: null,
+                city:
+                    "Москва, Московская область, Россия",
+                driving:
+                    'Права категории В',
                 tvWork: null,
-                externalFeatures: null,
-                skills: ['озвучивание', 'жонглирование', 'пантомима'],
-                kinopoiskLink: 'https://www.kinopoisk.ru/name/6125190/',
-                kinoteatrLink: 'https://www.kino-teatr.ru/kino/acter/w/ros/587167/bio/'
+                externalFeatures: 'пирсинг',
+                moreInfo: ['плавание (профессиональный)',
+                    'тайский бокс (любительский)',
+                    'верховая езда (любительский)',
+                    'футбол (любительский)',
+                    'хоккей (любительский)'],
+                skills: ['озвучивание'],
+                kinopoiskLink: null,
+                kinoteatrLink: 'https://www.kino-teatr.ru/kino/acter/m/ros/893266/bio/'
             },
             filmography: [
                 {
-                    name: "Мосгаз (в производстве) - Лидова",
-                    year: 2024,
-                    type: 'default'
-                },
-                {
-                    name: "Райский (в производстве) - главная роль",
-                    year: 2024,
-                    type: 'best'
-                },
-                {
-                    name: "Трудные подростки-4 - вебкамщица",
-                    year: 2022,
-                    type: 'default'
-                },
-                {
-                    name: "Второе зрение-2 - Щербатова",
-                    year: 2022,
-                    type: 'default'
-                },
-                {
-                    name: "Бедные смеются, богатые плачут",
-                    year: 2024,
-                    type: 'best'
-                },
-                {
-                    name: "Спасская-3 - Карина Павлова",
+                    name: "Екатерина. Фавориты - Александр",
                     year: 2023,
-                    type: 'default'
-                },
-                {
-                    name: "Женить нельзя рассорить - Юля",
-                    year: 2022,
-                    type: 'default'
-                },
-                {
-                    name: "Естественный отбор-2",
-                    year: 2021,
-                    type: 'default'
+                    type: 'best'
                 },
             ]
         },
         {
             id: 'kristina-orlyanskaya',
-            preview: "kristina-orlyanskaya/kristina-orlyanskaya-preview.png",
+            preview: "kristina-orlyanskaya/kristina-orlyanskaya-preview.webp",
+            category: 'actresses',
             commonFeatures: {
-                photo: "artists/kristina-orlyanskaya/kristina-orlyanskaya.png",
+                photo: "artists/kristina-orlyanskaya/kristina-orlyanskaya.webp",
                 name: "Екатерина Чаннова",
                 dateBirth: '15.03.2001',
                 growth: 170,
@@ -1074,9 +1721,9 @@ export const useArtistsStore = defineStore('artists', () => {
                 vocal: ['академический (любительский)', 'эстрада (любительский)'],
                 type: "общий словянский европейский",
                 photos: [
-                    '/artists/kristina-orlyanskaya/kristina-orlyanskaya-1.png',
-                    '/artists/kristina-orlyanskaya/kristina-orlyanskaya-2.png',
-                    '/artists/kristina-orlyanskaya/kristina-orlyanskaya-3.png'
+                    '/artists/kristina-orlyanskaya/kristina-orlyanskaya-1.webp',
+                    '/artists/kristina-orlyanskaya/kristina-orlyanskaya-2.webp',
+                    '/artists/kristina-orlyanskaya/kristina-orlyanskaya-3.webp'
                 ],
                 vizitingCard: 'https://www.youtube.com/embed/Rq-yFnXIelI'
             },
@@ -1165,113 +1812,408 @@ export const useArtistsStore = defineStore('artists', () => {
             ]
         },
         {
-            id: 'ekaterina-channova',
-            preview: "ekaterina-channova/ekaterina-channova-preview.png",
+            id: 'andrey-zamyatin',
+            preview: "andrey-zamyatin/andrey-zamyatin-preview.webp",
+            category: 'actor',
             commonFeatures: {
-                photo: "artists/ekaterina-channova/ekaterina-channova.png",
-                name: "Кристина Орлянская",
-                dateBirth: '15.03.2001',
-                growth: 170,
-                weight: 52,
-                clothingSize: 42,
-                shoeSize: 38,
+                photo: "artists/andrey-zamyatin/andrey-zamyatin.webp",
+                name: "Андрей Замятин",
+                dateBirth: '08.05.2003',
+                growth: 188,
+                weight: null,
+                clothingSize: 52,
+                shoeSize: 44,
                 eyes: 'зеленый',
-                foreignLanguages: ["английский (разговорный)"],
-                voice: 'меццо-сопрано',
-                hairColor: 'блондинка',
-                dance: [
-                    'спортивные бальные (полупрофессиональный)',
-                    'общетеатральный (любительский высокий)',
-                ],
-                vocal: ['академический (любительский)', 'эстрада (любительский)'],
-                type: "общий славянский европейский",
+                foreignLanguages: ['английский (свободный)', 'украинский (свободный)', 'немецкий (базовый)'],
+                voice: 'баритон',
+                hairColor: 'русый',
+                dance: ['общетеатральный (любительский)'],
+                vocal: null,
+                type: "Европейский",
                 photos: [
-                    '/artists/ekaterina-channova/ekaterina-channova-1.png',
-                    '/artists/ekaterina-channova/ekaterina-channova-2.png',
-                    '/artists/ekaterina-channova/ekaterina-channova-3.png'
+                    '/artists/andrey-zamyatin/andrey-zamyatin-1.webp',
+                    '/artists/andrey-zamyatin/andrey-zamyatin-2.webp',
+                    '/artists/andrey-zamyatin/andrey-zamyatin-3.webp'
                 ],
                 vizitingCard: null
             },
             additionalInformation: {
                 nationality: "Россия",
-                city: "Москва, Московская область, Россия",
+                city:
+                    "Москва, Московская область, Россия",
                 driving: null,
                 tvWork: null,
                 externalFeatures: null,
-                moreInfo: ['Музыкальная школа по классу фортепиано (7 лет)'],
-                skills: ['дубляж', 'пантомима'],
-                kinopoiskLink: 'https://www.kinopoisk.ru/name/4844224/',
-                kinoteatrLink: 'https://www.kino-teatr.ru/kino/acter/w/ros/452996/works/'
+                moreInfo: ['фортепиано (любительский высокий)', 'гитара (любительский высокий)',
+                    'бас-гитара (любительский высокий)',
+                    'саксофон (любительский)',
+                    'ударные (любительский)',
+                    'аккордеон (любительский)',
+                    'скрипка (любительский)'],
+                skills: null,
+                kinopoiskLink: null,
+                kinoteatrLink: 'https://www.kino-teatr.ru/kino/acter/m/post/448666/bio/'
             },
             filmography: [
                 {
-                    name: "Уроки китайского (в производстве) - Яна",
-                    year: 2024,
-                    type: 'default'
+                    name: "Тайная любовь | Таємне кохання (Украина) - Юрий Браницкий в молодости",
+                    year: 2019,
+                    type: 'best'
                 },
                 {
-                    name: "Столыпин (в производстве) - Мария Столыпина",
+                    name: "Забудь меня, мама! (Россия, Украина)",
+                    year: 2016,
+                    type: 'default'
+                },
+            ]
+        },
+        {
+            id: 'alexandra-rozovskaya',
+            preview: "alexandra-rozovskaya/alexandra-rozovskaya-preview.webp",
+            category: 'actresses',
+            commonFeatures: {
+                photo: "artists/alexandra-rozovskaya/alexandra-rozovskaya.webp",
+                name: "Александра Розовская",
+                dateBirth: '27.01.1988',
+                growth: 165,
+                weight: 56,
+                clothingSize: '42-44',
+                shoeSize: 36,
+                eyes: 'серо-голубой',
+                foreignLanguages: ["английский (свободный)", "французский (базовый)"],
+                voice: 'сопрано',
+                hairColor: 'русый',
+                dance: ['джаз-модерн (любительский)',],
+                vocal: ['эстрадно-джазовый (профессиональный)'],
+                type: "общий европейский",
+                photos: [
+                    '/artists/alexandra-rozovskaya/alexandra-rozovskaya-1.webp',
+                    '/artists/alexandra-rozovskaya/alexandra-rozovskaya-2.webp',
+                    '/artists/alexandra-rozovskaya/alexandra-rozovskaya-3.webp'
+                ],
+                vizitingCard: 'https://www.youtube.com/embed/gSQoC3wJ9ec'
+            },
+            additionalInformation: {
+                nationality: "Россия",
+                city: "Москва, Московская область, Россия",
+                driving: 'Права категории В',
+                tvWork: null,
+                externalFeatures: null,
+                moreInfo: [
+                    'Есть своя музыкальная группа “Meydeleh”',
+                    'Музыкальная школа им. Дунаевского - фортепиано',
+                    'большой теннис (любительский)',
+                    'волейбол (любительский)', 'фехтование (любительский)', 'акробатика (любительский)'
+                ],
+                skills: ['жонглирование', 'озвучивание'],
+                kinopoiskLink: 'https://www.kinopoisk.ru/name/6370840/',
+                kinoteatrLink: 'https://www.kino-teatr.ru/kino/acter/w/ros/240352/bio/'
+            },
+            filmography: [
+                {
+                    name: "Богатые плачут, бедные смеются",
                     year: 2024,
                     type: 'best'
                 },
                 {
-                    name: "Министерство Всего Хорошего (в производстве) -  распределительница",
+                    name: "Моя мама — шпион - Лариса Виноградова",
+                    year: 2023,
+                    type: 'default'
+                },
+                {
+                    name: "Свадьбы и разводы - Лиля, невеста Виктора",
+                    year: 2018,
+                    type: 'best'
+                },
+                {
+                    name: "Чехов-GALA (фильм-спектакль) барышня 'Свадьба'",
+                    year: 2012,
+                    type: 'default'
+                },
+                {
+                    name: "Записки экспедитора Тайной канцелярии-2 - царевна Елизавета",
+                    year: 2011,
+                    type: 'default'
+                },
+                {
+                    name: "Иван Грозный - Анна Колтовская",
+                    year: 2009,
+                    type: 'best'
+                },
+            ]
+        },
+        {
+            id: 'maxim-saprykin',
+            preview: "maxim-saprykin/maxim-saprykin-preview.webp",
+            category: 'actor',
+            commonFeatures: {
+                photo: "artists/maxim-saprykin/maxim-saprykin.webp",
+                name: "Максим Сапрыкин",
+                dateBirth: '30.06.2002',
+                growth: 176,
+                weight: null,
+                clothingSize: null,
+                shoeSize: 44,
+                eyes: null,
+                foreignLanguages: ['английский (базовый)'],
+                voice: null,
+                hairColor: 'русый',
+                dance: null,
+                vocal: null,
+                type: "Европейский",
+                photos: [
+                    '/artists/maxim-saprykin/maxim-saprykin-1.webp',
+                    '/artists/maxim-saprykin/maxim-saprykin-2.webp',
+                    '/artists/maxim-saprykin/maxim-saprykin-3.webp'
+                ],
+                vizitingCard: null
+            },
+            additionalInformation: {
+                nationality: "Россия",
+                city:
+                    "Москва, Московская область, Россия",
+                driving: 'Права категории В',
+                tvWork: null,
+                externalFeatures: null,
+                moreInfo: ['Чемпион Москвы по кикбоксингу',
+                    'чемпион СНГ по Таэквон-до', 'баскетбол (любительский)',
+                    'бег (любительский)',
+                    'борьба (любительский)',
+                    'волейбол (любительский)',
+                    'плавание (любительский)',
+                    'регби (любительский)',
+                    'футбол (любительский)'],
+                skills: ['озвучивание'],
+                kinopoiskLink: 'https://www.kinopoisk.ru/name/3017082/',
+                kinoteatrLink: 'https://www.kino-teatr.ru/kino/acter/m/ros/361910/bio/'
+            },
+            filmography: [
+                {
+                    name: "Приставы (в производстве) - Виктор",
                     year: 2024,
                     type: 'default'
                 },
                 {
-                    name: "Страсти по Матвею - студентка",
+                    name: "Наследники. Дар крови (в производстве) - Лёша",
+                    year: 2024,
+                    type: 'default'
+                },
+                {
+                    name: "Десять дней до весны (в производстве) - Гриша",
+                    year: 2024,
+                    type: 'default'
+                },
+                {
+                    name: "Блиндаж (в производстве)",
+                    year: 2024,
+                    type: 'default'
+                },
+                {
+                    name: "Хоккейные папы",
                     year: 2023,
                     type: 'default'
                 },
                 {
-                    name: "Медиатор-3 - Ксюша",
+                    name: "Папины дочки. Новые - Роман Рощин",
+                    year: 2023,
+                    type: 'best'
+                },
+                {
+                    name: "Кино про бандитов - Жека",
                     year: 2023,
                     type: 'default'
                 },
                 {
-                    name: "Голова-жестянка",
-                    year: 2023,
+                    name: "Училки в законе-3 - Никита",
+                    year: 2022,
                     type: 'default'
                 },
                 {
-                    name: "Старое пианино - Катя (главная роль)",
+                    name: "Красная шапочка - Рок",
+                    year: 2022,
+                    type: 'default'
+                },
+                {
+                    name: "Жиза - Якут (главная роль)",
                     year: 2022,
                     type: 'best'
                 },
                 {
-                    name: "Подслушано в Рыбинске - Вика",
-                    year: 2024,
+                    name: "Дикие предки - Гриша",
+                    year: 2022,
                     type: 'best'
                 },
                 {
-                    name: "Старушки в бегах-3 (в производстве)",
-                    year: 2024,
-                    type: 'default'
-                },
-                {
-                    name: "Мама из прошлого (в производстве) - Ольга в детстве",
-                    year: 2024,
-                    type: 'default'
-                },
-                {
-                    name: "Планета Максимус (фильм-спектакль) -Катя (главная роль)",
-                    year: 2023,
-                    type: 'best'
-                },
-                {
-                    name: "Эффект домино - Алина Терская",
-                    year: 2023,
-                    type: 'default'
-                },
-                {
-                    name: "Чикатило. Финальный сезон - Астафьева",
+                    name: "Валюша - Арсений",
                     year: 2022,
                     type: 'default'
                 },
                 {
-                    name: "Солнце, море и любовь - Полина",
+                    name: "Французы под Москвой - Вася",
+                    year: 2021,
+                    type: 'default'
+                },
+                {
+                    name: "Сеструха",
+                    year: 2021,
+                    type: 'default'
+                },
+                {
+                    name: "Сеструха",
+                    year: 2021,
+                    type: 'default'
+                },
+                {
+                    name: "Молодые и сильные. проклятие выживших - Питон",
+                    year: 2021,
+                    type: 'default'
+                },
+                {
+                    name: "Ле.Ген.Да - Лёня, 15 лет",
+                    year: 2021,
+                    type: 'default'
+                },
+                {
+                    name: "Крюк - Ярослав Соколов, хоккеист, сын Лады",
+                    year: 2021,
+                    type: 'default'
+                },
+            ]
+        },
+        {
+            id: 'denis-shvedov',
+            preview: "denis-shvedov/denis-shvedov-preview.webp",
+            category: 'actor',
+            commonFeatures: {
+                photo: "artists/denis-shvedov/denis-shvedov.webp",
+                name: "Денис Шведов",
+                dateBirth: '30.06.2002',
+                growth: 176,
+                weight: null,
+                clothingSize: null,
+                shoeSize: 44,
+                eyes: null,
+                foreignLanguages: ['английский (базовый)'],
+                voice: null,
+                hairColor: 'русый',
+                dance: null,
+                vocal: null,
+                type: "Европейский",
+                photos: [
+                    '/artists/denis-shvedov/denis-shvedov-1.webp',
+                    '/artists/denis-shvedov/denis-shvedov-2.webp',
+                    '/artists/denis-shvedov/denis-shvedov-3.webp'
+                ],
+                vizitingCard: null
+            },
+            additionalInformation: {
+                nationality: "Россия",
+                city:
+                    "Москва, Московская область, Россия",
+                driving: 'Права категории В',
+                tvWork: null,
+                externalFeatures: null,
+                moreInfo: ['Чемпион Москвы по кикбоксингу',
+                    'чемпион СНГ по Таэквон-до', 'баскетбол (любительский)',
+                    'бег (любительский)',
+                    'борьба (любительский)',
+                    'волейбол (любительский)',
+                    'плавание (любительский)',
+                    'регби (любительский)',
+                    'футбол (любительский)'],
+                skills: ['озвучивание'],
+                kinopoiskLink: 'https://www.kinopoisk.ru/name/3017082/',
+                kinoteatrLink: 'https://www.kino-teatr.ru/kino/acter/m/ros/361910/bio/'
+            },
+            filmography: [
+                {
+                    name: "Приставы (в производстве) - Виктор",
+                    year: 2024,
+                    type: 'default'
+                },
+                {
+                    name: "Наследники. Дар крови (в производстве) - Лёша",
+                    year: 2024,
+                    type: 'default'
+                },
+                {
+                    name: "Десять дней до весны (в производстве) - Гриша",
+                    year: 2024,
+                    type: 'default'
+                },
+                {
+                    name: "Блиндаж (в производстве)",
+                    year: 2024,
+                    type: 'default'
+                },
+                {
+                    name: "Хоккейные папы",
+                    year: 2023,
+                    type: 'default'
+                },
+                {
+                    name: "Папины дочки. Новые - Роман Рощин",
+                    year: 2023,
+                    type: 'best'
+                },
+                {
+                    name: "Кино про бандитов - Жека",
+                    year: 2023,
+                    type: 'default'
+                },
+                {
+                    name: "Училки в законе-3 - Никита",
                     year: 2022,
+                    type: 'default'
+                },
+                {
+                    name: "Красная шапочка - Рок",
+                    year: 2022,
+                    type: 'default'
+                },
+                {
+                    name: "Жиза - Якут (главная роль)",
+                    year: 2022,
+                    type: 'best'
+                },
+                {
+                    name: "Дикие предки - Гриша",
+                    year: 2022,
+                    type: 'best'
+                },
+                {
+                    name: "Валюша - Арсений",
+                    year: 2022,
+                    type: 'default'
+                },
+                {
+                    name: "Французы под Москвой - Вася",
+                    year: 2021,
+                    type: 'default'
+                },
+                {
+                    name: "Сеструха",
+                    year: 2021,
+                    type: 'default'
+                },
+                {
+                    name: "Сеструха",
+                    year: 2021,
+                    type: 'default'
+                },
+                {
+                    name: "Молодые и сильные. проклятие выживших - Питон",
+                    year: 2021,
+                    type: 'default'
+                },
+                {
+                    name: "Ле.Ген.Да - Лёня, 15 лет",
+                    year: 2021,
+                    type: 'default'
+                },
+                {
+                    name: "Крюк - Ярослав Соколов, хоккеист, сын Лады",
+                    year: 2021,
                     type: 'default'
                 },
             ]

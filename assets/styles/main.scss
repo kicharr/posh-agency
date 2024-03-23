@@ -218,6 +218,21 @@ body {
     transition: $transitionOpacity;
   }
 
+  &--tab {
+    font-size: 0.9rem;
+    color: $dark;
+    border: 0;
+    padding: 0;
+
+    &-active {
+      color: rgba(20, 20, 20, 0.5);
+    }
+
+    @include mobile-big {
+      font-size: .8rem;
+    }
+  }
+
   @include mobile-big {
     max-width: unset;
   }

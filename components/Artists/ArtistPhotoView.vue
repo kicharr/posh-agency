@@ -12,20 +12,18 @@ function checkCurrentClick(e) {
   }
 }
 
-const goPrevSlide = () => {
-  currentSlide.value > 0 ? currentSlide.value-- : currentSlide.value = props.allActorPhoto.length - 1
+const changeCurrentSlide = (flag) => {
+  if (flag === 'prev') {
+    currentSlide.value = (currentSlide.value - 1 < 0 ? props.allActorPhoto.length - 1 : currentSlide.value - 1)
+  } else {
+    currentSlide.value = (currentSlide.value + 1 >= props.allActorPhoto.length ? 0 : currentSlide.value + 1)
+  }
 }
-
-const goNextSlide = () => {
-  currentSlide.value < props.allActorPhoto.length - 1 ? currentSlide.value++ : currentSlide.value = 0
-}
-
 
 onMounted(() => {
   document.addEventListener('click', checkCurrentClick);
   document.body.classList.add('body-fixed');
 })
-
 
 onUnmounted(() => {
   document.removeEventListener('click', checkCurrentClick);
@@ -36,7 +34,7 @@ onUnmounted(() => {
 
 <template>
   <div class="photo-view">
-    <button @click="goPrevSlide" class="photo-view__button photo-view__button--prev">
+    <button @click="changeCurrentSlide('prev')" class="photo-view__button photo-view__button--prev">
       <img src="/static-images/other/slider-prev.svg" alt="Назад">
     </button>
 
@@ -44,7 +42,7 @@ onUnmounted(() => {
       <img :src="`/static-images/${allActorPhoto[currentSlide]}`">
     </div>
 
-    <button @click="goNextSlide" class="photo-view__button photo-view__button--next">
+    <button @click="changeCurrentSlide('next')" class="photo-view__button photo-view__button--next">
       <img src="/static-images/other/slider-next.png" alt="Вперёд">
     </button>
   </div>
@@ -64,28 +62,23 @@ onUnmounted(() => {
   animation: defaultShowAnimation;
 
   &__image {
-    max-width: 35vw;
-    width: 100%;
-    position: relative;
-    top: calc(50% - 32vh);
-    left: calc(50% - 20vw);
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
-    @include laptop {
-      max-width: 50vw;
-      top: calc(50% - 34vw);
-      left: calc(50% - 25vw);
-    }
+    img {
+      max-width: 40vw;
+      aspect-ratio: 16 / 21;
 
-    @include tablet {
-      max-width: 70vw;
-      top: calc(50% - 45vw);
-      left: calc(50% - 33vw);
-    }
+      @media (max-width: 1024px) {
+        max-width: 60vw;
+      }
 
-    @include mobile-big {
-      max-width: 100%;
-      top: calc(50% - 16vh);
-      left: 0;
+      @include laptop {
+        max-width: unset;
+      }
     }
   }
 

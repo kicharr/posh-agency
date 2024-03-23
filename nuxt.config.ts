@@ -1,5 +1,5 @@
 export default defineNuxtConfig({
-    ssr: false,
+    ssr: true,
     app: {
         head: {
             title: 'Агентство Анастасии Миллер - posh.agency',
@@ -57,5 +57,5 @@ export default defineNuxtConfig({
                 }
             }
         }
-    }
+    },
 })
