@@ -2,6 +2,7 @@
 const props = defineProps(['theme']);
 
 const isMobileNavVissible = ref(false);
+
 let route = useRoute();
 
 const changeMobileNavVissible = () => {
@@ -54,12 +55,13 @@ watch(isMobileNavVissible, (val) => {
             <NuxtLink
                 to="/artists"
                 class="link-default header-nav__link"
+                :class="{'header-nav__link--active': route?.fullPath === '/artists'}"
             >
               Работа с актёрами
             </NuxtLink>
           </li>
           <li>
-            <NuxtLink class="link-default header-nav__link">Кейсы</NuxtLink>
+            <NuxtLink to="/projects" class="link-default header-nav__link" :class="{'header-nav__link--active': route?.fullPath === '/projects'}">Кейсы</NuxtLink>
           </li>
           <li>
             <NuxtLink class="link-default header-nav__link">Кинопроекты</NuxtLink>

@@ -1,6 +1,7 @@
 <script setup>
 import {useArtistsStore} from "~/store/artists.js";
 import {getBestFilms} from "~/lib/utilities.js";
+import Breadcrumbs from "~/components/GlobalComponents/Breadcrumbs.vue";
 import ArtistsPhotoView from "~/components/Artists/ArtistPhotoView.vue";
 
 const route = useRoute();
@@ -19,9 +20,9 @@ const sortedFilmsByYear = (filmography) => {
   for (let i = 0; i < filmography.length; i++) {
     if (!sortedFilmography[filmography[i]?.year]) {
       sortedFilmography[filmography[i]?.year] = [filmography[i]?.name];
+    } else {
+      sortedFilmography[filmography[i]?.year].push(filmography[i]?.name);
     }
-
-    sortedFilmography[filmography[i]?.year].push(filmography[i]?.name);
   }
 
   return sortedFilmography;
@@ -62,7 +63,6 @@ definePageMeta({
   <main class="main">
     <section class="actor-hero section" :style="getArtistPhoto(artistData?.preview)">
       <div class="actor-hero-content container">
-
         <div class="actor-hero__information">
           <Breadcrumbs :currentPage="artistData?.commonFeatures?.name"/>
           <h1 class="actor-hero-content__title">{{ artistData?.commonFeatures?.name }}</h1>
@@ -90,152 +90,123 @@ definePageMeta({
     </section>
 
     <section class="actor-info section container">
+
       <h2 class="title-h2 actor-info__title">
-          <span>
-            об
-          </span>
-        <span>
-            актёре
-          </span>
+        <span>об</span>
+        <span>актёре</span>
       </h2>
 
       <div class="info">
         <h3 class="title-h3 info__title"><span>Физиологические</span> признаки</h3>
+
+
         <div class="info-content info-content__main">
-          <div class="info-content__item">
-            <span class="info-content__title">
-              Рост
-            </span>
-            <p class="info-content__text">
-              {{ artistData?.commonFeatures?.growth }}
-            </p>
+
+
+          <div v-if="artistData?.commonFeatures?.growth" class="info-content__item">
+            <span class="info-content__title">Рост</span>
+            <p class="info-content__text">{{ artistData?.commonFeatures?.growth }}</p>
           </div>
+
+
           <div v-if="artistData?.commonFeatures?.weight" class="info-content__item">
-            <span class="info-content__title">
-              Вес
-            </span>
-            <p class="info-content__text">
-              {{ artistData?.commonFeatures?.weight }}
-            </p>
+            <span class="info-content__title">Вес</span>
+            <p class="info-content__text">{{ artistData?.commonFeatures?.weight }}</p>
           </div>
+
+
           <div v-if="artistData?.commonFeatures?.clothingSize" class="info-content__item">
-            <span class="info-content__title">
-              Размер одежды
-            </span>
-            <p class="info-content__text">
-              {{ artistData?.commonFeatures?.clothingSize }}
-            </p>
+            <span class="info-content__title">Размер одежды</span>
+            <p class="info-content__text">{{ artistData?.commonFeatures?.clothingSize }}</p>
           </div>
+
+
           <div v-if="artistData?.commonFeatures?.shoeSize" class="info-content__item">
-            <span class="info-content__title">
-              Размер обуви
-            </span>
-            <p class="info-content__text">
-              {{ artistData?.commonFeatures?.shoeSize }}
-            </p>
+            <span class="info-content__title">Размер обуви</span>
+            <p class="info-content__text">{{ artistData?.commonFeatures?.shoeSize }}</p>
           </div>
-          <div class="info-content__item">
-            <span class="info-content__title">
-              Цвет глаз
-            </span>
-            <p class="info-content__text">
-              {{ artistData?.commonFeatures?.eyes }}
-            </p>
+
+
+          <div v-if="artistData?.commonFeatures?.eyes" class="info-content__item">
+            <span class="info-content__title">Цвет глаз</span>
+            <p class="info-content__text">{{ artistData?.commonFeatures?.eyes }}</p>
           </div>
+
+
           <div v-if="artistData?.commonFeatures?.voice" class="info-content__item">
-            <span class="info-content__title">
-              Тембр голоса
-            </span>
-            <p class="info-content__text">
-              {{ artistData?.commonFeatures?.voice }}
-            </p>
+            <span class="info-content__title">Тембр голоса</span>
+            <p class="info-content__text">{{ artistData?.commonFeatures?.voice }}</p>
           </div>
-          <div class="info-content__item">
-            <span class="info-content__title">
-              Тип
-            </span>
-            <p class="info-content__text">
-              {{ artistData?.commonFeatures?.type }}
-            </p>
+
+
+          <div v-if="artistData?.commonFeatures?.type" class="info-content__item">
+            <span class="info-content__title">Тип</span>
+            <p class="info-content__text">{{ artistData?.commonFeatures?.type }}</p>
           </div>
+
+
           <div v-if="artistData?.commonFeatures?.vocal" class="info-content__item">
-            <span class="info-content__title">
-              Вокал
-            </span>
-            <p class="info-content__text">
-              {{ artistData?.commonFeatures?.vocal.join(', ') }}
-            </p>
+            <span class="info-content__title">Вокал</span>
+            <p class="info-content__text">{{ artistData?.commonFeatures?.vocal.join(', ') }}</p>
           </div>
+
+
         </div>
       </div>
 
       <div class="info">
         <h3 class="title-h3 info__title"><span>Дополнительная</span> информация</h3>
         <div class="info-content info-content__additional">
-          <div class="info-content__item">
-            <span class="info-content__title">
-              Гражданство
-            </span>
-            <p class="info-content__text">
-              {{ artistData?.additionalInformation?.nationality }}
-            </p>
+
+
+          <div v-if="artistData?.additionalInformation?.nationality" class="info-content__item">
+            <span class="info-content__title">Гражданство</span>
+            <p class="info-content__text">{{ artistData?.additionalInformation?.nationality }}</p>
           </div>
-          <div class="info-content__item">
-            <span class="info-content__title">
-              Город
-            </span>
-            <p class="info-content__text">
-              {{ artistData?.additionalInformation?.city }}
-            </p>
+
+
+          <div v-if="artistData?.additionalInformation?.city" class="info-content__item">
+            <span class="info-content__title">Город</span>
+            <p class="info-content__text">{{ artistData?.additionalInformation?.city }}</p>
           </div>
+
+
           <div v-if="artistData?.additionalInformation?.skills" class="info-content__item">
-            <span class="info-content__title">
-              Навыки
-            </span>
-            <p class="info-content__text">
-              {{ artistData?.additionalInformation?.skills.join(', ') }}
-            </p>
+            <span class="info-content__title">Навыки</span>
+            <p class="info-content__text">{{ artistData?.additionalInformation?.skills.join(', ') }}</p>
           </div>
+
+
           <div v-if="artistData?.additionalInformation?.driving" class="info-content__item">
-            <span class="info-content__title">
-              Вождение
-            </span>
-            <p class="info-content__text">
-              {{ artistData?.additionalInformation?.driving }}
-            </p>
+            <span class="info-content__title">Вождение</span>
+            <p class="info-content__text">{{ artistData?.additionalInformation?.driving }}</p>
           </div>
+
+
           <div v-if="artistData?.commonFeatures?.foreignLanguages" class="info-content__item">
-            <span class="info-content__title">
-              Иностранные языки
-            </span>
-            <p class="info-content__text">
-              {{ artistData?.commonFeatures?.foreignLanguages.join(', ') }}
-            </p>
+            <span class="info-content__title">Иностранные языки</span>
+            <p class="info-content__text">{{ artistData?.commonFeatures?.foreignLanguages.join(', ') }}</p>
           </div>
+
+
           <div v-if="artistData?.additionalInformation?.moreInfo" class="info-content__item info-content__item--fill">
-            <span class="info-content__title">
-              Дополнительная информация
-            </span>
-            <p class="info-content__text">
-              {{ artistData?.additionalInformation?.moreInfo.join('; ') }}
-            </p>
+            <span class="info-content__title">Дополнительная информация</span>
+            <p class="info-content__text">{{ artistData?.additionalInformation?.moreInfo.join('; ') }}</p>
           </div>
-          <div v-if="artistData?.additionalInformation?.tvWork" class="info-content__item">
-            <span class="info-content__title">
-              Работа на TV и Радио
-            </span>
-            <p class="info-content__text">
-              {{ artistData?.additionalInformation?.tvWork.join('; ') }}
-            </p>
+
+
+          <div v-if="artistData?.additionalInformation?.tvWork" class="info-content__item info-content__item--fill">
+            <span class="info-content__title">Работа на TV и Радио</span>
+            <p class="info-content__text">{{ artistData?.additionalInformation?.tvWork.join('; ') }}</p>
           </div>
+
+
           <div v-if="artistData?.additionalInformation?.externalFeatures" class="info-content__item">
-            <span class="info-content__title">
-              Внешние особенности
-            </span>
-            <p class="info-content__text">
-              {{ artistData?.additionalInformation?.externalFeatures }}
-            </p>
+            <span class="info-content__title">Внешние особенности</span>
+            <p class="info-content__text">{{ artistData?.additionalInformation?.externalFeatures }}</p>
           </div>
+
+
         </div>
       </div>
     </section>
@@ -347,6 +318,10 @@ definePageMeta({
   align-items: flex-end;
   position: relative;
   z-index: 5;
+
+  @include mobile-big {
+    padding-top: 10rem;
+  }
 
   &__title {
     font-style: italic;

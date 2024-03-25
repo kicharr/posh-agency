@@ -1190,9 +1190,9 @@ export const useArtistsStore = defineStore('artists', () => {
                 hairColor: 'темно-русый',
                 type: "общий европейский",
                 photos: [
-                    'artists/julia-sorokina/julia-sorokina-1.webp',
-                    'artists/julia-sorokina/julia-sorokina-2.webp',
-                    'artists/julia-sorokina/julia-sorokina-3.webp'
+                    '/artists/julia-sorokina/julia-sorokina-1.webp',
+                    '/artists/julia-sorokina/julia-sorokina-2.webp',
+                    '/artists/julia-sorokina/julia-sorokina-3.webp'
                 ],
                 vizitingCard: 'https://www.youtube.com/embed/8VksL9PZ40A'
             },
