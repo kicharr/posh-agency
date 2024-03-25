@@ -2,6 +2,7 @@
 const props = defineProps(['theme']);
 
 const isMobileNavVissible = ref(false);
+let route = useRoute();
 
 const changeMobileNavVissible = () => {
   isMobileNavVissible.value = !isMobileNavVissible.value;
@@ -50,7 +51,12 @@ watch(isMobileNavVissible, (val) => {
       <div class="header-nav">
         <ul class="header-nav__list">
           <li>
-            <NuxtLink to="/artists" class="link-default header-nav__link">Работа с актёрами</NuxtLink>
+            <NuxtLink
+                to="/artists"
+                class="link-default header-nav__link"
+            >
+              Работа с актёрами
+            </NuxtLink>
           </li>
           <li>
             <NuxtLink class="link-default header-nav__link">Кейсы</NuxtLink>
@@ -153,6 +159,23 @@ watch(isMobileNavVissible, (val) => {
 
     @media (max-width: 978px) {
       display: none;
+    }
+  }
+
+  &__link {
+    position: relative;
+
+    &--active {
+      &::before {
+        position: absolute;
+        content: "";
+        bottom: -.10rem;
+        left: 0;
+        width: 100%;
+        height: .05rem;
+        border-radius: 0.25rem;
+        background-color: $pink;
+      }
     }
   }
 }

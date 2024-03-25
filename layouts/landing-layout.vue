@@ -1,5 +1,8 @@
-<script setup lang="ts">
-const theme: string = 'light';
+<script setup>
+import Header from "~/components/GlobalComponents/Header.vue";
+import Footer from "~/components/GlobalComponents/Footer.vue";
+
+const theme = 'light';
 </script>
 
 <template>

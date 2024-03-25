@@ -19,9 +19,9 @@ export const useArtistsStore = defineStore('artists', () => {
                 voice: "сопрано",
                 type: "общий европейский",
                 photos: [
-                    'artists/slava-kopeykin/slava-kopeykin-1.webp',
-                    'artists/slava-kopeykin/slava-kopeykin-2.webp',
-                    'artists/slava-kopeykin/slava-kopeykin-3.webp'
+                    '/artists/slava-kopeykin/slava-kopeykin-1.webp',
+                    '/artists/slava-kopeykin/slava-kopeykin-2.webp',
+                    '/artists/slava-kopeykin/slava-kopeykin-3.webp'
                 ],
                 vizitingCard: 'https://www.youtube.com/embed/CxhIyXpG9xk'
             },
@@ -66,10 +66,10 @@ export const useArtistsStore = defineStore('artists', () => {
         },
         {
             id: 'gleb-shevnin',
-            preview: "gleb-shevnin/gleb-shevnin-preview.webp",
+            preview: "/gleb-shevnin/gleb-shevnin-preview.webp",
             category: 'actor',
             commonFeatures: {
-                photo: "artists/gleb-shevnin/gleb-shevnin.webp",
+                photo: "/artists/gleb-shevnin/gleb-shevnin.webp",
                 name: "Глеб Шевнин",
                 dateBirth: '07.08.1999',
                 growth: 190,
@@ -149,10 +149,10 @@ export const useArtistsStore = defineStore('artists', () => {
         },
         {
             id: 'danya-kiselyov',
-            preview: "danya-kiselyov/danya-kiselyov-preview.webp",
+            preview: "/danya-kiselyov/danya-kiselyov-preview.webp",
             category: 'actor',
             commonFeatures: {
-                photo: "artists/danya-kiselyov/danya-kiselyov.webp",
+                photo: "/artists/danya-kiselyov/danya-kiselyov.webp",
                 name: "Даня Киселёв",
                 dateBirth: '18.02.2000',
                 growth: 180,
@@ -264,10 +264,10 @@ export const useArtistsStore = defineStore('artists', () => {
         },
         {
             id: 'philip-ershov',
-            preview: "philip-ershov/philip-ershov-preview.webp",
+            preview: "/philip-ershov/philip-ershov-preview.webp",
             category: 'actor',
             commonFeatures: {
-                photo: "artists/philip-ershov/philip-ershov.webp",
+                photo: "/artists/philip-ershov/philip-ershov.webp",
                 name: "Филипп Ершов",
                 dateBirth: '04.09.1993',
                 growth: 180,
@@ -407,10 +407,10 @@ export const useArtistsStore = defineStore('artists', () => {
         },
         {
             id: 'sasha-yugov',
-            preview: "sasha-yugov/sasha-yugov-preview.webp",
+            preview: "/sasha-yugov/sasha-yugov-preview.webp",
             category: 'actor',
             commonFeatures: {
-                photo: "artists/sasha-yugov/sasha-yugov.webp",
+                photo: "/artists/sasha-yugov/sasha-yugov.webp",
                 name: "Саша Югов",
                 dateBirth: '14.08.1997',
                 growth: 178,
@@ -536,10 +536,10 @@ export const useArtistsStore = defineStore('artists', () => {
         },
         {
             id: 'yana-enzhaeva',
-            preview: "yana-enzhaeva/yana-enzhaeva-preview.webp",
+            preview: "/yana-enzhaeva/yana-enzhaeva-preview.webp",
             category: 'actresses',
             commonFeatures: {
-                photo: "artists/yana-enzhaeva/yana-enzhaeva.webp",
+                photo: "/artists/yana-enzhaeva/yana-enzhaeva.webp",
                 name: "Яна Енжаева",
                 dateBirth: '26.09.1994',
                 growth: 170,
@@ -661,10 +661,10 @@ export const useArtistsStore = defineStore('artists', () => {
         },
         {
             id: 'arseny-weiss',
-            preview: "arseny-weiss/arseny-weiss-preview.webp",
+            preview: "/arseny-weiss/arseny-weiss-preview.webp",
             category: 'actor',
             commonFeatures: {
-                photo: "artists/arseny-weiss/arseny-weiss.webp",
+                photo: "/artists/arseny-weiss/arseny-weiss.webp",
                 name: "Арсений Вейс",
                 dateBirth: '23.02.2005',
                 growth: 184,
@@ -743,10 +743,10 @@ export const useArtistsStore = defineStore('artists', () => {
         },
         {
             id: 'tatiana-marakhonich',
-            preview: "tatiana-marakhonich/tatiana-marakhonich-preview.webp",
+            preview: "/tatiana-marakhonich/tatiana-marakhonich-preview.webp",
             category: 'actresses',
             commonFeatures: {
-                photo: "artists/tatiana-marakhonich/tatiana-marakhonich.webp",
+                photo: "/artists/tatiana-marakhonich/tatiana-marakhonich.webp",
                 name: "Татьяна Марахонич",
                 dateBirth: '27.05.1998',
                 growth: 177,
@@ -839,10 +839,10 @@ export const useArtistsStore = defineStore('artists', () => {
         },
         {
             id: 'dmitry-zhuravlev',
-            preview: "dmitry-zhuravlev/dmitry-zhuravlev-preview.webp",
+            preview: "/dmitry-zhuravlev/dmitry-zhuravlev-preview.webp",
             category: 'actor',
             commonFeatures: {
-                photo: "artists/dmitry-zhuravlev/dmitry-zhuravlev.webp",
+                photo: "/artists/dmitry-zhuravlev/dmitry-zhuravlev.webp",
                 name: "Дмитрий Журавлев",
                 dateBirth: '17.05.1992',
                 growth: 176,
@@ -935,10 +935,10 @@ export const useArtistsStore = defineStore('artists', () => {
         },
         {
             id: 'polina-denisova',
-            preview: "polina-denisova/polina-denisova-preview.webp",
+            preview: "/polina-denisova/polina-denisova-preview.webp",
             category: 'actresses',
             commonFeatures: {
-                photo: "artists/polina-denisova/polina-denisova.webp",
+                photo: "/artists/polina-denisova/polina-denisova.webp",
                 name: "Полина Денисова",
                 dateBirth: '24.02.2004',
                 growth: 167,
@@ -1014,10 +1014,10 @@ export const useArtistsStore = defineStore('artists', () => {
         },
         {
             id: 'andrey-galchenko',
-            preview: "andrey-galchenko/andrey-galchenko-preview.webp",
+            preview: "/andrey-galchenko/andrey-galchenko-preview.webp",
             category: 'actor',
             commonFeatures: {
-                photo: "artists/andrey-galchenko/andrey-galchenko.webp",
+                photo: "/artists/andrey-galchenko/andrey-galchenko.webp",
                 name: "Андрей Гальченко",
                 dateBirth: '22.11.1997',
                 growth: 177,
@@ -1085,10 +1085,10 @@ export const useArtistsStore = defineStore('artists', () => {
         },
         {
             id: 'alina-kolesnikova',
-            preview: "alina-kolesnikova/alina-kolesnikova-preview.webp",
+            preview: "/alina-kolesnikova/alina-kolesnikova-preview.webp",
             category: 'actresses',
             commonFeatures: {
-                photo: "artists/alina-kolesnikova/alina-kolesnikova.webp",
+                photo: "/artists/alina-kolesnikova/alina-kolesnikova.webp",
                 name: "Алина Колесникова",
                 dateBirth: '12.01.2000',
                 growth: 175,
@@ -1169,10 +1169,10 @@ export const useArtistsStore = defineStore('artists', () => {
         },
         {
             id: 'julia-sorokina',
-            preview: "julia-sorokina/julia-sorokina-preview.webp",
+            preview: "/julia-sorokina/julia-sorokina-preview.webp",
             category: 'actresses',
             commonFeatures: {
-                photo: "artists/julia-sorokina/julia-sorokina.webp",
+                photo: "/artists/julia-sorokina/julia-sorokina.webp",
                 name: "Юлия Сорокина",
                 dateBirth: '18.06.2000',
                 growth: 170,
@@ -1385,10 +1385,10 @@ export const useArtistsStore = defineStore('artists', () => {
         },
         {
             id: 'kirill-rusin',
-            preview: "kirill-rusin/kirill-rusin-preview.webp",
+            preview: "/kirill-rusin/kirill-rusin-preview.webp",
             category: 'actor',
             commonFeatures: {
-                photo: "artists/kirill-rusin/kirill-rusin.webp",
+                photo: "/artists/kirill-rusin/kirill-rusin.webp",
                 name: "Кирилл Русин",
                 dateBirth: '20.09.1999',
                 growth: 181,
@@ -1479,10 +1479,10 @@ export const useArtistsStore = defineStore('artists', () => {
         },
         {
             id: 'galya-denisenko',
-            preview: "galya-denisenko/galya-denisenko-preview.webp",
+            preview: "/galya-denisenko/galya-denisenko-preview.webp",
             category: 'actresses',
             commonFeatures: {
-                photo: "artists/galya-denisenko/galya-denisenko.webp",
+                photo: "/artists/galya-denisenko/galya-denisenko.webp",
                 name: "Галя Денисенко",
                 dateBirth: '17.05.2000',
                 growth: 166,
@@ -1536,10 +1536,10 @@ export const useArtistsStore = defineStore('artists', () => {
         },
         {
             id: 'ekaterina-channova',
-            preview: "ekaterina-channova/ekaterina-channova-preview.webp",
+            preview: "/ekaterina-channova/ekaterina-channova-preview.webp",
             category: 'actresses',
             commonFeatures: {
-                photo: "artists/ekaterina-channova/ekaterina-channova.webp",
+                photo: "/artists/ekaterina-channova/ekaterina-channova.webp",
                 name: "Кристина Орлянская",
                 dateBirth: '15.03.2001',
                 growth: 170,
@@ -1649,10 +1649,10 @@ export const useArtistsStore = defineStore('artists', () => {
         },
         {
             id: 'ruslan-chagilov',
-            preview: "ruslan-chagilov/ruslan-chagilov-preview.webp",
+            preview: "/ruslan-chagilov/ruslan-chagilov-preview.webp",
             category: 'actor',
             commonFeatures: {
-                photo: "artists/ruslan-chagilov/ruslan-chagilov.webp",
+                photo: "/artists/ruslan-chagilov/ruslan-chagilov.webp",
                 name: "Руслан Чагилов",
                 dateBirth: '19.09.2003',
                 growth: 178,
@@ -1700,10 +1700,10 @@ export const useArtistsStore = defineStore('artists', () => {
         },
         {
             id: 'kristina-orlyanskaya',
-            preview: "kristina-orlyanskaya/kristina-orlyanskaya-preview.webp",
+            preview: "/kristina-orlyanskaya/kristina-orlyanskaya-preview.webp",
             category: 'actresses',
             commonFeatures: {
-                photo: "artists/kristina-orlyanskaya/kristina-orlyanskaya.webp",
+                photo: "/artists/kristina-orlyanskaya/kristina-orlyanskaya.webp",
                 name: "Екатерина Чаннова",
                 dateBirth: '15.03.2001',
                 growth: 170,
@@ -1813,10 +1813,10 @@ export const useArtistsStore = defineStore('artists', () => {
         },
         {
             id: 'andrey-zamyatin',
-            preview: "andrey-zamyatin/andrey-zamyatin-preview.webp",
+            preview: "/andrey-zamyatin/andrey-zamyatin-preview.webp",
             category: 'actor',
             commonFeatures: {
-                photo: "artists/andrey-zamyatin/andrey-zamyatin.webp",
+                photo: "/artists/andrey-zamyatin/andrey-zamyatin.webp",
                 name: "Андрей Замятин",
                 dateBirth: '08.05.2003',
                 growth: 188,
@@ -1869,10 +1869,10 @@ export const useArtistsStore = defineStore('artists', () => {
         },
         {
             id: 'alexandra-rozovskaya',
-            preview: "alexandra-rozovskaya/alexandra-rozovskaya-preview.webp",
+            preview: "/alexandra-rozovskaya/alexandra-rozovskaya-preview.webp",
             category: 'actresses',
             commonFeatures: {
-                photo: "artists/alexandra-rozovskaya/alexandra-rozovskaya.webp",
+                photo: "/artists/alexandra-rozovskaya/alexandra-rozovskaya.webp",
                 name: "Александра Розовская",
                 dateBirth: '27.01.1988',
                 growth: 165,
@@ -1944,10 +1944,10 @@ export const useArtistsStore = defineStore('artists', () => {
         },
         {
             id: 'maxim-saprykin',
-            preview: "maxim-saprykin/maxim-saprykin-preview.webp",
+            preview: "/maxim-saprykin/maxim-saprykin-preview.webp",
             category: 'actor',
             commonFeatures: {
-                photo: "artists/maxim-saprykin/maxim-saprykin.webp",
+                photo: "/artists/maxim-saprykin/maxim-saprykin.webp",
                 name: "Максим Сапрыкин",
                 dateBirth: '30.06.2002',
                 growth: 176,
@@ -2082,10 +2082,10 @@ export const useArtistsStore = defineStore('artists', () => {
         },
         {
             id: 'denis-shvedov',
-            preview: "denis-shvedov/denis-shvedov-preview.webp",
+            preview: "/denis-shvedov/denis-shvedov-preview.webp",
             category: 'actor',
             commonFeatures: {
-                photo: "artists/denis-shvedov/denis-shvedov.webp",
+                photo: "/artists/denis-shvedov/denis-shvedov.webp",
                 name: "Денис Шведов",
                 dateBirth: '30.06.2002',
                 growth: 176,

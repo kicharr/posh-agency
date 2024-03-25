@@ -19,20 +19,18 @@ const sortedFilmsByYear = (filmography) => {
   for (let i = 0; i < filmography.length; i++) {
     if (!sortedFilmography[filmography[i]?.year]) {
       sortedFilmography[filmography[i]?.year] = [filmography[i]?.name];
-    } else {
-      sortedFilmography[filmography[i]?.year].push(filmography[i]?.name);
     }
+
+    sortedFilmography[filmography[i]?.year].push(filmography[i]?.name);
   }
 
   return sortedFilmography;
 }
 const getArtistPhoto = (str) => {
   if (!str) return `background: center / cover no-repeat url("/static-images/artists/actor-photo-none.png");`
-  return `background: center / cover no-repeat url('/static-images/artists/${str}');`
+  return `background: center / cover no-repeat url('/static-images/artists${str}');`
 }
-const changeFilmographyVissible = () => {
-  isAllFilmographyVissible.value = !isAllFilmographyVissible.value;
-}
+const changeFilmographyVissible = () => isAllFilmographyVissible.value = !isAllFilmographyVissible.value;
 
 const changePhotoView = (photo) => {
   currentPhotoView.value = artistData?.commonFeatures?.photos.indexOf(photo);
@@ -44,6 +42,16 @@ function checkFilmographyLength(filmography) {
 
   return filmography.filter((item) => item?.type === 'best');
 }
+
+useHead({
+  title: `${artistData?.commonFeatures?.name} - posh.agency`,
+  meta: [
+    {
+      name: 'description',
+      content: `Информация об артисте ${artistData?.commonFeatures?.name}, фотографии и фильмография. Звоните сейчас: + 7 (917) 545-20-84`
+    }
+  ]
+})
 
 definePageMeta({
   layout: "landing-layout"
@@ -61,16 +69,19 @@ definePageMeta({
           <div class="actor-hero-content__description">
             <span class="actor-hero-content__text actor-hero-content__text--blue">Актёр кино</span>
             <p class="actor-hero-content__text">Дата рождения — {{ artistData?.commonFeatures?.dateBirth }}</p>
-            <p v-if="getBestFilms(artistData?.filmography)" class="actor-hero-content__text actor-hero-content__text--films">
+            <p v-if="getBestFilms(artistData?.filmography)"
+               class="actor-hero-content__text actor-hero-content__text--films">
               Лучшее: {{ getBestFilms(artistData?.filmography) }}</p>
           </div>
         </div>
 
         <div class="actor-hero__links">
-          <a v-if="artistData?.additionalInformation?.kinoteatrLink" :href="artistData?.additionalInformation?.kinoteatrLink" target="_blank">
+          <a v-if="artistData?.additionalInformation?.kinoteatrLink"
+             :href="artistData?.additionalInformation?.kinoteatrLink" target="_blank">
             <img class="actor-link" src="/static-images/artists/kino-teatr.svg" alt="Ссылка на страницу кинотеатра">
           </a>
-          <a v-if="artistData?.additionalInformation?.kinopoiskLink" :href="artistData?.additionalInformation?.kinopoiskLink" target="_blank">
+          <a v-if="artistData?.additionalInformation?.kinopoiskLink"
+             :href="artistData?.additionalInformation?.kinopoiskLink" target="_blank">
             <img class="actor-link" src="/static-images/artists/kinopoisk.svg" alt="Ссылка на страницу кинопоиска">
           </a>
         </div>
@@ -282,12 +293,12 @@ definePageMeta({
       <div class="photos__grid">
         <div v-for="(photo, index) in artistData?.commonFeatures?.photos" :key="index" class="photos__item">
           <button @click="changePhotoView(photo)" class="photo-button">
-            <img :src="`/static-images/${photo}`" :alt="`Фото - ${index + 1} ${artistData?.commonFeatures?.name}`">
+            <img :src="`/static-images${photo}`" :alt="`Фото - ${index + 1} ${artistData?.commonFeatures?.name}`">
           </button>
         </div>
       </div>
       <ArtistsPhotoView v-if="photoViewActive" :currentPhotoIndex="currentPhotoView"
-                      :allActorPhoto="artistData?.commonFeatures?.photos" @changePhotoView="changePhotoView"/>
+                        :allActorPhoto="artistData?.commonFeatures?.photos" @changePhotoView="changePhotoView"/>
     </section>
 
     <section v-if="artistData?.commonFeatures?.vizitingCard" class="visiting-card section container">

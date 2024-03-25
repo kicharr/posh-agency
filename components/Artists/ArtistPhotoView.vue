@@ -39,7 +39,7 @@ onUnmounted(() => {
     </button>
 
     <div class="photo-view__image">
-      <img :src="`/static-images/${allActorPhoto[currentSlide]}`">
+      <img :src="`/static-images${allActorPhoto[currentSlide]}`">
     </div>
 
     <button @click="changeCurrentSlide('next')" class="photo-view__button photo-view__button--next">
@@ -76,7 +76,7 @@ onUnmounted(() => {
         max-width: 60vw;
       }
 
-      @include laptop {
+      @include tablet {
         max-width: unset;
       }
     }

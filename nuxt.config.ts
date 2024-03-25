@@ -1,5 +1,5 @@
 export default defineNuxtConfig({
-    ssr: true,
+    ssr: false,
     app: {
         head: {
             title: 'Агентство Анастасии Миллер - posh.agency',
@@ -10,7 +10,7 @@ export default defineNuxtConfig({
                 {charset: 'utf-8'},
                 {
                     name: 'description',
-                    content: 'Агентство Анастасии Миллер. Профессиональный менеджмент актёров в Москве. - posh.agency'
+                    content: 'Агентство Анастасии Миллер. Профессиональный менеджмент актёров в Москве. Свжитесь сейчас по номеру: + 7 (917) 545-20-84'
                 },
                 {
                     name: 'viewport',
@@ -29,22 +29,19 @@ export default defineNuxtConfig({
     devServer: {
         port: 8080
     },
-    alias: {
-        "assets": "@/assets",
-    },
     devtools: {
         enabled: true
     },
     components: [
         {
             path: '~/components',
-            pathPrefix: false,
         },
     ],
     css: ['~/assets/styles/main.scss'],
     modules: ['@pinia/nuxt'],
     imports: {
         dirs: ['./stores'],
+        autoImport: true
     },
     vite: {
         css: {

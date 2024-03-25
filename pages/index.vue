@@ -2,6 +2,7 @@
 import {useArtistsStore} from "~/store/artists.js";
 import {useProjectsStore} from "~/store/projects";
 import ProjectCard from "~/components/Projects/ProjectCard.vue";
+import ArtistCard from "~/components/Artists/ArtistCard.vue";
 
 const artistsStore = useArtistsStore();
 const projectsStore = useProjectsStore();
@@ -68,7 +69,7 @@ definePageMeta({
       </div>
       <div class="artists__list">
         <ArtistCard
-            v-for="(artist, index) in artistsList.slice(0, 4)"
+            v-for="(artist, index) in artistsList.slice(0, 6)"
             :key="index"
             :artistData="artist"
         />
@@ -684,6 +685,11 @@ definePageMeta({
   &__button {
     color: $dark;
     margin: 3rem auto 2rem;
+
+    @include mobile-big {
+      width: 100%;
+      margin: 2rem auto 1rem;
+    }
   }
 }
 

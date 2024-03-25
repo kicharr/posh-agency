@@ -92,8 +92,7 @@ const props = defineProps(['projectData']);
   }
 
   &:hover {
-    box-shadow: 0 .2rem .2rem 0 $dark;
-
+    box-shadow: 0 3px 3px  $pink;
     img {
       transform: scale(1.1);
     }
