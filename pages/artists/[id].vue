@@ -14,19 +14,33 @@ const isAllFilmographyVissible = ref(false);
 const photoViewActive = ref(false);
 
 let currentPhotoView = ref('');
+// const sortedFilmsByYear = (filmography) => {
+//   let sortedFilmography = {};
+//   for (let i = 0; i < filmography.length; i++) {
+//     if (!sortedFilmography[filmography[i]?.year]) {
+//       sortedFilmography[filmography[i]?.year] = [filmography[i]?.name];
+//     } else {
+//       sortedFilmography[filmography[i]?.year].push(filmography[i]?.name);
+//     }
+//   }
+//   return sortedFilmography;
+// }
 const sortedFilmsByYear = (filmography) => {
-  let sortedFilmography = {};
+  const newFilmography = new Map();
 
-  for (let i = 0; i < filmography.length; i++) {
-    if (!sortedFilmography[filmography[i]?.year]) {
-      sortedFilmography[filmography[i]?.year] = [filmography[i]?.name];
+  filmography.forEach((item) => {
+    if (!newFilmography.has(item?.year)) {
+      newFilmography.set(item?.year, []);
+      newFilmography.get(item?.year).push(item?.name)
     } else {
-      sortedFilmography[filmography[i]?.year].push(filmography[i]?.name);
+      newFilmography.get(item?.year).push(item?.name)
     }
-  }
+  })
 
-  return sortedFilmography;
+  return newFilmography;
 }
+
+
 const getArtistPhoto = (str) => {
   if (!str) return `background: center / cover no-repeat url("/static-images/artists/actor-photo-none.png");`
   return `background: center / cover no-repeat url('/static-images/artists${str}');`
@@ -234,18 +248,16 @@ definePageMeta({
         <div v-if="isAllFilmographyVissible" class="full-filmography">
           <hr class="full-filmography__separator">
 
-          <div v-for="(filmsForYear, year, index) in sortedFilmsByYear(artistData?.filmography)" :key="index"
+          <div v-for="(filmsForYear, index) in sortedFilmsByYear(artistData?.filmography)" :key="index"
                class="filmography-year__wrapper">
 
             <button class="filmography-year__button">
-              <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M0 0L22 10.78L0 22V0Z" fill="#FFBE98"/>
-              </svg>
-              {{ year }}
+              <img src="/static-images/peach-rectangle.svg" alt="•">
+              {{ filmsForYear[0] }}
             </button>
 
             <ul class="list-default">
-              <li v-for="(item, index) in filmsForYear" :key="index" class="filmography-year__item">
+              <li v-for="(item, index) in filmsForYear[1]" :key="index" class="filmography-year__item">
                 {{ item }}
               </li>
             </ul>

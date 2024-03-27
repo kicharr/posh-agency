@@ -2,24 +2,34 @@
 import {getBestFilms} from "~/lib/utilities.js";
 
 const props = defineProps(['artistData']);
-// /static-images/artists/artist-cover.webp
+
 </script>
 
 <template>
   <NuxtLink :to="`/artists/${artistData?.id}`" class="artist-card">
+
     <div class="artist-card__preview">
       <img loading="lazy" :src="`/static-images${artistData?.commonFeatures?.photo}`" :alt="`${artistData?.commonFeatures?.name}`">
     </div>
 
+<!--    <div class="artist-card__preview">-->
+<!--      <img loading="lazy" src="/static-images/artists/artist-cover.webp" :alt="`${artistData?.commonFeatures?.name}`">-->
+<!--    </div>-->
+
     <div class="artist-card__info">
-      <div class="artist-info artist-info--desktop">
+
+      <div class="artist-info">
         <h3 class="artist-card__title">{{ artistData?.commonFeatures?.name }}</h3>
         <span class="artist-card__text artist-card__text--blue">Актёр кино</span>
       </div>
-      {{ artistData?.photo }}
+
       <p class="artist-card__text artist-card__text">{{ getBestFilms(artistData?.filmography) }}</p>
     </div>
+
   </NuxtLink>
+
+
+
 </template>
 
 <style scoped lang="scss">
@@ -28,7 +38,6 @@ const props = defineProps(['artistData']);
   flex-direction: column;
   gap: 1rem;
   align-items: center;
-  animation: defaultShowAnimation;
 
   max-width: 33.55rem;
   width: 100%;

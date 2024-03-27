@@ -2087,18 +2087,18 @@ export const useArtistsStore = defineStore('artists', () => {
             commonFeatures: {
                 photo: "/artists/denis-shvedov/denis-shvedov.webp",
                 name: "Денис Шведов",
-                dateBirth: '30.06.2002',
-                growth: 176,
-                weight: null,
-                clothingSize: null,
-                shoeSize: 44,
-                eyes: null,
-                foreignLanguages: ['английский (базовый)'],
+                dateBirth: '24.11.1981',
+                growth: 190,
+                weight: '85-98',
+                clothingSize: '50-52',
+                shoeSize: 45,
+                eyes: 'зеленый',
+                foreignLanguages: null,
                 voice: null,
                 hairColor: 'русый',
                 dance: null,
                 vocal: null,
-                type: "Европейский",
+                type: null,
                 photos: [
                     '/artists/denis-shvedov/denis-shvedov-1.webp',
                     '/artists/denis-shvedov/denis-shvedov-2.webp',
@@ -2108,113 +2108,355 @@ export const useArtistsStore = defineStore('artists', () => {
             },
             additionalInformation: {
                 nationality: "Россия",
-                city:
-                    "Москва, Московская область, Россия",
+                city: "Москва, Московская область, Россия",
                 driving: 'Права категории В',
                 tvWork: null,
                 externalFeatures: null,
-                moreInfo: ['Чемпион Москвы по кикбоксингу',
-                    'чемпион СНГ по Таэквон-до', 'баскетбол (любительский)',
-                    'бег (любительский)',
-                    'борьба (любительский)',
-                    'волейбол (любительский)',
-                    'плавание (любительский)',
-                    'регби (любительский)',
-                    'футбол (любительский)'],
+                moreInfo: null,
                 skills: ['озвучивание'],
-                kinopoiskLink: 'https://www.kinopoisk.ru/name/3017082/',
-                kinoteatrLink: 'https://www.kino-teatr.ru/kino/acter/m/ros/361910/bio/'
+                kinopoiskLink: 'https://www.kinopoisk.ru/name/1705878/',
+                kinoteatrLink: 'https://www.kino-teatr.ru/kino/acter/m/ros/21039/bio/'
             },
             filmography: [
                 {
-                    name: "Приставы (в производстве) - Виктор",
+                    name: "Финал (в производстве) - Владимир Алекно — главная роль",
                     year: 2024,
                     type: 'default'
                 },
                 {
-                    name: "Наследники. Дар крови (в производстве) - Лёша",
+                    name: "Танго (в производстве) - главная роль",
                     year: 2024,
                     type: 'default'
                 },
                 {
-                    name: "Десять дней до весны (в производстве) - Гриша",
+                    name: "Лето. Нулевые - Виталий Михайлович",
                     year: 2024,
                     type: 'default'
                 },
                 {
-                    name: "Блиндаж (в производстве)",
+                    name: "Красный 5 — главная роль",
                     year: 2024,
                     type: 'default'
                 },
                 {
-                    name: "Хоккейные папы",
+                    name: "Я делаю шаг - Дмитрий",
                     year: 2023,
                     type: 'default'
                 },
                 {
-                    name: "Папины дочки. Новые - Роман Рощин",
-                    year: 2023,
-                    type: 'best'
-                },
-                {
-                    name: "Кино про бандитов - Жека",
+                    name: "Сны Алисы - Константин — главная роль",
                     year: 2023,
                     type: 'default'
                 },
                 {
-                    name: "Училки в законе-3 - Никита",
+                    name: "Оффлайн-2. Уязвимость обнаружена - Никонов — главная роль",
+                    year: 2023,
+                    type: 'default'
+                },
+                {
+                    name: "Оборотень - Лазарев — главная роль",
+                    year: 2023,
+                    type: 'default'
+                },
+                {
+                    name: "Иванько-2 - Макар Андреевич — главная роль",
+                    year: 2023,
+                    type: 'default'
+                },
+                {
+                    name: "Доктор Преображенский. Новые серии. - Лев Григорьевич Преображенский — главная роль",
+                    year: 2023,
+                    type: 'default'
+                },
+                {
+                    name: "Что и требовалось доказать-2 - Олег Ширяев — главная роль",
                     year: 2022,
                     type: 'default'
                 },
                 {
-                    name: "Красная шапочка - Рок",
+                    name: "Оффлайн - Никонов — главная роль",
                     year: 2022,
                     type: 'default'
                 },
                 {
-                    name: "Жиза - Якут (главная роль)",
+                    name: "Бывшие. Happy end - Илья Русаков — главная роль",
                     year: 2022,
+                    type: 'default'
+                },
+                {
+                    name: "Сказки Пушкина. Для взрослых",
+                    year: 2021,
+                    type: 'default'
+                },
+                {
+                    name: "Рэйк",
+                    year: 2020,
+                    type: 'default'
+                },
+                {
+                    name: "Фантом - Стас — главная роль",
+                    year: 2020,
+                    type: 'default'
+                },
+                {
+                    name: "Иванько - Макар Андреевич — главная роль",
+                    year: 2020,
+                    type: 'default'
+                },
+                {
+                    name: "Волк - Александр Волк — главная роль",
+                    year: 2020,
+                    type: 'default'
+                },
+                {
+                    name: "Бывшие-3 - Илья Русаков — главная роль",
+                    year: 2020,
+                    type: 'default'
+                },
+                {
+                    name: "Тинатин (короткометражный) - отец Тины",
+                    year: 2019,
+                    type: 'default'
+                },
+                {
+                    name: "Бывшие-2 - Илья Русаков — главная роль",
+                    year: 2019,
+                    type: 'default'
+                },
+                {
+                    name: "Завод | Factory, The (Армения, Россия, Франция) - Седой — главная роль",
+                    year: 2018,
+                    type: 'default'
+                },
+                {
+                    name: "Доктор Преображенский - Лев Григорьевич Преображенский — главная роль",
+                    year: 2018,
+                    type: 'default'
+                },
+                {
+                    name: "Всё сложно (короткометражный)",
+                    year: 2018,
+                    type: 'default'
+                },
+                {
+                    name: "В постели - Женя — главная роль",
+                    year: 2018,
+                    type: 'default'
+                },
+                {
+                    name: "HollyWhore (Россия, США, не был завершен)",
+                    year: 2018,
+                    type: 'default'
+                },
+                {
+                    name: "Путь сквозь снега (Украина) - Денис Гордеев — главная роль",
+                    year: 2017,
+                    type: 'default'
+                },
+                {
+                    name: "Новые чувства (короткометражный)",
+                    year: 2017,
+                    type: 'default'
+                },
+                {
+                    name: "Налёт-2 - Павел Карпенко — главная роль",
+                    year: 2017,
+                    type: 'default'
+                },
+                {
+                    name: "Налёт - Павел Карпенко — главная роль",
+                    year: 2017,
+                    type: 'default'
+                },
+                {
+                    name: "Жизнь впереди - Игорь",
+                    year: 2017,
+                    type: 'default'
+                },
+                {
+                    name: "Что и требовалось доказать -Олег Ширяев — главная роль ",
+                    year: 2016,
+                    type: 'default'
+                },
+                {
+                    name: "Танцы насмерть - Серый",
+                    year: 2016,
+                    type: 'default'
+                },
+                {
+                    name: "Мама всегда рядом (короткометражный)",
+                    year: 2016,
+                    type: 'default'
+                },
+                {
+                    name: "Мажор-2 - Данила Королёв — главная роль",
+                    year: 2016,
+                    type: 'default'
+                },
+                {
+                    name: "Бывшие - Илья Русаков — главная роль",
+                    year: 2016,
                     type: 'best'
                 },
                 {
-                    name: "Дикие предки - Гриша",
-                    year: 2022,
+                    name: "Беги! - Николай Маркин — главная роль",
+                    year: 2016,
+                    type: 'default'
+                },
+                {
+                    name: "Снег и пепел - майор Урусов",
+                    year: 2015,
+                    type: 'default'
+                },
+                {
+                    name: "Приличные люди - Сиплый",
+                    year: 2015,
+                    type: 'default'
+                },
+                {
+                    name: "Неуловимые - Сергей Полянский",
+                    year: 2015,
+                    type: 'default'
+                },
+                {
+                    name: "Москва, я терплю тебя - Виктор Тихонович",
+                    year: 2015,
+                    type: 'default'
+                },
+                {
+                    name: "Метод - Игорь Бойко",
+                    year: 2015,
                     type: 'best'
                 },
                 {
-                    name: "Валюша - Арсений",
-                    year: 2022,
+                    name: "Метаморфозис - Владимир",
+                    year: 2015,
                     type: 'default'
                 },
                 {
-                    name: "Французы под Москвой - Вася",
-                    year: 2021,
+                    name: "Измены - Никита Михалков",
+                    year: 2015,
                     type: 'default'
                 },
                 {
-                    name: "Сеструха",
-                    year: 2021,
+                    name: "Мажор - Данила Королёв — главная роль",
+                    year: 2014,
                     type: 'default'
                 },
                 {
-                    name: "Сеструха",
-                    year: 2021,
+                    name: "Звезда | Star - частный детектив",
+                    year: 2014,
                     type: 'default'
                 },
                 {
-                    name: "Молодые и сильные. проклятие выживших - Питон",
-                    year: 2021,
+                    name: "Авантюристы - Андрей",
+                    year: 2014,
                     type: 'default'
                 },
                 {
-                    name: "Ле.Ген.Да - Лёня, 15 лет",
-                    year: 2021,
+                    name: "Станица - Геннадий Иванович Киреев",
+                    year: 2013,
                     type: 'default'
                 },
                 {
-                    name: "Крюк - Ярослав Соколов, хоккеист, сын Лады",
-                    year: 2021,
+                    name: "Майор - Сергей Соболев — главная роль",
+                    year: 2013,
+                    type: 'best'
+                },
+                {
+                    name: "Чехов-GALA (фильм-спектакль) - Нюнин",
+                    year: 2012,
                     type: 'default'
+                },
+                {
+                    name: "О чём ещё говорят мужчины - Боря",
+                    year: 2011,
+                    type: 'default'
+                },
+                {
+                    name: "Отражение",
+                    year: 2011,
+                    type: 'default'
+                },
+                {
+                    name: "Инкассаторы - Сергей Хромов — главная роль",
+                    year: 2011,
+                    type: 'default'
+                },
+                {
+                    name: "Быть или не быть",
+                    year: 2011,
+                    type: 'default'
+                },
+                {
+                    name: "Записки экспедитора Тайной канцелярии",
+                    year: 2010,
+                    type: 'default'
+                },
+                {
+                    name: "Жить - Андрей — главная роль",
+                    year: 2010,
+                    type: 'default'
+                },
+                {
+                    name: "Берег утопии (фильм-спектакль)",
+                    year: 2010,
+                    type: 'default'
+                },
+                {
+                    name: "Однажды будет любовь - Антон",
+                    year: 2009,
+                    type: 'default'
+                },
+                {
+                    name: "Из жизни капитана Черняева - Кусто",
+                    year: 2009,
+                    type: 'default'
+                },
+                {
+                    name: "Иван Грозный",
+                    year: 2009,
+                    type: 'default'
+                },
+                {
+                    name: "Про зайца (короткометражный)",
+                    year: 2008,
+                    type: 'default'
+                },
+                {
+                    name: "Добрая подружка для всех",
+                    year: 2008,
+                    type: 'default'
+                },
+                {
+                    name: "Александр. Невская битва - Сбыслав Янукович",
+                    year: 2008,
+                    type: 'default'
+                },
+                {
+                    name: "Татьянин день - Анатолий",
+                    year: 2007,
+                    type: 'default'
+                },
+                {
+                    name: "Слуга Государев - Шляхтич",
+                    year: 2007,
+                    type: 'default'
+                },
+                {
+                    name: "Морозов - Матвей",
+                    year: 2007,
+                    type: 'default'
+                },
+                {
+                    name: "Короли игры - Константин Ожиганов",
+                    year: 2007,
+                    type: 'default'
+                },
+                {
+                    name: "Лига справедливости Зака Снайдера | Zack Snyder's Justice League (США) - Аквамен / Артур Гарри",
+                    year: 2006,
+                    type: 'best'
                 },
             ]
         },

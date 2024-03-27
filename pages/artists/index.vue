@@ -18,9 +18,7 @@ const filtredArtistsList = computed(() => {
 
 useHead({
   title: `Артисты - posh.agency`,
-  meta: [
-    {name: 'description', content: `Список актёров и актрис. Звоните сейчас: + 7 (917) 545-20-84`}
-  ]
+  meta: [{name: 'description', content: `Список актёров и актрис. Звоните сейчас: + 7 (917) 545-20-84`}]
 })
 
 definePageMeta({
@@ -31,6 +29,7 @@ definePageMeta({
 <template>
   <main class="main">
     <section class="artists section">
+
       <div class="artists-heading">
         <div class="section__heading container">
           <h1 class="title-h1 artists-heading__title">Артисты</h1>
@@ -38,37 +37,28 @@ definePageMeta({
       </div>
 
       <div class="search-elements container">
+
         <div class="search-item">
-          <input v-model="artistName" placeholder="Введите имя артиста"
-                 class="search-item__input">
+          <input v-model="artistName" placeholder="Введите имя артиста" class="search-item__input">
         </div>
+
         <div class="search-item">
           <ul class="search-item__buttons">
             <li>
-              <button
-                  @click="currentCategory = 'all'"
-                  class="button button--tab"
-                  :class="{'button--tab-active': currentCategory === 'all'}"
-              >
+              <button @click="currentCategory = 'all'" class="button button--tab"
+                      :class="{'button--tab-active': currentCategory === 'all'}">
                 Все
               </button>
             </li>
             <li>
-              <button
-                  @click="currentCategory = 'actor'"
-                  class="button button--tab"
-                  :class="{'button--tab-active': currentCategory === 'actor'}"
-              >
+              <button @click="currentCategory = 'actor'" class="button button--tab"
+                      :class="{'button--tab-active': currentCategory === 'actor'}">
                 Актеры
               </button>
             </li>
             <li>
-              <button
-                  @click="currentCategory = 'actresses'"
-                  class="button button--tab"
-                  :class="{'button--tab-active': currentCategory === 'actresses'}"
-              >
-                Актрисы
+              <button @click="currentCategory = 'actresses'" class="button button--tab"
+                      :class="{'button--tab-active': currentCategory === 'actresses'}">Актрисы
               </button>
             </li>
           </ul>
@@ -76,15 +66,14 @@ definePageMeta({
       </div>
 
       <div class="artists__content container">
+
         <p v-if="!filtredArtistsList?.length" class="artists__error-message">Упс.. Не получилось найти нужного
           артиста.</p>
+
         <div class="artists__list">
-          <ArtistCardFullView
-              v-for="(artist, index) in filtredArtistsList"
-              :key="index"
-              :artistData="artist"
-          />
+          <ArtistCardFullView v-for="(artist, index) in filtredArtistsList" :key="index" :artistData="artist"/>
         </div>
+
       </div>
     </section>
   </main>
