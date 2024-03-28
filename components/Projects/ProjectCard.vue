@@ -32,8 +32,13 @@ const props = defineProps(['projectData']);
   text-align: center;
   transition: all .2s ease-in-out;
 
-  @include mobile-big {
+  @include tablet {
+    border-radius: 1.2rem;
     max-width: unset;
+  }
+
+  @include mobile-big {
+    border-radius: .8rem;
   }
 
   &__content {
@@ -71,7 +76,6 @@ const props = defineProps(['projectData']);
   &__preview {
     border-radius: 1.25rem;
     margin-bottom: .4rem;
-    max-width: 18rem;
     width: 100%;
     overflow: hidden;
 
@@ -81,6 +85,10 @@ const props = defineProps(['projectData']);
       @include mobile-big {
         max-width: unset;
       }
+    }
+
+    @include mobile-big {
+      border-radius: .8rem;
     }
   }
 

@@ -61,7 +61,9 @@ watch(isMobileNavVissible, (val) => {
             </NuxtLink>
           </li>
           <li>
-            <NuxtLink to="/projects" class="link-default header-nav__link" :class="{'header-nav__link--active': route?.fullPath === '/projects'}">Кейсы</NuxtLink>
+            <NuxtLink to="/projects" class="link-default header-nav__link"
+                      :class="{'header-nav__link--active': route?.fullPath === '/projects'}">Кейсы
+            </NuxtLink>
           </li>
           <li>
             <NuxtLink class="link-default header-nav__link">Кинопроекты</NuxtLink>
@@ -95,11 +97,14 @@ watch(isMobileNavVissible, (val) => {
         </button>
         <ul v-if="isMobileNavVissible" class="header-nav-burger__list">
           <li>
-            <NuxtLink to="/artists" class="link-default  header-nav__link" rel="nofollow">Работа с актёрами
+            <NuxtLink to="/artists" class="link-default  header-nav__link" rel="nofollow"
+                      :class="{'header-nav__link--active': route?.fullPath === '/artists'}">Работа с актёрами
             </NuxtLink>
           </li>
           <li>
-            <NuxtLink class="link-default  header-nav__link" rel="nofollow">Кейсы</NuxtLink>
+            <NuxtLink to="/projects" class="link-default  header-nav__link" rel="nofollow"
+                      :class="{'header-nav__link--active': route?.fullPath === '/projects'}">Кейсы
+            </NuxtLink>
           </li>
           <li>
             <NuxtLink class="link-default header-nav__link " rel="nofollow">Кинопроекты

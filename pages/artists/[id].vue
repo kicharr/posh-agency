@@ -2,7 +2,7 @@
 import {useArtistsStore} from "~/store/artists.js";
 import {getBestFilms} from "~/lib/utilities.js";
 import Breadcrumbs from "~/components/GlobalComponents/Breadcrumbs.vue";
-import ArtistsPhotoView from "~/components/Artists/ArtistPhotoView.vue";
+import ArtistsPhotoView from "~/components/Artists/ArtistsPhotoView.vue";
 
 const route = useRoute();
 const artistStore = useArtistsStore();
@@ -14,24 +14,13 @@ const isAllFilmographyVissible = ref(false);
 const photoViewActive = ref(false);
 
 let currentPhotoView = ref('');
-// const sortedFilmsByYear = (filmography) => {
-//   let sortedFilmography = {};
-//   for (let i = 0; i < filmography.length; i++) {
-//     if (!sortedFilmography[filmography[i]?.year]) {
-//       sortedFilmography[filmography[i]?.year] = [filmography[i]?.name];
-//     } else {
-//       sortedFilmography[filmography[i]?.year].push(filmography[i]?.name);
-//     }
-//   }
-//   return sortedFilmography;
-// }
+
 const sortedFilmsByYear = (filmography) => {
   const newFilmography = new Map();
 
   filmography.forEach((item) => {
     if (!newFilmography.has(item?.year)) {
-      newFilmography.set(item?.year, []);
-      newFilmography.get(item?.year).push(item?.name)
+      newFilmography.set(item?.year, [item?.name]);
     } else {
       newFilmography.get(item?.year).push(item?.name)
     }
@@ -39,7 +28,6 @@ const sortedFilmsByYear = (filmography) => {
 
   return newFilmography;
 }
-
 
 const getArtistPhoto = (str) => {
   if (!str) return `background: center / cover no-repeat url("/static-images/artists/actor-photo-none.png");`

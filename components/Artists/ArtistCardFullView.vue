@@ -12,10 +12,6 @@ const props = defineProps(['artistData']);
       <img loading="lazy" :src="`/static-images${artistData?.commonFeatures?.photo}`" :alt="`${artistData?.commonFeatures?.name}`">
     </div>
 
-<!--    <div class="artist-card__preview">-->
-<!--      <img loading="lazy" src="/static-images/artists/artist-cover.webp" :alt="`${artistData?.commonFeatures?.name}`">-->
-<!--    </div>-->
-
     <div class="artist-card__info">
 
       <div class="artist-info">

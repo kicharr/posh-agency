@@ -71,7 +71,9 @@ definePageMeta({
           артиста.</p>
 
         <div class="artists__list">
-          <ArtistCardFullView v-for="(artist, index) in filtredArtistsList" :key="index" :artistData="artist"/>
+          <transition-group name="list">
+            <ArtistCardFullView v-for="(artist, index) in filtredArtistsList" :key="index" :artistData="artist"/>
+          </transition-group>
         </div>
 
       </div>

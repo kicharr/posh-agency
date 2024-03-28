@@ -6,6 +6,12 @@ const projectsStore = useProjectsStore();
 
 const projectsList = projectsStore?.projectsList;
 
+const projectName = ref('');
+
+const filtredProjectsList = computed(() => {
+  return projectsList?.filter((project) => project?.name.match(new RegExp(projectName.value, 'gi')))
+});
+
 useHead({
   title: `Проекты - posh.agency`,
   meta: [
@@ -30,13 +36,25 @@ definePageMeta({
         </div>
       </div>
 
-      <div class="projects-content ">
+      <div class="search-elements container">
+
+        <div class="search-item">
+          <input v-model="projectName" placeholder="Название проекта" class="search-item__input">
+        </div>
+      </div>
+
+      <div class="projects-content">
+        <p v-if="!filtredProjectsList?.length" class="projects__error-message">
+          Упс.. Не получилось найти проект.
+        </p>
         <div class="projects__list container">
-          <ProjectCard
-              v-for="(project, index) in projectsList"
-              :key="index"
-              :projectData="project"
-          />
+          <transition-group name="list">
+            <ProjectCard
+                v-for="(project, index) in filtredProjectsList"
+                :key="index"
+                :projectData="project"
+            />
+          </transition-group>
         </div>
       </div>
 
@@ -55,8 +73,22 @@ definePageMeta({
       grid-template-columns: repeat(2, 1fr);
     }
 
-    @include mobile-big {
+    @media (max-width: 650px) {
       grid-template-columns: repeat(1, 1fr);
+    }
+  }
+
+  &__error-message {
+    text-align: center;
+    font-size: .9rem;
+    padding: 5rem 0;
+
+    @include tablet {
+      font-size: .8rem;
+    }
+
+    @include mobile-small {
+      font-size: .7rem;
     }
   }
 }
@@ -71,4 +103,25 @@ definePageMeta({
   }
 }
 
+.search-elements {
+  margin: 2rem auto;
+}
+
+.search-item {
+  &__input {
+    width: 100%;
+    border: 1px solid #000;
+    border-radius: 1.6rem;
+    padding: .8rem 1.6rem;
+
+    font-size: 0.9rem;
+    color: #6d6d6d;
+
+    @include mobile-big {
+      padding: .4rem .7rem;
+      font-size: .8rem;
+    }
+  }
+
+}
 </style>

@@ -260,6 +260,8 @@ definePageMeta({
   align-items: flex-end;
   padding: 17.5rem .5rem 10rem;
 
+  animation: showElement 1.5s linear alternate;
+
   @include tablet {
     flex-direction: column;
     align-items: center;

@@ -52,6 +52,7 @@ onUnmounted(() => {
 
 <style scoped lang="scss">
 .photo-view {
+  display: flex;
   background: rgba(20, 20, 20, .8);
   width: 100%;
   height: 100%;
@@ -69,7 +70,7 @@ onUnmounted(() => {
     align-items: center;
 
     img {
-      max-width: 40vw;
+      max-width: 38vw;
       aspect-ratio: 16 / 21;
 
       @media (max-width: 1024px) {
@@ -83,37 +84,12 @@ onUnmounted(() => {
   }
 
   &__button {
-    position: absolute;
-    top: calc(50% - 1.5rem);
-    z-index: 10;
     transition: $transitionOpacity;
+    max-width: 1.5rem;
+    width: 100%;
 
     @include mobile-big {
       max-width: 1.5rem;
-    }
-
-    &--prev {
-      left: 2.5rem;
-
-      @include tablet {
-        left: 0.5rem;
-      }
-
-      @include mobile-small {
-        left: 0.1rem;
-      }
-    }
-
-    &--next {
-      right: 2.5rem;
-
-      @include tablet {
-        right: 0.5rem;
-      }
-
-      @include mobile-small {
-        right: 0.1rem;
-      }
     }
 
     &:hover {
