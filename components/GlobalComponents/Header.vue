@@ -3,7 +3,7 @@ const props = defineProps(['theme']);
 
 const isMobileNavVissible = ref(false);
 
-let route = useRoute();
+const route = useRoute();
 
 const changeMobileNavVissible = () => {
   isMobileNavVissible.value = !isMobileNavVissible.value;
@@ -22,10 +22,20 @@ watch(isMobileNavVissible, (val) => {
     }, {once: true})
   }
 })
+
+// onMounted(() => {
+//   document.addEventListener('scroll', () => {
+//     if (scrollY >= 200) {
+//       document.querySelector('header').classList.add('header--fixed');
+//     } else {
+//       document.querySelector('header').classList.remove('header--fixed');
+//     }
+//   })
+// })
 </script>
 
 <template>
-  <header :class="`header header-${theme ? theme : 'dark'}`">
+  <header :class="`header header--${theme ? theme : 'dark'}`">
     <div class="header-action header-action--mobile">
       <ul class="header-action__list container">
         <li>
@@ -129,18 +139,26 @@ watch(isMobileNavVissible, (val) => {
   left: 0;
   width: 100%;
   z-index: 10;
+  transition: all .5s linear;
 
   @include mobile-big {
     padding: .4rem 0;
   }
-}
 
-.header-light {
-  color: $bright;
-}
+  &--light {
+    color: $bright;
+  }
 
-.header-dark {
-  position: relative;
+  &--dark {
+    position: relative;
+  }
+
+  //&--fixed {
+  //  position: fixed;
+  //  top: 0;
+  //  left: 0;
+  //  background-color: rgba(255, 255, 255, .5);
+  //}
 }
 
 .header-content {

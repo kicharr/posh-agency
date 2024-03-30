@@ -560,6 +560,12 @@ definePageMeta({
   &__button {
     color: $dark;
     margin: 0 auto;
+
+    @include tablet {
+      width: 100%;
+      font-size: .9rem;
+      padding: 0.6rem 1.2rem;
+    }
   }
 }
 

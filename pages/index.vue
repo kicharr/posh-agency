@@ -690,6 +690,8 @@ definePageMeta({
 
     @include mobile-big {
       width: 100%;
+      font-size: .9rem;
+      padding: 0.6rem 1.2rem;
       margin: 2rem auto 1rem;
     }
   }

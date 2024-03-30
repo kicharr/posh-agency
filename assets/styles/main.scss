@@ -195,6 +195,12 @@ body {
   @include mobile-small {
     font-size: .7rem;
   }
+
+  @include tablet {
+    &:hover {
+      opacity: unset;
+    }
+  }
 }
 
 .button {
@@ -235,12 +241,19 @@ body {
     }
   }
 
-  @include mobile-big {
-    max-width: unset;
-  }
-
   &:hover {
     opacity: .8;
+  }
+
+  @include tablet {
+    &:hover {
+      opacity: unset;
+    }
+  }
+
+  @include mobile-big {
+    max-width: unset;
+    opacity: 1;
   }
 }
 
