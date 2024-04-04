@@ -284,9 +284,10 @@ definePageMeta({
       <div class="viziting-card__content">
         <iframe :src="artistData?.commonFeatures?.vizitingCard"
                 width="100%"
-                height="600"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                allowfullscreen>
+                allowfullscreen
+                style="border: 0; aspect-ratio: 16/9;"
+        >
         </iframe>
       </div>
 
@@ -320,7 +321,7 @@ definePageMeta({
   z-index: 5;
 
   @include mobile-big {
-    padding-top: 10rem;
+    padding-top: 15rem;
   }
 
   &__title {
@@ -486,7 +487,8 @@ definePageMeta({
   gap: 2.5rem;
 
   @include mobile-big {
-    grid-template-columns: repeat(1, 1fr);
+    display: flex;
+    flex-wrap: wrap;
     gap: 1.25rem;
   }
 
@@ -646,8 +648,5 @@ definePageMeta({
       height: 100%;
     }
   }
-}
-
-.visiting-card {
 }
 </style>

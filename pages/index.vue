@@ -237,6 +237,42 @@ definePageMeta({
         </div>
       </div>
     </section>
+
+    <section class="producer-info section container">
+      <div class="section__heading">
+        <h2 class="title-h2 producer-info__title">Познакомимся ?</h2>
+      </div>
+
+      <div class="producer-card">
+        <img src="/static-images/nastya.png" alt="Анастасия Миллер - продюссер. posh-ahecny"
+             class="producer-card__image">
+        <div class="producer-card__content">
+          <h3 class="producer-card__title">Как проходит консультация.</h3>
+          <p class="producer-card__text">
+            На консультации мы проанализируем ваш текущий подход к рекламным компаниям и выявим новые стратегии для
+            эффективного продвижения. Мы рассмотрим успешные методы, применимые в зарубежных рекламных проектах, и
+            определим, как они могут быть адаптированы к вашей отрасли.
+          </p>
+          <p class="producer-card__text">
+            Заполните предложенную форму, и я ближе познакомлюсь с вашими актерскими агентствами, текущими
+            маркетинговыми
+            усилиями. После этого мы сможем назначить звонок в удобное для вас время, чтобы обсудить, как можно улучшить
+            ваши рекламные кампании.
+          </p>
+          <p class="producer-card__text">
+            За 45 минут нашей консультации мы выявим потенциал сотрудничества и возможности для улучшения рекламных
+            процессов вашего актёрского агентства.
+          </p>
+          <span class="producer-card__separator"></span>
+          <h4 class="producer-card__subtitle">Анастасия Миллер</h4>
+          <p class="producer-card__text">
+            Vestibulum nec urna ut arcu tempus vestibulum. Donec iaculis tristique felis, ut tincidunt velit ultricies
+            sit
+            amet. Donec id lobortis nulla, et sodales tortor.
+          </p>
+        </div>
+      </div>
+    </section>
   </main>
 
 
@@ -265,7 +301,7 @@ definePageMeta({
   @include tablet {
     flex-direction: column;
     align-items: center;
-    padding: 13rem 10px;
+    padding: 13rem 10px 8rem;
   }
 
   &__left {
@@ -560,18 +596,29 @@ definePageMeta({
     height: 100%;
   }
 
-
   &__preview {
     max-width: 251px;
     aspect-ratio: 1 / 1;
 
     @include mobile-big {
-      max-width: unset;
+      max-width: 8rem;
+      height: 8rem;
+    }
+
+    @include mobile-small {
+      max-width: 6rem;
+      height: 6rem;
     }
   }
 
   &:hover {
     box-shadow: 0 .2rem .2rem 0 $dark;
+  }
+
+  &__date {
+    @include mobile-big {
+      display: none;
+    }
   }
 
   &__title {
@@ -580,13 +627,22 @@ definePageMeta({
     font-size: 1rem;
     text-transform: uppercase;
     margin-bottom: 1.2rem;
+
+    @include mobile-big {
+      font-size: .8rem;
+      margin-bottom: .6rem;
+    }
   }
 
   &__description {
     margin-bottom: auto;
 
     @include mobile-big {
-      margin-bottom: 3.5rem;
+      margin-bottom: 0;
+    }
+
+    @include mobile-small {
+      font-size: .6rem;
     }
   }
 
@@ -598,16 +654,18 @@ definePageMeta({
 
     @include tablet {
       flex-direction: row;
-    }
-
-    @include mobile-big {
-      flex-direction: column;
+      align-items: center;
     }
 
     &:last-child {
       @include mobile-big {
-        flex-direction: column-reverse;
+        flex-direction: row-reverse;
       }
+    }
+
+    @include mobile-small {
+      padding: 0.8rem;
+      border-radius: 0.8rem;
     }
   }
 
@@ -617,19 +675,25 @@ definePageMeta({
     height: 100%;
 
     @include mobile-big {
-      flex-direction: column;
-      max-height: unset;
+      flex-direction: row-reverse;
+      align-items: center;
     }
 
     &:last-child {
       @include mobile-big {
-        flex-direction: column-reverse;
+        flex-direction: row;
+        align-items: center;
       }
+    }
+
+    @include mobile-small {
+      padding: 0.8rem;
+      border-radius: 0.8rem;
     }
   }
 }
 
-// artists
+// ARTISTS
 .artists {
   display: flex;
   flex-direction: column;
@@ -812,5 +876,137 @@ definePageMeta({
       grid-template-columns: repeat(1, 1fr);
     }
   }
+}
+
+// PRODUCER-INFO
+
+.producer-info {
+  &__title {
+    text-transform: uppercase;
+    margin-bottom: 8rem;
+
+    @include laptop {
+      margin-bottom: 6rem;
+    }
+
+    @include laptop {
+      margin-bottom: 7rem;
+    }
+  }
+}
+
+.producer-card {
+  display: flex;
+  justify-content: flex-end;
+
+  position: relative;
+  z-index: 10;
+  border-radius: 1.6rem;
+  padding: 1.6rem 5rem 1.6rem 22.5rem;
+
+  background-image: url("/static-images/producer-card-bg.png");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+
+  @include tablet {
+    padding: 15rem 1.6rem 1.6rem 1.6rem;
+    background-image: url("/static-images/producer-card-bg-tablet.png");
+  }
+
+  @include mobile-big {
+    padding: 10rem .8rem .8rem .8rem;
+    background-image: url("/static-images/producer-card-bg-mobile.png");
+  }
+
+  &__title {
+    margin-bottom: .5rem;
+
+    @include mobile-big {
+      font-size: 1rem;
+    }
+
+    @include mobile-small {
+      font-size: .9rem;
+    }
+  }
+
+  &__text {
+    font-size: 0.8rem;
+    margin-bottom: .75rem;
+
+    &:last-child {
+      font-size: 0.7rem;
+    }
+  }
+
+  &__content {
+    max-width: 26rem;
+    width: 100%;
+
+
+    @include tablet {
+      max-width: unset;
+    }
+  }
+
+  &__separator {
+    display: inline-block;
+    background-color: $pink;
+    max-width: 6.7rem;
+    border-radius: 0.5rem;
+    width: 100%;
+    height: 0.15rem;
+    margin: .75rem 0;
+  }
+
+  &__subtitle {
+    margin-bottom: .5rem;
+    font-style: italic;
+
+    @include mobile-big {
+      font-size: 1rem;
+    }
+
+    @include mobile-small {
+      font-size: .9rem;
+    }
+  }
+
+  &__image {
+    position: absolute;
+    top: -5rem;
+    left: 5rem;
+
+    border-radius: 1.6rem;
+    max-width: 19.9rem;
+    width: 100%;
+    height: 24rem;
+
+    aspect-ratio: 20 / 24;
+
+    @media (max-width: 1165px) {
+      max-width: 16rem;
+      height: 20rem;
+      aspect-ratio: 16 / 20;
+      top: 2rem;
+      left: 3rem;
+    }
+
+    @include tablet {
+      top: -6rem;
+      left: 1.5rem;
+    }
+
+    @include mobile-big {
+      max-width: 12.1rem;
+      height: 14.8rem;
+      left: calc(50% - 6.5rem);
+    }
+
+    @include mobile-small {
+      left: calc(50% - 6.1rem);
+    }
+  }
+
 }
 </style>
