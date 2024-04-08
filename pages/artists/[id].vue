@@ -7,13 +7,19 @@ import ArtistsPhotoView from "~/components/Artists/ArtistsPhotoView.vue";
 const route = useRoute();
 const artistStore = useArtistsStore();
 
-const artistData = artistStore.getArtistData(route?.params?.id);
-
 const isAllFilmographyVissible = ref(false);
 
 const photoViewActive = ref(false);
 
 let currentPhotoView = ref('');
+
+const artistData = artistStore.getArtistData(route?.params?.id);
+
+onBeforeMount(() => {
+  if (!artistData) {
+    navigateTo('/artists');
+  }
+})
 
 const sortedFilmsByYear = (filmography) => {
   const newFilmography = new Map();
@@ -33,6 +39,7 @@ const getArtistPhoto = (str) => {
   if (!str) return `background: center / cover no-repeat url("/static-images/artists/actor-photo-none.png");`
   return `background: center / cover no-repeat url('/static-images/artists${str}');`
 }
+
 const changeFilmographyVissible = () => isAllFilmographyVissible.value = !isAllFilmographyVissible.value;
 
 const changePhotoView = (photo) => {
@@ -43,7 +50,7 @@ const changePhotoView = (photo) => {
 function checkFilmographyLength(filmography) {
   if (filmography?.length <= 2) return filmography;
 
-  return filmography.filter((item) => item?.type === 'best');
+  return filmography?.filter((item) => item?.type === 'best');
 }
 
 useHead({

@@ -7,7 +7,7 @@ let currentSlide = ref(props.currentPhotoIndex);
 const changePhotoView = () => emits('changePhotoView');
 
 function checkCurrentClick(e) {
-  if (e.target.localName !== 'img') {
+  if (e.target.localName !== 'img' && e?.target?.localName !== 'button') {
     changePhotoView();
   }
 }

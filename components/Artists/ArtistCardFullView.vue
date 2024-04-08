@@ -9,7 +9,8 @@ const props = defineProps(['artistData']);
   <NuxtLink :to="`/artists/${artistData?.id}`" class="artist-card">
 
     <div class="artist-card__preview">
-      <img loading="lazy" :src="`/static-images${artistData?.commonFeatures?.photo}`" :alt="`${artistData?.commonFeatures?.name}`">
+      <img loading="lazy" :src="`/static-images${artistData?.commonFeatures?.photo}`"
+           :alt="`${artistData?.commonFeatures?.name}`">
     </div>
 
     <div class="artist-card__info">
@@ -23,7 +24,6 @@ const props = defineProps(['artistData']);
     </div>
 
   </NuxtLink>
-
 
 
 </template>
