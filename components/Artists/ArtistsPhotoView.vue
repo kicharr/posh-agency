@@ -4,15 +4,11 @@ const emits = defineEmits(['changePhotoView']);
 
 let currentSlide = ref(props.currentPhotoIndex);
 
-const changePhotoView = () => emits('changePhotoView');
-
-function checkCurrentClick(e) {
-  if (e.target.localName !== 'img' && e?.target?.localName !== 'button') {
-    changePhotoView();
-  }
+function changePhotoView() {
+  emits('changePhotoView');
 }
 
-const changeCurrentSlide = (flag) => {
+function changeCurrentSlide(flag) {
   if (flag === 'prev') {
     currentSlide.value = (currentSlide.value - 1 < 0 ? props.allActorPhoto.length - 1 : currentSlide.value - 1)
   } else {
@@ -20,13 +16,39 @@ const changeCurrentSlide = (flag) => {
   }
 }
 
+function checkCurrentClick(e) {
+  if (e?.target?.localName !== 'img' && e?.target?.localName !== 'button') {
+    changePhotoView();
+  }
+}
+
+function keyboardInteraction(e) {
+  const key = e?.key;
+
+  switch (key) {
+    case 'ArrowRight':
+      changeCurrentSlide('prev');
+      break;
+    case 'ArrowLeft':
+      changeCurrentSlide('next');
+      break;
+    case 'Escape':
+      changePhotoView();
+      break;
+    default:
+      break;
+  }
+}
+
 onMounted(() => {
   document.addEventListener('click', checkCurrentClick);
+  document.addEventListener('keydown', keyboardInteraction)
   document.body.classList.add('body-fixed');
 })
 
 onUnmounted(() => {
   document.removeEventListener('click', checkCurrentClick);
+  document.removeEventListener('keydown', keyboardInteraction);
   document.body.classList.remove('body-fixed');
 })
 
@@ -46,8 +68,6 @@ onUnmounted(() => {
       <img src="/static-images/other/slider-next.png" alt="Вперёд">
     </button>
   </div>
-
-
 </template>
 
 <style scoped lang="scss">
@@ -61,6 +81,7 @@ onUnmounted(() => {
   top: 0;
   left: 0;
   animation: defaultShowAnimation;
+
 
   &__image {
     width: 100vw;

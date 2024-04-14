@@ -23,15 +23,6 @@ watch(isMobileNavVissible, (val) => {
   }
 })
 
-// onMounted(() => {
-//   document.addEventListener('scroll', () => {
-//     if (scrollY >= 200) {
-//       document.querySelector('header').classList.add('header--fixed');
-//     } else {
-//       document.querySelector('header').classList.remove('header--fixed');
-//     }
-//   })
-// })
 </script>
 
 <template>
@@ -153,12 +144,6 @@ watch(isMobileNavVissible, (val) => {
     position: relative;
   }
 
-  //&--fixed {
-  //  position: fixed;
-  //  top: 0;
-  //  left: 0;
-  //  background-color: rgba(255, 255, 255, .5);
-  //}
 }
 
 .header-content {
