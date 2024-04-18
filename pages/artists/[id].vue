@@ -24,6 +24,8 @@ onBeforeMount(() => {
 const sortedFilmsByYear = (filmography) => {
   const newFilmography = new Map();
 
+  if (!filmography.length) return;
+
   filmography.forEach((item) => {
     if (!newFilmography.has(item?.year)) {
       newFilmography.set(item?.year, [item?.name]);
@@ -52,6 +54,14 @@ function checkFilmographyLength(filmography) {
 
   return filmography?.filter((item) => item?.type === 'best');
 }
+
+watch(photoViewActive, (val) => {
+  if (val) {
+    document.body.classList.add('body-fixed');
+  } else {
+    document.body.classList.remove('body-fixed');
+  }
+})
 
 useHead({
   title: `${artistData?.commonFeatures?.name} - posh.agency`,

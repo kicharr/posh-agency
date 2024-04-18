@@ -1,6 +1,12 @@
-# Nuxt 3 Minimal Starter
+# Brief information about the project, the frontend of the application is written on the basis of Nuxt 3.
 
-Look at the [Nuxt 3 documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
+## Useful links:
+
+Design: https://www.figma.com/file/v31gBHAiZDbamc91EVZRiK/posh.agency?type=design&node-id=0%3A1&mode=design&t=ji9bxWVBDeQokSIg-1
+
+Built application: https://posh-agency-test.netlify.app/
+
+
 
 ## Setup
 
@@ -13,28 +19,17 @@ npm install
 # pnpm
 pnpm install
 
-# yarn
-yarn install
-
-# bun
-bun install
-```
-
 ## Development Server
 
-Start the development server on `http://localhost:8080`:
-
-```bash
 # npm
 npm run dev
 
 # pnpm
 pnpm run dev
 
-# yarn
-yarn dev
-
-# bun
-bun run dev
+The development server runs on port `4321`.
+# But overrides may occur, see the IDE console.
 ```
+
+Look at the [Nuxt 3 documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
 
