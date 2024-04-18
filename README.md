@@ -4,6 +4,8 @@
 
 Design: https://www.figma.com/file/v31gBHAiZDbamc91EVZRiK/posh.agency?type=design&node-id=0%3A1&mode=design&t=ji9bxWVBDeQokSIg-1
 
+[![Netlify Status](https://api.netlify.com/api/v1/badges/39d104dc-bedf-4198-8b3c-3a84ddc5d673/deploy-status)](https://app.netlify.com/sites/posh-agency-test/deploys)
+
 Built application: https://posh-agency-test.netlify.app/
 
 
