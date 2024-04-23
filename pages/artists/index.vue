@@ -1,5 +1,5 @@
 <script setup>
-import {useArtistsStore} from "~/store/artists.js";
+import {useArtistsStore} from "~/store/artists/artists.js";
 import ArtistCardFullView from "~/components/Artists/ArtistCardFullView.vue";
 
 const artistsStore = useArtistsStore();

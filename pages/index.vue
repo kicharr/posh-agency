@@ -1,6 +1,6 @@
 <script setup>
-import {useArtistsStore} from "~/store/artists.js";
-import {useProjectsStore} from "~/store/projects";
+import {useArtistsStore} from "~/store/artists/artists.js";
+import {useProjectsStore} from "~/store/projects/projects.js";
 import ProjectCard from "~/components/Projects/ProjectCard.vue";
 import ArtistCard from "~/components/Artists/ArtistCard.vue";
 
@@ -99,12 +99,30 @@ definePageMeta({
             Praesent orci nibh, blandit sit amet blandit vitae, venenatis et ante.
           </p>
         </div>
-
       </div>
-
       <div class="projects__list">
         <ProjectCard
-            v-for="(project, index) in projectList"
+            v-for="(project, index) in projectList?.filter((project) => project?.type === 'movie')"
+            :key="index"
+            :projectData="project"
+        />
+      </div>
+    </section>
+
+    <section class="projects section container">
+      <div class="section__heading">
+        <h2 class="title-h2 projects__title projects__title--companies">
+          <span>
+            Рекламные
+          </span>
+          <span>
+            Проекты
+          </span>
+        </h2>
+      </div>
+      <div class="projects__list">
+        <ProjectCard
+            v-for="(project, index) in projectList?.filter((project) => project?.type !== 'movie')"
             :key="index"
             :projectData="project"
         />
@@ -125,37 +143,37 @@ definePageMeta({
 
           <div class="company-list">
             <NuxtLink class="company-list__link">
+              <img class="company-list__image" src="/static-images/backstage/nuum.svg"
+                   alt="nuum">
+            </NuxtLink>
+            <NuxtLink class="company-list__link">
               <img class="company-list__image" src="/static-images/backstage/sberbank-logo.svg"
                    alt="СБЕРБАНК">
-            </NuxtLink>
-            <NuxtLink class="company-list__link">
-              <img class="company-list__image" src="/static-images/backstage/mts-logo.svg"
-                   alt="Смотреть бэкстейдж для компании МТС">
-            </NuxtLink>
-            <NuxtLink class="company-list__link">
-              <img class="company-list__image" src="/static-images/backstage/yasno-logo.svg"
-                   alt="Сервис ЯСНО">
-            </NuxtLink>
-            <NuxtLink class="company-list__link">
-              <img class="company-list__image" src="/static-images/backstage/sportmaster.svg"
-                   alt="Спортмастер">
-            </NuxtLink>
-            <NuxtLink class="company-list__link">
-              <img class="company-list__image" src="/static-images/backstage/monochrome.svg"
-                   alt="monochrome">
-            </NuxtLink>
-            <NuxtLink class="company-list__link">
-              <img class="company-list__image" src="/static-images/backstage/nextup.svg"
-                   alt="nextup">
             </NuxtLink>
             <NuxtLink class="company-list__link">
               <img class="company-list__image" src="/static-images/backstage/yandex.svg"
                    alt="yandex">
             </NuxtLink>
             <NuxtLink class="company-list__link">
-              <img class="company-list__image" src="/static-images/backstage/nuum.svg"
-                   alt="nuum">
+              <img class="company-list__image" src="/static-images/backstage/monochrome.svg"
+                   alt="monochrome">
             </NuxtLink>
+            <NuxtLink class="company-list__link">
+              <img class="company-list__image" src="/static-images/backstage/sportmaster.svg"
+                   alt="Спортмастер">
+            </NuxtLink>
+            <NuxtLink class="company-list__link">
+              <img class="company-list__image" src="/static-images/backstage/yasno-logo.svg"
+                   alt="Сервис ЯСНО">
+            </NuxtLink>
+            <!--            <NuxtLink class="company-list__link">-->
+            <!--              <img class="company-list__image" src="/static-images/backstage/mts-logo.svg"-->
+            <!--                   alt="Смотреть бэкстейдж для компании МТС">-->
+            <!--            </NuxtLink>-->
+            <!--            <NuxtLink class="company-list__link">-->
+            <!--              <img class="company-list__image" src="/static-images/backstage/nextup.svg"-->
+            <!--                   alt="nextup">-->
+            <!--            </NuxtLink>-->
           </div>
         </div>
       </div>
@@ -244,7 +262,7 @@ definePageMeta({
       </div>
 
       <div class="producer-card">
-        <img src="/static-images/nastya.png" alt="Анастасия Миллер - продюссер. posh-ahecny"
+        <img src="/static-images/nastya.jpg" alt="Анастасия Миллер - продюссер. posh-ahecny"
              class="producer-card__image">
         <div class="producer-card__content">
           <h3 class="producer-card__title">Как проходит консультация.</h3>
@@ -777,6 +795,7 @@ definePageMeta({
       gap: .75rem;
     }
 
+
     span {
       &:last-child {
         font-weight: 400;
@@ -824,7 +843,6 @@ definePageMeta({
       }
 
     }
-
   }
 
   &__info {
@@ -877,6 +895,44 @@ definePageMeta({
     }
   }
 }
+
+.projects {
+  &__title {
+    &--companies {
+      gap: .5rem;
+      margin-bottom: 0;
+
+      @include mobile-big {
+        gap: 0;
+      }
+
+      span {
+        &:last-child {
+          font-weight: 400;
+          font-style: normal;
+
+          @include mobile-big {
+            text-align: right;
+          }
+        }
+      }
+
+      &::before {
+        display: none;
+      }
+
+      span:first-child {
+        &::before {
+          max-width: 100%;
+          top: 100%;
+          left: 0;
+        }
+
+      }
+    }
+  }
+}
+
 
 // PRODUCER-INFO
 

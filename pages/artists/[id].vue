@@ -1,5 +1,5 @@
 <script setup>
-import {useArtistsStore} from "~/store/artists.js";
+import {useArtistsStore} from "~/store/artists/artists.js";
 import {getBestFilms} from "~/lib/utilities.js";
 import Breadcrumbs from "~/components/GlobalComponents/Breadcrumbs.vue";
 import ArtistsPhotoView from "~/components/Artists/ArtistsPhotoView.vue";
@@ -38,7 +38,7 @@ const sortedFilmsByYear = (filmography) => {
 }
 
 const getArtistPhoto = (str) => {
-  if (!str) return `background: center / cover no-repeat url("/static-images/artists/actor-photo-none.png");`
+  if (!str) return `background: center / cover no-repeat url("/static-images/artists/artist-cover.webp");`
   return `background: center / cover no-repeat url('/static-images/artists${str}');`
 }
 
@@ -149,6 +149,11 @@ definePageMeta({
           <div v-if="artistData?.commonFeatures?.eyes" class="info-content__item">
             <span class="info-content__title">Цвет глаз</span>
             <p class="info-content__text">{{ artistData?.commonFeatures?.eyes }}</p>
+          </div>
+
+          <div v-if="artistData?.commonFeatures?.hairColor" class="info-content__item">
+            <span class="info-content__title">Цвет волос</span>
+            <p class="info-content__text">{{ artistData?.commonFeatures?.hairColor }}</p>
           </div>
 
 

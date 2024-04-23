@@ -1,7 +1,5 @@
 <script setup>
-
 const props = defineProps(['projectData']);
-
 
 </script>
 
@@ -9,7 +7,7 @@ const props = defineProps(['projectData']);
   <NuxtLink :to="`projects/${projectData?.id}`" class="project-card">
     <div class="project-card__content">
       <div class="project-card__preview">
-        <img src="/static-images/projects/project-test-preview.png" alt="">
+        <img :src="`/static-images/projects/${projectData?.preview}`" :alt="projectData?.name">
       </div>
       <div class="project-card__name">
         <p>{{ projectData?.name }}</p>
@@ -76,11 +74,23 @@ const props = defineProps(['projectData']);
   &__preview {
     border-radius: 1.25rem;
     margin-bottom: .4rem;
-    width: 100%;
+    width: 18rem;
+    height: 11rem;
     overflow: hidden;
+
+    @media (max-width: 1200px) {
+      width: 100%;
+      
+    }
+
+    @media (max-width: 650px) {
+      height: unset;
+    }
 
     img {
       transition: $transitionTransform;
+      height: 100%;
+      width: 100%;
 
       @include mobile-big {
         max-width: unset;
@@ -100,7 +110,12 @@ const props = defineProps(['projectData']);
   }
 
   &:hover {
-    box-shadow: 0 3px 3px  $pink;
+    box-shadow: 0 3px 3px $pink;
+
+    @include tablet {
+      box-shadow: none;
+    }
+
     img {
       transform: scale(1.1);
     }

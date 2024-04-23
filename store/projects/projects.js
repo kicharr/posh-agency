@@ -3,6 +3,22 @@ import {computed} from "vue";
 export const useProjectsStore = defineStore('projects', () => {
     const projectsList = ref([
         {
+            id: 'anomaliya',
+            type: 'movie',
+            name: 'Аномалия',
+            preview: 'anomaliya.png',
+            videoPath: 'path',
+            description: '30 лет своей жизни уфолог Герман Павлович посвятил изучению Юшкинской аномальной зоны, где были обнаружены таинственные статуэтки внеземного происхождения. Но однажды к уфологу приходит загадочный посетитель, утверждающий, что происхождение этих статуэток несколько иное, нежели тот полагал.'
+        },
+        {
+            id: 'zam',
+            name: 'Зам',
+            type: 'movie',
+            preview: 'zam.png',
+            videoPath: 'https://www.kinopoisk.ru/film/5435044/',
+            description: 'Непримечательный заместитель главного редактора журнала «Садовод», в связи с неожиданной болезнью начальника, оказывается во главе издания. Но справиться с долгожданной властью не так-то просто.'
+        },
+        {
             id: 'mts',
             name: 'МТС "Главный офис',
             preview: 'project-test-preview.png',

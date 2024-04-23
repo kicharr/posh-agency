@@ -1,5 +1,5 @@
 <script setup>
-import {useProjectsStore} from "~/store/projects.js";
+import {useProjectsStore} from "~/store/projects/projects.js";
 
 const route = useRoute();
 const projectStore = useProjectsStore();
@@ -35,6 +35,12 @@ definePageMeta({
 
   @include mobile-big {
     gap: 1.5rem;
+  }
+
+  &__preview {
+    max-width: 30rem;
+    width: 100%;
+    margin: 0 auto;
   }
 
   &__title {

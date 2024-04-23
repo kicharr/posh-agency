@@ -1,6 +1,6 @@
 <script setup>
 import ProjectCard from "~/components/Projects/ProjectCard.vue";
-import {useProjectsStore} from "~/store/projects.js";
+import {useProjectsStore} from "~/store/projects/projects.js";
 
 const projectsStore = useProjectsStore();
 
