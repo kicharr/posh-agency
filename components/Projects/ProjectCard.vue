@@ -23,6 +23,8 @@ const props = defineProps(['projectData']);
   overflow: hidden;
   border-radius: 1.6rem;
   padding: .8rem .8rem 1.2rem .8rem;
+  background: rgb(242,223,118);
+  background: radial-gradient(circle, rgba(242,223,118,.2) 0%, rgba(255,190,152,.2) 100%);
 
   position: relative;
   z-index: 0;
@@ -43,33 +45,33 @@ const props = defineProps(['projectData']);
     overflow: hidden;
   }
 
-  &::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: -1;
-    opacity: .9;
-    width: 100%;
-    height: 100%;
-    background: radial-gradient(168% 142.37% at -16.45% -25.91%,
-        rgb(255, 190, 152) 0%,
-        rgb(255, 255, 255) 68%);
-  }
+  //&::before {
+  //  content: "";
+  //  position: absolute;
+  //  top: 0;
+  //  left: 0;
+  //  z-index: -1;
+  //  opacity: .9;
+  //  width: 100%;
+  //  height: 100%;
+  //  background: radial-gradient(168% 142.37% at -16.45% -25.91%,
+  //      rgb(255, 190, 152) 0%,
+  //      rgb(255, 255, 255) 68%);
+  //}
 
-  &::after {
-    content: "";
-    position: absolute;
-    bottom: 0;
-    right: 0;
-    z-index: -1;
-    opacity: .5;
-    width: 100%;
-    height: 100%;
-    background: radial-gradient(121.79% 92.62% at 107.14% 107.1%,
-        rgb(242, 223, 118) 0%,
-        rgb(255, 255, 255) 100%);
-  }
+  //&::after {
+  //  content: "";
+  //  position: absolute;
+  //  bottom: 0;
+  //  right: 0;
+  //  z-index: -1;
+  //  opacity: .5;
+  //  width: 100%;
+  //  height: 100%;
+  //  background: radial-gradient(121.79% 92.62% at 107.14% 107.1%,
+  //      rgb(242, 223, 118) 0%,
+  //      rgb(255, 255, 255) 100%);
+  //}
 
   &__preview {
     border-radius: 1.25rem;
@@ -80,11 +82,11 @@ const props = defineProps(['projectData']);
 
     @media (max-width: 1200px) {
       width: 100%;
-      
     }
 
     @media (max-width: 650px) {
       height: unset;
+      border-radius: .6rem;
     }
 
     img {
@@ -107,6 +109,10 @@ const props = defineProps(['projectData']);
     font-weight: 600;
     font-size: 0.9rem;
     text-transform: uppercase;
+
+    @include tablet {
+      font-size: .8rem;
+    }
   }
 
   &:hover {

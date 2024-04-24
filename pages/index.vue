@@ -926,6 +926,16 @@ definePageMeta({
           max-width: 100%;
           top: 100%;
           left: 0;
+
+          @include mobile-big {
+            left: 9rem;
+            top: calc(50% - 0rem);
+            max-width: 2.5rem;
+          }
+
+          @include mobile-small {
+            left: 8rem;
+          }
         }
 
       }
