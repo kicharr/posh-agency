@@ -74,7 +74,7 @@ definePageMeta({
             :artistData="artist"
         />
       </div>
-      <NuxtLink to="/artists/" class="button artists__button">Смотерть всех</NuxtLink>
+      <NuxtLink to="/artists/" class="button artists__button">Смотреть всех</NuxtLink>
     </section>
 
     <section class="projects section container">

@@ -92,7 +92,7 @@ onUnmounted(() => {
 
     img {
       max-width: 38vw;
-      aspect-ratio: 16 / 21;
+      //aspect-ratio: 16 / 21;
 
       @media (max-width: 1024px) {
         max-width: 60vw;

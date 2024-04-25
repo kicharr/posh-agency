@@ -9,7 +9,7 @@ export const useArtistsStore = defineStore('artists', () => {
             "commonFeatures": {
                 "photo": "/artists/slava-kopeykin/slava-kopeykin.webp",
                 "name": "Слава Копейкин",
-                "dateBirth": "24.03.1983",
+                "dateBirth": "15.06.1998",
                 "growth": 183,
                 "weight": 82,
                 "clothingSize": 50,

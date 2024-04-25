@@ -42,13 +42,16 @@ const props = defineProps(['artistData']);
   width: 100%;
 
   img {
-    border-radius: 50%;
+    width: 100%;
+    height: 100%;
   }
 
   &__preview {
     max-width: 8.7rem;
+
     width: 100%;
     overflow: hidden;
+    border-radius: 50%;
 
     @include laptop {
       max-width: 7.5rem;
