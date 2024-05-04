@@ -32,7 +32,7 @@ definePageMeta({
     <section class="projects section">
       <div class="projects-heading">
         <div class="section__heading container">
-          <h1 class="title-h1 projects-heading__title">Проекты</h1>
+          <h1 class="title-h1 projects-heading__title">Все работы</h1>
         </div>
       </div>
 

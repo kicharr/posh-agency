@@ -1,11 +1,13 @@
 <script setup>
+import MenuDropDown from "~/components/GlobalComponents/MenuDropDown.vue";
+
 const props = defineProps(['theme']);
 
 const isMobileNavVissible = ref(false);
 
 const route = useRoute();
 
-const changeMobileNavVissible = () => {
+function changeMobileNavVissible() {
   isMobileNavVissible.value = !isMobileNavVissible.value;
 
   if (isMobileNavVissible.value) {
@@ -58,19 +60,23 @@ watch(isMobileNavVissible, (val) => {
                 class="link-default header-nav__link"
                 :class="{'header-nav__link--active': route?.fullPath === '/artists'}"
             >
-              Работа с актёрами
+              Резиденты
             </NuxtLink>
           </li>
           <li>
-            <NuxtLink to="/projects" class="link-default header-nav__link"
-                      :class="{'header-nav__link--active': route?.fullPath === '/projects'}">Кейсы
-            </NuxtLink>
+            <button class="link-default header-nav__link header-nav__link--dropdown"
+                    :class="{'header-nav__link--active': route?.fullPath === '/projects'}">
+              Кейсы
+
+              <img class="dropdown__icon" src="/static-images/dropdown-arrow.svg">
+
+              <MenuDropDown/>
+            </button>
+
+
           </li>
           <li>
-            <NuxtLink class="link-default header-nav__link">Кинопроекты</NuxtLink>
-          </li>
-          <li>
-            <NuxtLink class="link-default header-nav__link">Контакты</NuxtLink>
+            <NuxtLink class="link-default header-nav__link">Команда</NuxtLink>
           </li>
         </ul>
       </div>
@@ -173,6 +179,10 @@ watch(isMobileNavVissible, (val) => {
   }
 
   &__link {
+    display: flex;
+    align-items: center;
+    gap: .25rem;
+
     position: relative;
 
     &--active {
@@ -185,6 +195,19 @@ watch(isMobileNavVissible, (val) => {
         height: .05rem;
         border-radius: 0.25rem;
         background-color: $pink;
+      }
+    }
+
+    &:has(.dropdown) {
+
+
+      &:hover {
+        opacity: 1;
+
+        .dropdown__nav {
+          display: flex;
+          color: $bright;
+        }
       }
     }
   }

@@ -78,14 +78,14 @@ definePageMeta({
     </section>
 
     <section class="projects section container">
+
+      <h2 class="title-h2 projects-title">
+        <span>ПРОЕКТЫ</span>
+      </h2>
+
       <div class="section__heading">
         <h2 class="title-h2 projects__title">
-          <span>
-            Проекты
-          </span>
-          <span>
-            КИНОПРОЕКТЫ
-          </span>
+          КИНО
         </h2>
         <div class="projects__info">
           <p class="projects__description">
@@ -112,12 +112,7 @@ definePageMeta({
     <section class="projects section container">
       <div class="section__heading">
         <h2 class="title-h2 projects__title projects__title--companies">
-          <span>
-            Рекламные
-          </span>
-          <span>
-            Проекты
-          </span>
+          Реклама
         </h2>
       </div>
       <div class="projects__list">
@@ -256,41 +251,41 @@ definePageMeta({
       </div>
     </section>
 
-    <section class="producer-info section container">
-      <div class="section__heading">
-        <h2 class="title-h2 producer-info__title">Познакомимся ?</h2>
-      </div>
+    <!--    <section class="producer-info section container">-->
+    <!--      <div class="section__heading">-->
+    <!--        <h2 class="title-h2 producer-info__title">Познакомимся ?</h2>-->
+    <!--      </div>-->
 
-      <div class="producer-card">
-        <img src="/static-images/nastya.jpg" alt="Анастасия Миллер - продюссер. posh-ahecny"
-             class="producer-card__image">
-        <div class="producer-card__content">
-          <h3 class="producer-card__title">Как проходит консультация.</h3>
-          <p class="producer-card__text">
-            На консультации мы проанализируем ваш текущий подход к рекламным компаниям и выявим новые стратегии для
-            эффективного продвижения. Мы рассмотрим успешные методы, применимые в зарубежных рекламных проектах, и
-            определим, как они могут быть адаптированы к вашей отрасли.
-          </p>
-          <p class="producer-card__text">
-            Заполните предложенную форму, и я ближе познакомлюсь с вашими актерскими агентствами, текущими
-            маркетинговыми
-            усилиями. После этого мы сможем назначить звонок в удобное для вас время, чтобы обсудить, как можно улучшить
-            ваши рекламные кампании.
-          </p>
-          <p class="producer-card__text">
-            За 45 минут нашей консультации мы выявим потенциал сотрудничества и возможности для улучшения рекламных
-            процессов вашего актёрского агентства.
-          </p>
-          <span class="producer-card__separator"></span>
-          <h4 class="producer-card__subtitle">Анастасия Миллер</h4>
-          <p class="producer-card__text">
-            Vestibulum nec urna ut arcu tempus vestibulum. Donec iaculis tristique felis, ut tincidunt velit ultricies
-            sit
-            amet. Donec id lobortis nulla, et sodales tortor.
-          </p>
-        </div>
-      </div>
-    </section>
+    <!--      <div class="producer-card">-->
+    <!--        <img src="/static-images/nastya.jpg" alt="Анастасия Миллер - продюссер. posh-ahecny"-->
+    <!--             class="producer-card__image">-->
+    <!--        <div class="producer-card__content">-->
+    <!--          <h3 class="producer-card__title">Как проходит консультация.</h3>-->
+    <!--          <p class="producer-card__text">-->
+    <!--            На консультации мы проанализируем ваш текущий подход к рекламным компаниям и выявим новые стратегии для-->
+    <!--            эффективного продвижения. Мы рассмотрим успешные методы, применимые в зарубежных рекламных проектах, и-->
+    <!--            определим, как они могут быть адаптированы к вашей отрасли.-->
+    <!--          </p>-->
+    <!--          <p class="producer-card__text">-->
+    <!--            Заполните предложенную форму, и я ближе познакомлюсь с вашими актерскими агентствами, текущими-->
+    <!--            маркетинговыми-->
+    <!--            усилиями. После этого мы сможем назначить звонок в удобное для вас время, чтобы обсудить, как можно улучшить-->
+    <!--            ваши рекламные кампании.-->
+    <!--          </p>-->
+    <!--          <p class="producer-card__text">-->
+    <!--            За 45 минут нашей консультации мы выявим потенциал сотрудничества и возможности для улучшения рекламных-->
+    <!--            процессов вашего актёрского агентства.-->
+    <!--          </p>-->
+    <!--          <span class="producer-card__separator"></span>-->
+    <!--          <h4 class="producer-card__subtitle">Анастасия Миллер</h4>-->
+    <!--          <p class="producer-card__text">-->
+    <!--            Vestibulum nec urna ut arcu tempus vestibulum. Donec iaculis tristique felis, ut tincidunt velit ultricies-->
+    <!--            sit-->
+    <!--            amet. Donec id lobortis nulla, et sodales tortor.-->
+    <!--          </p>-->
+    <!--        </div>-->
+    <!--      </div>-->
+    <!--    </section>-->
   </main>
 
 
@@ -795,53 +790,10 @@ definePageMeta({
       gap: .75rem;
     }
 
-
-    span {
-      &:last-child {
-        font-weight: 400;
-        font-style: normal;
-
-        @include mobile-big {
-          text-align: right;
-        }
-      }
-    }
-
-    &::before {
-      @include title-bg-yellow;
-      top: -0.2rem;
-      right: -2.5rem;
-
-      @include laptop {
-        top: -0.4rem;
-        right: -3.7rem;
-      }
-
-      @include tablet {
-        width: 7.4rem;
-        right: -0.7rem;
-      }
-
-      @include mobile-big {
-        width: 6.4rem;
-        height: 2rem;
-        left: unset;
-        right: -0.6rem;
-        top: 2rem;
-      }
-    }
-
     span:first-child {
       &::before {
-        @include mobile-big {
-          left: 7.5rem;
-        }
-
-        @include mobile-small {
-          left: 6rem;
-        }
+        display: none;
       }
-
     }
   }
 
@@ -896,6 +848,29 @@ definePageMeta({
   }
 }
 
+.projects-title {
+  font-size: 2.625rem;
+  font-style: italic;
+
+  @include tablet {
+    font-size: 2.25rem;
+  }
+
+  @include mobile-big {
+    text-align: center;
+  }
+
+  span {
+    &::before {
+      top: unset;
+      display: inline-block;
+      max-width: 100%;
+      left: 1rem;
+      bottom: 0;
+    }
+  }
+}
+
 .projects {
   &__title {
     &--companies {
@@ -918,7 +893,9 @@ definePageMeta({
       }
 
       &::before {
-        display: none;
+        max-width: 6rem !important;
+        height: 2rem;
+        right: 0;
       }
 
       span:first-child {
@@ -938,6 +915,28 @@ definePageMeta({
           }
         }
 
+      }
+    }
+
+    &::before {
+      @include title-bg-yellow;
+
+      max-width: 5rem;
+      height: 2rem;
+      top: 0;
+      
+
+      @include laptop {
+        max-width: 4rem;
+        right: -2rem;
+        top: -0.15rem;
+      }
+
+      @include mobile-big {
+        max-width: 4rem;
+        right: unset;
+        left: 1rem;
+        top: -0.25rem;
       }
     }
   }

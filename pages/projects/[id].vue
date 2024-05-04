@@ -1,10 +1,18 @@
 <script setup>
 import {useProjectsStore} from "~/store/projects/projects.js";
+import TrailerView from "~/components/Projects/TrailerView.vue";
 
 const route = useRoute();
+
 const projectStore = useProjectsStore();
 
+const trailerIsVissible = ref(false);
+
 const projectData = projectStore.getProjectData(route?.params?.id);
+
+function changeTrailerViewVissible() {
+  trailerIsVissible.value = !trailerIsVissible.value;
+}
 
 definePageMeta({
   layout: "project-layout"
@@ -17,11 +25,21 @@ definePageMeta({
       <h1 class="project__title title-h1">{{ projectData?.name }}</h1>
 
       <div class="project-video">
+
         <img class="project__preview" :src="`/static-images/projects/${projectData?.preview}`"
              :alt="`Превью для проекта - ${projectData?.name}`">
+
+        <button v-if="projectData?.videoPath" class="project-video__play" @click="changeTrailerViewVissible">
+          <img src="/static-images/other/play-button.svg" alt="Play button">
+        </button>
+
+        <TrailerView v-if="trailerIsVissible" :video-id="projectData?.videoPath"
+                     @changeTrailerViewVissible="changeTrailerViewVissible"/>
       </div>
 
-      <p class="project__description">{{ projectData?.description }}</p>
+      <a v-if="projectData?.kinopoisk" class="link project-video__link" :href="projectData?.kinopoisk">
+        подробнее
+      </a>
     </section>
   </main>
 </template>
@@ -38,9 +56,20 @@ definePageMeta({
   }
 
   &__preview {
-    max-width: 30rem;
+    max-width: 40rem;
     width: 100%;
     margin: 0 auto;
+    border-radius: 0.8rem;
+    overflow: hidden;
+
+    &--play {
+      position: absolute;
+      top: 0;
+      left: 0;
+
+      max-width: 5rem;
+      width: 100%;
+    }
   }
 
   &__title {
@@ -62,6 +91,41 @@ definePageMeta({
     @include tablet {
       font-size: .8rem;
     }
+  }
+}
+
+.project-video {
+  position: relative;
+
+  &__play {
+    position: absolute;
+
+    top: calc(50% - 2rem);
+    left: calc(50% - 2rem);
+
+    max-width: 4rem;
+    width: 100%;
+    cursor: pointer;
+
+    transition: opacity .5s ease-in-out;
+    padding: 0;
+
+    @include mobile-big {
+      max-width: 3rem;
+
+      top: calc(50% - 1.5rem);
+      left: calc(50% - 1.5rem);
+    }
+
+    &:hover {
+      opacity: .6;
+    }
+  }
+
+  &__link {
+    display: inline-block;
+    text-align: center;
+    text-decoration: underline;
   }
 }
 </style>

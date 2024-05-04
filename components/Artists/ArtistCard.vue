@@ -7,7 +7,8 @@ const props = defineProps(['artistData']);
 <template>
   <div class="artist-card">
     <div class="artist-card__preview">
-      <img loading="lazy" :src="`/static-images${artistData?.commonFeatures?.photo}`" :alt="`${artistData?.commonFeatures?.name}`">
+      <img loading="lazy" :src="`/static-images${artistData?.commonFeatures?.photo}`"
+           :alt="`${artistData?.commonFeatures?.name}`">
       <div class="artist-info artist-info--mobile">
         <h3 class="artist-card__title">{{ artistData?.commonFeatures?.name }}</h3>
         <span class="artist-card__text artist-card__text--blue">Актёр кино</span>
@@ -47,18 +48,18 @@ const props = defineProps(['artistData']);
   }
 
   &__preview {
-    max-width: 8.7rem;
 
-    width: 100%;
-    overflow: hidden;
-    border-radius: 50%;
+    img {
+      width: 8.7rem;
+      border-radius: 50%;
 
-    @include laptop {
-      max-width: 7.5rem;
-    }
+      @include laptop {
+        max-width: 7.5rem;
+      }
 
-    @include tablet {
-      max-width: 6rem;
+      @include tablet {
+        max-width: 6rem;
+      }
     }
 
     @include mobile-big {
@@ -69,7 +70,6 @@ const props = defineProps(['artistData']);
 
       img {
         max-width: 5rem;
-
       }
     }
 

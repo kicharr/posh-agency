@@ -82,7 +82,6 @@ onUnmounted(() => {
   left: 0;
   animation: defaultShowAnimation;
 
-
   &__image {
     width: 100vw;
     height: 100vh;

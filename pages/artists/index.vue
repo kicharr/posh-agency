@@ -16,6 +16,7 @@ const filtredArtistsList = computed(() => {
       ?.filter((artist) => artist?.commonFeatures?.name.match(new RegExp(artistName.value, 'gi')));
 });
 
+
 useHead({
   title: `Артисты - posh.agency`,
   meta: [{name: 'description', content: `Список актёров и актрис. Звоните сейчас: + 7 (917) 545-20-84`}]
