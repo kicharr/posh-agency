@@ -42,15 +42,11 @@ const props = defineProps(['artistData']);
   max-width: 33.55rem;
   width: 100%;
 
-  img {
-    width: 100%;
-    height: 100%;
-  }
-
   &__preview {
 
     img {
       width: 8.7rem;
+      max-width: unset;
       border-radius: 50%;
 
       @include laptop {

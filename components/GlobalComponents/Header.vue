@@ -64,14 +64,10 @@ watch(isMobileNavVissible, (val) => {
             </NuxtLink>
           </li>
           <li>
-            <button class="link-default header-nav__link header-nav__link--dropdown"
+            <NuxtLink to="/projects" class="link-default header-nav__link header-nav__link--dropdown"
                     :class="{'header-nav__link--active': route?.fullPath === '/projects'}">
               Кейсы
-
-              <img class="dropdown__icon" src="/static-images/dropdown-arrow.svg">
-
-              <MenuDropDown/>
-            </button>
+            </NuxtLink>
 
 
           </li>

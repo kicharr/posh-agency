@@ -2043,12 +2043,42 @@ export const useArtistsStore = defineStore('artists', () => {
         },
     ]);
 
+    const partnersList = ref([
+        {
+            logotype: '/static-images/partners/yellow-yeti.svg',
+            alt: 'Агентство стратегического digital-маркетинга - Yellow Yeti',
+            title: 'Yellow Yeti'
+        },
+        {
+            logotype: '/static-images/partners/asap-casting.svg',
+            alt: 'Менеджмент актеров - asap casting',
+            title: 'asap casting'
+        },
+        {
+            logotype: '/static-images/partners/hype.svg',
+            alt: 'Первое в России Influencer-маркетинг агентство - Hype Agency',
+            title: 'Hype Agency'
+        },
+        {
+            logotype: '/static-images/partners/trend-talent-agency.svg',
+            alt: 'Актерское агентство - Trend Talent Agency',
+            title: 'Trend Talent Agency'
+        },
+        {
+            logotype: '/static-images/partners/didenok.svg',
+            alt: 'Коммуникационное агентство с экспертизой в селебрити маркетинге и менеджменте - Didenok Team',
+            title: 'Didenok Team'
+        },
+    ]);
+
     const getArtistData = (id) => {
         return artistsList.value.find((actor) => actor.id === id)
     }
 
     return {
         artistsList: computed(() => artistsList.value),
+        partnersList: computed(() => partnersList.value),
+
         getArtistData
     }
 })
