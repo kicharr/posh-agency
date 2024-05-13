@@ -4,6 +4,7 @@ import {useProjectsStore} from "~/store/projects/projects.js";
 import ProjectCard from "~/components/Projects/ProjectCard.vue";
 import ArtistCard from "~/components/Artists/ArtistCard.vue";
 import Partners from "~/components/GlobalComponents/Partners.vue";
+import Loader from "~/components/GlobalComponents/Loader.vue";
 
 const artistsStore = useArtistsStore();
 const projectsStore = useProjectsStore();
@@ -12,6 +13,17 @@ const artistsList = artistsStore.artistsList;
 const projectList = projectsStore.projectsList;
 const partnersList = artistsStore.partnersList;
 
+const loaderIsActive = ref(true);
+
+onBeforeMount(() => {
+  intervalToLoader();
+})
+
+const intervalToLoader = () => {
+  setTimeout(() => {
+    loaderIsActive.value = !loaderIsActive.value;
+  }, 3400)
+}
 
 definePageMeta({
   layout: "landing-layout"
@@ -19,6 +31,10 @@ definePageMeta({
 </script>
 
 <template>
+  <Transition>
+    <Loader v-if="loaderIsActive"/>
+  </Transition>
+
   <main class="main">
     <section class="hero section">
       <div class="hero-content container">
@@ -270,6 +286,17 @@ definePageMeta({
 </template>
 
 <style scoped lang="scss">
+.v-enter-active,
+.v-leave-active {
+  transition: opacity 0.5s ease;
+}
+
+.v-enter-from,
+.v-leave-to {
+  opacity: 0;
+}
+
+
 .main {
   overflow-x: hidden;
 }
